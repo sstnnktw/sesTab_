@@ -1,0 +1,421 @@
+<SES pre Tablet>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SES3 income</title>
+
+<style>
+/* CSS เพื่อสร้างการตกแต่งสีและรูปแบบต่าง ๆ */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    font-size: 16px;
+  }
+  .ses {
+    background-color: #b786db;
+    padding: 25px;
+    text-align:center;
+    font-size: 24px;
+  }
+  .frame {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .chapter {
+    background-color: #edecf3;
+    padding: 20px;
+    font-size: 20px;
+    text-align:center;
+  }
+  .head0 {
+  	background-color: #c9a4e4;
+    padding: 15px;
+    padding-left: 20px;
+    font-size: 18px;
+  }
+  .head {
+  	background-color: #E9DAF4;
+    padding: 15px;
+    padding-left: 20px;
+    font-size: 16px;
+  }
+  .head2 {  /* EGxx_1, EGxx_2, ... */
+    background-color: #f8f6fa;
+    padding: 15px;
+    padding-left: 60px;
+    font-size: 16px;
+  }
+  .inputT {
+    background-color: #FEE4CD;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .inputT input {
+    font-size: 16px;
+  }
+  .input {
+    padding-left: 60px;
+    font-size: 16px;
+  }
+  .input input {
+    background-color: #EEEEEE;
+    color: #BFBFBF;
+    font-size: 16px;
+    height: 35px;
+    width: 250px;
+  }
+  .nn {
+  	background-color: #FFF9E7;
+    font-size: 15px;
+    padding: 10px;
+    padding-left: 20px;
+  } 
+  .remark {
+  	color: #FF0000;
+  	font-size: 15px;
+  	padding-left: 5px;
+  	margin-bottom: 50px;
+  } 
+  .container {
+  	display: flex;
+  	flex-wrap: wrap; /* ให้เรียงคอลัมน์เวลาขนาดหน้าจอเล็กลง */
+  }
+  .container {
+  	display: flex;
+  	flex-wrap: wrap; /* ให้เรียงคอลัมน์เวลาขนาดหน้าจอเล็กลง */
+  }
+  .column {
+  	flex: 1;
+  	padding-left: 100px;
+  }
+  .note {    
+    font-size: 18px;
+    background-color: #E2EFDA;
+    padding: 20px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  .notebox {
+    height: 200px;    
+    font-size: 16px;
+    color: #FF0000;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #000;
+    margin-top: 10px;
+    white-space: pre-line; /* เพิ่ม white-space เพื่อให้เกิดการขึ้นบรรทัดใหม่เมื่อกด Enter */
+    overflow-y: auto; /* เพิ่ม scrollbar เมื่อข้อความยาวเกินขอบเขตของ notebox */
+  }
+
+</style>
+</head>
+<body>
+
+<!----------------------------------------------- HEADDING ----------------------------------------------->
+
+<div class="ses">
+	<b>การสำรวจภาวะเศรษฐกิจและสังคมของครัวเรือน</b>
+</div>
+
+<div class="chapter">
+    <b>สรุปข้อมูลครัวเรือน</b>
+    <br><span class="remark">รายละเอียดการคำนวณตัวแปรตาม <u>Data Dict</u></span>
+</div>
+
+<!-------------------------------------------- ค่าใช้จ่าย -------------------------------------------->
+
+<div class="head0">
+	<b>ค่าใช้จ่าย</b>
+</div>
+
+
+<div class="head">
+	<b>ค่าใช้จ่ายทั้งสิ้นเฉลี่ยต่อเดือน</b>
+</div>
+
+<div class="frame">
+<div class="input">
+	<input type="number" readonly placeholder=" CON + NCON + FBTP">
+</div>
+</div><!-- frame -->
+    
+
+<div class="head">
+	<b>ค่าใช้จ่ายอุปโภคบริโภคเฉลี่ยต่อเดือน</b>
+</div>
+  
+<div class="frame">
+<div class="input">
+	<input type="number" readonly placeholder=" CON">
+</div>
+</div><!-- frame -->
+
+    
+<div class="head2">
+	<b>1. ค่าใช้จ่ายเกี่ยวกับที่อยู่อาศัย</b> (ไม่รวม ค่าต่อเติมบ้าน)
+</div>
+  
+<div class="frame">
+<div class="input">
+	<input type="number" readonly>
+    <span class="remark">∑(EG01A → EG05A) + ∑(EG01BC → EG05BC)</span>
+</div>
+</div><!-- frame -->
+
+
+<div class="head2">
+	<b>2. ค่าใช้จ่ายเกี่ยวกับเครื่องแต่งบ้าน เครื่องใช้เบ็ดเตล็ด และการดำเนินการในครัวเรือน</b>
+</div>
+  
+<div class="frame">
+<div class="input">
+	<input type="number" readonly>
+    <span class="remark">∑(EG06A → EG27A) + ∑(EG06BC → EG27BC)</span>
+</div>
+</div><!-- frame -->
+
+
+<div class="head2">
+	<b>3. ค่าจ้างบุคคลที่ให้บริการแก่ครัวเรือน</b> (รวม ค่าอาหารและสิ่งของที่ซื้อให้)
+</div>
+  
+<div class="frame">
+<div class="input">
+	<input type="number" readonly>
+    <span class="remark">∑(EG28A → EG29A) + ∑(EG28BC → EG29BC)</span>
+</div>
+</div><!-- frame -->
+
+
+<div class="head2">
+	<b>4. ค่าใช้จ่ายเกี่ยวกับผ้า เสื้อผ้า และเครื่องแต่งกาย</b>
+</div>
+  
+<div class="frame">
+<div class="input">
+	<input type="number" readonly>
+    <span class="remark">∑(EG30A → EG35A) + ∑(EG30BC → EG35BC)</span>
+</div>
+</div><!-- frame -->
+
+
+<div class="head2">
+	<b>5. ค่าใช้จ่ายเกี่ยวกับรองเท้า</b>
+</div>
+  
+<div class="frame">
+<div class="input">
+	<input type="number" readonly>
+    <span class="remark">∑(EG36A → EG38A) + ∑(EG36BC → EG38BC)</span>
+</div>
+</div><!-- frame -->
+
+
+<div class="head2">
+	<b>6. ค่าใช้จ่ายส่วนบุคคล</b>
+</div>
+  
+<div class="frame">
+<div class="input">
+	<input type="number" readonly>
+    <span class="remark">∑(EG39A → EG46A) + ∑(EG39BC → EG46BC)</span>
+</div>
+</div><!-- frame -->
+
+
+<div class="head2">
+	<b>7. ค่าเวชภัณฑ์และค่าตรวจรักษาพยาบาล</b>
+</div>
+  
+<div class="frame">
+<div class="input">
+	<input type="number" readonly>
+    <span class="remark">∑(EG47A → EG60A) + ∑(EG47BC → EG60BC)</span>
+</div>
+</div><!-- frame -->
+
+
+<div class="head2">
+	<b>8. ค่าใช้จ่ายเกี่ยวกับการเดินทางและการสื่อสาร</b>
+</div>
+  
+<div class="frame">
+<div class="input">
+	<input type="number" readonly>
+    <span class="remark">∑(EG61A → EG87A) + ∑(EG61BC → EG87BC)</span>
+</div>
+</div><!-- frame -->
+
+
+<div class="head2">
+	<b>9. ค่าใช้จ่ายเกี่ยวกับการศึกษา</b>
+</div>
+  
+<div class="frame">
+<div class="input">
+	<input type="number" readonly>
+    <span class="remark">∑(EG88A → EG92A) + ∑(EG88BC → EG92BC)</span>
+</div>
+</div><!-- frame -->
+
+
+<div class="head2">
+	<b>10. ค่าใช้จ่ายเกี่ยวกับการบันเทิง การอ่าน และกิจกรรมทางศาสนา</b>
+</div>
+  
+<div class="frame">
+<div class="input">
+	<input type="number" readonly>
+    <span class="remark">∑(EG93A → EG110A) + ∑(EG93BC → EG110BC)</span>
+</div>
+</div><!-- frame -->
+
+
+<div class="head2">
+	<b>11. ค่าใช้จ่ายเกี่ยวกับการจัดงานพิธีในโอกาสพิเศษ</b>
+</div>
+  
+<div class="frame">
+<div class="input">
+	<input type="number" readonly>
+    <span class="remark">EG111A + EG111BC</span>
+</div>
+</div><!-- frame -->
+    
+
+<div class="head">
+	<b>ค่าใช้จ่ายที่ไม่เกี่ยวกับการอุปโภคบริโภคเฉลี่ยต่อเดือน</b>
+</div>
+  
+<div class="frame">
+<div class="input">
+	<input type="number" readonly placeholder=" NCON">
+</div>
+</div><!-- frame -->
+
+
+<div class="head">
+	<b>ค่าใช้จ่ายอาหาร เครื่องดื่ม และยาสูบเฉลี่ยต่อเดือน</b>
+</div>
+  
+<div class="frame">
+<div class="input">
+	<input type="number" readonly placeholder=" FBTP">
+</div>
+</div><!-- frame -->
+
+<!-------------------------------------------- รายได้ -------------------------------------------->
+
+<div class="head0">
+	<b>รายได้</b>
+</div>
+
+
+<div class="head">
+	<b> รายได้ทั้งสิ้นเฉลี่ยต่อเดือน</b>
+</div>
+
+<div class="frame">
+<div class="input">
+	<input type="number" readonly placeholder=" INCOME">
+</div>
+</div><!-- frame -->
+    
+
+<div class="head">
+	<b>รายได้จากค่าจ้าง/เงินเดือนเฉลี่ยต่อเดือน</b>
+</div>
+  
+<div class="frame">
+<div class="input">
+	<input type="number" readonly placeholder=" IN02/12">
+</div>
+</div><!-- frame -->
+    
+
+<div class="head">
+	<b>รายได้จากการประกอบธุรกิจเฉลี่ยต่อเดือน</b>
+</div>
+  
+<div class="frame">
+<div class="input">
+	<input type="number" readonly placeholder=" IN03/12">
+</div>
+</div><!-- frame -->
+    
+
+<div class="head">
+	<b>รายได้จากการประกอบการเกษตรเฉลี่ยต่อเดือน</b>
+</div>
+  
+<div class="frame">
+<div class="input">
+	<input type="number" readonly placeholder=" IN04/12">
+</div>
+</div><!-- frame -->
+    
+
+<div class="head">
+	<b>รายได้จากแหล่งอื่น ๆ เฉลี่ยต่อเดือน</b>
+</div>
+
+<div class="frame">
+<div class="input">
+	<input id="IN15" type="number" min="00" max="99999" placeholder=" ∑(IN05 → IN16)/12" readonly>
+</div>
+</div><!-- frame -->
+
+<div class="head0">
+	<b>ตรวจสอบยอดรวมรายได้ - ค่าใช้จ่าย</b>
+</div>
+  
+<div class="frame">
+<div class="input">
+	<input type="number" readonly placeholder=" COMP">
+</div>
+</div><!-- frame -->
+
+
+<!-------------------------------------------- NOTE -------------------------------------------->
+
+<div class="note">
+	<b>NOTE :</b>
+  <span class="remark">SUMMARY_NOTE</span>
+	<div id="ses3_note" class="notebox" contenteditable="true">*** เพิ่มฟังก์ชันพิมพ์ด้วยเสียง ***</div>
+</div>
+
+<!----------------------------------------------------------------------------------------------------------->
+
+<script>
+    var HM01_1 = localStorage.getItem("HM01_1");
+    var HM01_3 = localStorage.getItem("HM01_3");
+    var HM01_4 = localStorage.getItem("HM01_4");
+    var HM01_5 = localStorage.getItem("HM01_5");
+    var IN08_1_rec1 = localStorage.getItem("IN08_1_rec1");
+    var IN08_2_rec1 = localStorage.getItem("IN08_2_rec1");
+    var IN08_3_rec1 = localStorage.getItem("IN08_3_rec1");
+    var IN08_4_rec1 = localStorage.getItem("IN08_4_rec1");
+    var IN08_5_rec1 = localStorage.getItem("IN08_5_rec1");
+    var IN08_6_rec1 = localStorage.getItem("IN08_6_rec1");
+    var IN09_rec1 = localStorage.getItem("IN09_rec1");
+    var IN15_rec1 = localStorage.getItem("IN15_rec1");
+
+    document.getElementById('IN01_1').value = HM01_1;
+    document.getElementById('IN01_3').value = HM01_3;
+    document.getElementById('IN01_4').value = HM01_4;
+    document.getElementById('IN01_5').value = HM01_5;
+    document.getElementById('IN08_1').value = IN08_1_rec1;
+    document.getElementById('IN08_2').value = IN08_2_rec1;
+    document.getElementById('IN08_3').value = IN08_3_rec1;
+    document.getElementById('IN08_4').value = IN08_4_rec1;
+    document.getElementById('IN08_5').value = IN08_5_rec1;
+    document.getElementById('IN08_6').value = IN08_6_rec1;
+    document.getElementById('IN09').value = IN09_rec1;
+    document.getElementById('IN15').value = IN15_rec1;
+</script>
+
+
+
+</body>
+</html>

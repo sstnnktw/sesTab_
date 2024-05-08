@@ -1,0 +1,1513 @@
+<SES pre Tablet>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SES Chapter 3 - part 4</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+        font-size: 16px;
+    }
+    .frame {
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+    .ses {
+        background-color: #b786db;
+        padding: 25px;
+        text-align:center;
+        font-size: 24px;
+    }
+    .chapter {
+        background-color: #edecf3;
+        padding: 20px;
+        font-size: 20px;
+        text-align:center;
+    }
+    .headABC {  /* ก., ข., ... */
+        background-color: #d2b3e8;
+        padding: 15px;
+        font-size: 18px;
+    }
+    .head1 {  /* ข้อ 1., 2., 3., ... */
+        background-color: #DEC8EE;
+        padding: 15px;
+        padding-left: 40px;
+        font-size: 16px;
+    }
+    .head1_ {  /* ข้อ 2.1, 2.2, ... */
+        background-color: #E9DAF4;
+        padding: 15px;
+        padding-left: 60px;
+        font-size: 16px;
+    }
+    .head2 {  /* หัวข้ออื่น ๆ */
+        background-color: #f1e5f1;
+        padding: 15px;
+        padding-left: 60px;
+        font-size: 16px;
+    }
+    .head3 {  /* EGxx */
+        background-color: #F7EEFC;
+        padding: 15px;
+        padding-left: 60px;
+        font-size: 16px;
+    }
+    .head4 {  /* EGxx_1, EGxx_2, ... */
+        background-color: #f8f6fa;
+        padding: 15px;
+        padding-left: 60px;
+        font-size: 16px;
+    }
+    .headT {
+        background-color: #FED5AA;
+        padding: 15px;
+        padding-left: 60px;
+        font-size: 16px;
+    }
+    .Y {  /* เดือนที่แล้ว, 12 เดือนที่แล้ว, เฉลี่ยต่อเดือน */
+        margin-top: 30px;
+        padding-left: 70px;
+        font-size: 16px;
+    }
+    .id {  /* ซื้อ/จ่าย, ไม่ได้ซื้อ/จ่าย */
+        margin-top: 25px;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    .inputY {
+        background-color: #E9FCFF;
+        font-size: 16px;
+    }
+    .inputM {
+        font-size: 16px;
+    }
+    .inputM2 {
+    	background-color: #EEEEEE;
+    	color: #BFBFBF;
+        font-size: 16px;
+    }
+    .inputT {
+    	background-color: #FEE4CD;
+        font-size: 16px;
+    }
+    .nn {
+        background-color: #FFF9E7;
+        font-size: 15px;
+        padding: 10px;
+        padding-left: 20px;
+    }  
+    .nn2 {
+        background-color: #FFF9E7;
+        font-size: 15px;
+        padding: 10px;
+        padding-left: 60px;
+    }
+    .remark {
+        color: #FF0000;
+        font-size: 15px;
+        padding-left: 5px;
+    }  
+    .select {
+        background-color: #fff;
+        padding: 60px;
+        padding-left: 80px;
+        font-size: 16px;
+    }
+    .select select {
+        font-size: 16px;
+        height: 35px;
+        width: 250px;    
+    }
+    .etc {
+        margin-top: 30px;
+        padding-left: 100px;
+    }
+    .etc input{
+        font-size: 16px;
+        height: 35px;
+        width: 250px;   
+        margin-top: 15px;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap; /* ให้เรียงคอลัมน์เวลาขนาดหน้าจอเล็กลง */
+    }
+    .column {
+        flex: 1;
+        padding-left: 100px;
+    }
+    input[type="number"] {
+        height: 35px;
+        width: 250px;   
+        box-sizing: border-box; /* ให้ขนาดกล่องข้อความครอบเส้นขอบ */
+        padding: 8px;
+        margin-top: 5px;
+        height: 35px;
+    }
+    .note {    
+        font-size: 18px;
+        background-color: #E2EFDA;
+        padding: 20px;
+        padding-left: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .notebox {
+        height: 200px;    
+        font-size: 16px;
+        color: #FF0000;
+        background-color: #fff;
+        padding: 10px;
+        border: 1px solid #000;
+        margin-top: 10px;
+        white-space: pre-line; /* เพิ่ม white-space เพื่อให้เกิดการขึ้นบรรทัดใหม่เมื่อกด Enter */
+        overflow-y: auto; /* เพิ่ม scrollbar เมื่อข้อความยาวเกินขอบเขตของ notebox */
+    }
+  #EG8892Div,
+  #EG9398Div,
+  #EG99103Div,
+  #EG104107Div,
+  #EG108110Div{
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<!----------------------------------------------- HEADDING ----------------------------------------------->
+
+<div class="ses">
+	<b>การสำรวจภาวะเศรษฐกิจและสังคมของครัวเรือน</b>
+</div>
+
+<div class="chapter">
+    <b>ตอนที่ 3 ค่าใช้จ่ายสินค้าและบริการ</b>
+    <br><span class="remark">ข้อไหนไม่มีค่าใช้จ่ายสามารถปล่อย blank ได้ <u>แต่หลังบ้านบันทึกค่าเป็น 0</u></span>
+</div>
+
+<div class="nn">
+    ให้บันทึก <b>"จำนวนเงิน"</b> (ถ้าซื้อ/จ่าย) หรือ <b>"มูลค่า"</b> (ถ้าไม่ได้ซื้อ/จ่าย เบิกได้) ของค่าใช้จ่ายแต่ละรายการตาม<b>คาบเวลาที่กำหนดให้</b>
+</div>
+
+<div class="headABC">
+    <b>ก. ค่าใช้จ่ายอุปโภคบริโภคของครัวเรือน</b>
+</div>
+
+<!----------------------------------------------------------------------------> <!--- 9 --->
+
+<div id="09Div"> 
+
+<div class="head1">
+	<b>9. ค่าใช้จ่ายเกี่ยวกับการศึกษา (ในรอบ12 เดือนที่แล้ว)</b>
+</div>
+
+<div class="nn2">
+	<b>เช่น</b> ค่าเล่าเรียน/ค่าธรรมเนียม/ค่าบำรุงการศึกษา ค่าอุปกรณ์ในการเรียน ค่าเรียนพิเศษ เรียนวิชาชีพ เรียนดนตรี/เต้นรำ ค่าถ่ายเอกสารค่าจัดทำรายงาน ฯลฯ
+</div>
+
+<div class="select">
+	<select id="EG8892" onchange="toggleDiv('EG8892Div', 'EG8892');">
+		<option value="">-- กรุณาเลือก --</option>
+		<option value="0">ไม่มี</option>
+		<option value="1">มี</option>
+	</select>
+    <span class="remark">บันทึกเป็นตัวแปร EGCH20</span>
+</div>
+
+<!-------------------------- EG88 - EG92 -------------------------->
+
+<div id="EG8892Div">
+
+<!------------ EG88 ------------>
+
+<div id="EG88Div">
+    
+<div class="head3">
+	<b>EG88 : ค่าเล่าเรียน/ค่าธรรมเนียม/ค่าบำรุงการศึกษาในโรงเรียนหรือสถานศึกษา<u>ของรัฐ</u></b>
+</div>
+
+<div class="frame">
+<div class="Y"> <b>12 เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG88AY</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputY" type="number" id="EG88AY" oninput="CalMonthly('EG88AY', 'EG88A');">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG88BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputY" type="number" id="EG88BCY" oninput="CalMonthly('EG88BCY', 'EG88BC');">
+        </div>
+    
+	</div>
+    
+<div class="Y"> <b>เฉลี่ยต่อเดือน :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG88A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputM2" id="EG88A" type="number" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG88BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputM2" id="EG88BC" type="number" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- EG88Div -->
+
+<!------------ EG89 ------------>
+
+<div id="EG89Div">
+    
+<div class="head3">
+	<b>EG89 : ค่าเล่าเรียน/ค่าธรรมเนียม/ค่าบำรุงการศึกษาในโรงเรียนหรือสถานศึกษา<u>เอกชน</u></b>
+</div>
+
+<div class="frame">
+<div class="Y"> <b>12 เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG89AY</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputY" type="number" id="EG89AY" oninput="CalMonthly('EG89AY', 'EG89A');">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG89BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputY" type="number" id="EG89BCY" oninput="CalMonthly('EG89BCY', 'EG89BC');">
+        </div>
+    
+	</div>
+    
+<div class="Y"> <b>เฉลี่ยต่อเดือน :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG89A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputM2" id="EG89A" type="number" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG89BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputM2" id="EG89BC" type="number" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- EG89Div -->
+
+<!------------ EG90 ------------>
+
+<div id="EG90Div">
+    
+<div class="head3">
+	<b>EG90 : ค่าหนังสือ เครื่องเขียน และอุปกรณ์ในการเรียน</b>
+</div>
+
+<div class="frame">
+<div class="Y"> <b>12 เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG90AY</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputY" type="number" id="EG90AY" oninput="CalMonthly('EG90AY', 'EG90A');">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG90BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputY" type="number" id="EG90BCY" oninput="CalMonthly('EG90BCY', 'EG90BC');">
+        </div>
+    
+	</div>
+    
+<div class="Y"> <b>เฉลี่ยต่อเดือน :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG90A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputM2" id="EG90A" type="number" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG90BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputM2" id="EG90BC" type="number" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- EG90Div -->
+
+<!------------ EG91 ------------>
+
+<div id="EG91Div">
+    
+<div class="head3">
+	<b>EG91 : ค่าเรียนพิเศษ เรียนวิชาชีพ เรียนดนตรี/เต้นรำ ฯลฯ</b>
+</div>
+
+<div class="frame">
+<div class="Y"> <b>12 เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG91AY</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputY" type="number" id="EG91AY" oninput="CalMonthly('EG91AY', 'EG91A');">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG91BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputY" type="number" id="EG91BCY" oninput="CalMonthly('EG91BCY', 'EG91BC');">
+        </div>
+    
+	</div>
+    
+<div class="Y"> <b>เฉลี่ยต่อเดือน :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG91A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputM2" id="EG91A" type="number" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG91BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputM2" id="EG91BC" type="number" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- EG91Div -->
+
+<!------------ EG92 ------------>
+
+<div id="EG92Div">
+    
+<div class="head3">
+	<b>EG92 : ค่าใช้จ่ายอื่น ๆ</b> (เช่น ค่าถ่ายเอกสาร ค่าจัดทำรายงาน ฯลฯ)
+</div>
+
+<div class="frame">
+<div class="Y"> <b>12 เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG92AY</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputY" type="number" id="EG92AY" oninput="CalMonthly('EG92AY', 'EG92A');">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG92BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputY" type="number" id="EG92BCY" oninput="CalMonthly('EG92BCY', 'EG92BC');">
+        </div>
+    
+	</div>
+    
+<div class="Y"> <b>เฉลี่ยต่อเดือน :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG92A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputM2" id="EG92A" type="number" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG92BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputM2" id="EG92BC" type="number" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- EG92Div -->
+
+</div><!-- EG8892Div -->
+
+</div><!-- 09Div -->
+
+<!----------------------------------------------------------------------------> <!--- 10 --->
+
+<div id="10Div"> 
+
+<div class="head1">
+	<b>10. ค่าใช้จ่ายเกี่ยวกับการบันเทิง การอ่าน และกิจกรรมทางศาสนา</b>
+</div>
+
+<!-------------------------------------------------------------> <!--- 10.1 --->
+
+<div id="10.1Div"> 
+
+<div class="head1_">
+	<b>10.1 ค่าซื้ออุปกรณ์การบันเทิง และกีฬา</b>
+</div>
+
+<div class="nn2">
+	<b>เช่น</b> โทรทัศน์ วิทยุ กล้องถ่ายรูป/วีดีโอ กล่องทีวีดิจิทัล และค่าติดตั้ง เครื่องคอมพิวเตอร์ และอุปกรณ์ที่เกี่ยวข้อง อุปกรณ์กีฬา และบริหารร่างกาย ค่าซ่อมแซม/บำรุงรักษา ฯลฯ
+</div>
+
+<div class="select">
+	<select id="EG9398" onchange="toggleDiv('EG9398Div', 'EG9398');">
+		<option value="">-- กรุณาเลือก --</option>
+		<option value="0">ไม่มี</option>
+		<option value="1">มี</option>
+	</select>
+    <span class="remark">บันทึกเป็นตัวแปร EGCH21</span>
+</div>
+
+<!-------------------------- EG93 - EG98 -------------------------->
+
+<div id="EG9398Div">
+
+<!------------ EG93 ------------>
+
+<div id="EG93Div">
+    
+<div class="head3">
+	<b>EG93 : โทรทัศน์ วิทยุ เครื่องเล่นวีซีดี/ดีวีดี/บลูเรย์</b>
+</div>
+
+<div class="frame">
+<div class="Y"> <b>12 เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG93AY</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputY" type="number" id="EG93AY" oninput="CalMonthly('EG93AY', 'EG93A');">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG93BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputY" type="number" id="EG93BCY" oninput="CalMonthly('EG93BCY', 'EG93BC');">
+        </div>
+    
+	</div>
+    
+<div class="Y"> <b>เฉลี่ยต่อเดือน :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG93A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputM2" id="EG93A" type="number" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG93BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputM2" id="EG93BC" type="number" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- EG93Div -->
+
+<!------------ EG94 ------------>
+
+<div id="EG94Div">
+    
+<div class="head3">
+	<b>EG94 : กล้องถ่ายรูป/วีดีโอ เครื่องฉายภาพยนตร์และภาพนิ่ง</b> (<b>รวม</b> แบตเตอรี่และเมมโมรี่การ์ดที่มากับเครื่อง)
+</div>
+
+<div class="frame">
+<div class="Y"> <b>12 เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG94AY</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputY" type="number" id="EG94AY" oninput="CalMonthly('EG94AY', 'EG94A');">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG94BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputY" type="number" id="EG94BCY" oninput="CalMonthly('EG94BCY', 'EG94BC');">
+        </div>
+    
+	</div>
+    
+<div class="Y"> <b>เฉลี่ยต่อเดือน :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG94A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputM2" id="EG94A" type="number" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG94BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputM2" id="EG94BC" type="number" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- EG94Div -->
+
+<!------------ EG95 ------------>
+
+<div id="EG95Div">
+    
+<div class="head3">
+	<b>EG95 : จานรับสัญญาณดาวเทียม กล่องทีวีดิจิทัล และค่าติดตั้งเคเบิลทีวี</b>
+</div>
+
+<div class="frame">
+<div class="Y"> <b>12 เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG95AY</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputY" type="number" id="EG95AY" oninput="CalMonthly('EG95AY', 'EG95A');">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG95BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputY" type="number" id="EG95BCY" oninput="CalMonthly('EG95BCY', 'EG95BC');">
+        </div>
+    
+	</div>
+    
+<div class="Y"> <b>เฉลี่ยต่อเดือน :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG95A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputM2" id="EG95A" type="number" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG95BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputM2" id="EG95BC" type="number" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- EG95Div -->
+
+<!------------ EG96 ------------>
+
+<div id="EG96Div">
+    
+<div class="head3">
+	<b>EG96 : เครื่องคอมพิวเตอร์ และอุปกรณ์ที่เกี่ยวข้อง</b>
+</div>
+
+<div class="frame">
+<div class="Y"> <b>12 เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG96AY</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputY" type="number" id="EG96AY" oninput="CalMonthly('EG96AY', 'EG96A');">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG96BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputY" type="number" id="EG96BCY" oninput="CalMonthly('EG96BCY', 'EG96BC');">
+        </div>
+    
+	</div>
+    
+<div class="Y"> <b>เฉลี่ยต่อเดือน :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG96A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputM2" id="EG96A" type="number" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG96BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputM2" id="EG96BC" type="number" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- EG96Div -->
+
+<!------------ EG97 ------------>
+
+<div id="EG97Div">
+    
+<div class="head3">
+	<b>EG97 : อุปกรณ์กีฬา และบริหารร่างกาย</b> (เช่น ลูกฟุตบอล ไม้แบดมินตัน ฯลฯ)
+</div>
+
+<div class="frame">
+<div class="Y"> <b>12 เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG97AY</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputY" type="number" id="EG97AY" oninput="CalMonthly('EG97AY', 'EG97A');">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG97BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputY" type="number" id="EG97BCY" oninput="CalMonthly('EG97BCY', 'EG97BC');">
+        </div>
+    
+	</div>
+    
+<div class="Y"> <b>เฉลี่ยต่อเดือน :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG97A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputM2" id="EG97A" type="number" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG97BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputM2" id="EG97BC" type="number" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- EG97Div -->
+
+<!------------ EG98 ------------>
+
+<div id="EG98Div">
+    
+<div class="head3">
+	<b>EG98 : ค่าซ่อมแซม/บำรุงรักษา และอื่น ๆ</b> (ระบุ)
+</div>
+
+	<div class="input">
+        <div id="EG98_T" class="etc">
+              <input type="text" placeholder = "ระบุ">
+    		  <span class="remark">บันทึกเป็นตัวแปร EG98_T</span>
+        </div>
+    </div>
+
+<div class="frame">
+<div class="Y"> <b>12 เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG98AY</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputY" type="number" id="EG98AY" oninput="CalMonthly('EG98AY', 'EG98A');">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG98BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputY" type="number" id="EG98BCY" oninput="CalMonthly('EG98BCY', 'EG98BC');">
+        </div>
+    
+	</div>
+    
+<div class="Y"> <b>เฉลี่ยต่อเดือน :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG98A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputM2" id="EG98A" type="number" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG98BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputM2" id="EG98BC" type="number" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- EG98Div -->
+
+</div><!-- EG9398Div -->
+
+</div><!-- 10.1Div -->
+
+<!-------------------------------------------------------------> <!--- 10.2 --->
+
+<div id="10.2Div"> 
+
+<div class="head1_">
+	<b>10.2 ค่าซื้อเครื่องเล่น สัตว์เลี้ยง ไม้ประดับ และค่าใช้จ่ายเกี่ยวกับการบันเทิง</b>
+</div>
+
+<div class="nn2">
+	<b>เช่น</b> ค่าซื้อเครื่อง/ของเล่นชนิดต่าง ๆค่าซื้อสัตว์เลี้ยง/อุปกรณ์เลี้ยงสัตว์ ค่าต้นไม้/พันธุ์ไม้ ค่าซื้อแอปพลิเคชั่น/ค่าบริการ Streaming ฯลฯ
+</div>
+
+<div class="select">
+	<select id="EG99103" onchange="toggleDiv('EG99103Div', 'EG99103');">
+		<option value="">-- กรุณาเลือก --</option>
+		<option value="0">ไม่มี</option>
+		<option value="1">มี</option>
+	</select>
+    		  <span class="remark">บันทึกเป็นตัวแปร EGCH22</span>
+</div>
+
+<!-------------------------- EG99 - EG103 -------------------------->
+
+<div id="EG99103Div">
+
+<!------------ EG99 ------------>
+
+<div id="EG99Div">
+    
+<div class="head3">
+	<b>EG99 : ค่าซื้อเครื่อง/ของเล่นชนิดต่าง ๆ</b> (เช่น รถเด็กเล่น เครื่องบินบังคับวิทยุ ฯลฯ)
+</div>
+
+<div class="frame">
+<div class="Y"> <b>12 เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG99AY</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputY" type="number" id="EG99AY" oninput="CalMonthly('EG99AY', 'EG99A');">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG99BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputY" type="number" id="EG99BCY" oninput="CalMonthly('EG99BCY', 'EG99BC');">
+        </div>
+    
+	</div>
+    
+<div class="Y"> <b>เฉลี่ยต่อเดือน :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG99A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputM2" id="EG99A" type="number" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG99BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputM2" id="EG99BC" type="number" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- EG99Div -->
+
+<!------------ EG100 ------------>
+
+<div id="EG100Div">
+    
+<div class="head3">
+	<b>EG100 : ค่าซื้อสัตว์เลี้ยง/อุปกรณ์เลี้ยงสัตว์</b> (<b>รวม</b> ค่าอาหารและอื่นๆ)
+</div>
+
+<div class="frame">
+<div class="Y"> <b>12 เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG100AY</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputY" type="number" id="EG100AY" oninput="CalMonthly('EG100AY', 'EG100A');">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG100BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputY" type="number" id="EG100BCY" oninput="CalMonthly('EG100BCY', 'EG100BC');">
+        </div>
+    
+	</div>
+    
+<div class="Y"> <b>เฉลี่ยต่อเดือน :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG100A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputM2" id="EG100A" type="number" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG100BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputM2" id="EG100BC" type="number" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- EG100Div -->
+
+<!------------ EG101 ------------>
+
+<div id="EG101Div">
+    
+<div class="head3">
+	<b>EG101 : ค่าต้นไม้/พันธุ์ไม้ประดับ/ดอกไม้สด</b> (<b>รวม</b> ปุ๋ยและอุปกรณ์ทำสวน)
+</div>
+
+<div class="frame">
+<div class="Y"> <b>เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG101A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputM" type="number" id="EG101A">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG101BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputM" type="number" id="EG101BC">
+        </div>
+    
+	</div>
+</div><!-- frame -->
+  
+</div> <!-- EG101Div -->
+
+<!------------ EG102 ------------>
+
+<div id="EG102Div">
+    
+<div class="head3">
+	<b>EG102 : ค่าซื้อ/เช่า วีซีดี/ ดีวีดี ค่าสมาชิกเคเบิลทีวี ค่าถ่ายรูป</b> (ฟิล์ม ล้าง/อัด/ขยายภาพ) <b>ค่าซื้อแอปพลิเคชั่น/ค่าบริการ Streaming</b>
+</div>
+
+<div class="frame">
+<div class="Y"> <b>เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG102A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputM" type="number" id="EG102A">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG102BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputM" type="number" id="EG102BC">
+        </div>
+    
+	</div>
+</div><!-- frame -->
+  
+</div> <!-- EG102Div -->
+
+<!------------ EG103 ------------>
+
+<div id="EG103Div">
+    
+<div class="head3">
+	<b>EG103 : ค่าซ่อมแซม/บำรุงรักษา และอื่น ๆ</b> (เช่น ของที่ระลึก/ของสะสม ฯลฯ)
+</div>
+
+<div class="frame">
+<div class="Y"> <b>เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG103A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputM" type="number" id="EG103A">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG103BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputM" type="number" id="EG103BC">
+        </div>
+    
+	</div>
+</div><!-- frame -->
+  
+</div> <!-- EG103Div -->
+
+</div><!-- EG99103Div -->
+
+</div><!-- 10.2Div -->
+
+<!-------------------------------------------------------------> <!--- 10.3 --->
+
+<div id="10.3Div"> 
+
+<div class="head1_">
+	<b>10.3 ค่าผ่านประตู ค่าเรียนและเล่นกีฬา</b>
+</div>
+
+<div class="nn2">
+	<b>เช่น</b> ค่าดูภาพยนตร์/กีฬา/การแสดงต่าง ๆ สวนสนุก สวนสัตว์ พิพิธภัณฑ์ ค่าเรียนและเล่นกีฬา ค่าสมาชิกสโมสร/สมาคมต่าง ๆ ฯลฯ
+</div>
+
+<div class="select">
+	<select id="EG104107" onchange="toggleDiv('EG104107Div', 'EG104107');">
+		<option value="">-- กรุณาเลือก --</option>
+		<option value="0">ไม่มี</option>
+		<option value="1">มี</option>
+	</select>
+    		  <span class="remark">บันทึกเป็นตัวแปร EGCH23</span>
+</div>
+
+<!-------------------------- EG104 - EG107 -------------------------->
+
+<div id="EG104107Div">
+
+<!------------ EG104 ------------>
+
+<div id="EG104Div">
+    
+<div class="head3">
+	<b>EG104 : ดูภาพยนตร์/กีฬา/การแสดงต่าง ๆ</b> (เช่น ฟุตบอล การแสดงดนตรี งานเทศกาล ฯลฯ)
+</div>
+
+<div class="frame">
+<div class="Y"> <b>เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG104A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputM" type="number" id="EG104A">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG104BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputM" type="number" id="EG104BC">
+        </div>
+    
+	</div>
+</div><!-- frame -->
+  
+</div> <!-- EG104Div -->
+
+<!------------ EG105 ------------>
+
+<div id="EG105Div">
+    
+<div class="head3">
+	<b>EG105 : สนามเด็กเล่นและสวนสนุก สวนสัตว์ โบราณสถาน พิพิธภัณฑ์ อุทยานฯ</b>
+</div>
+
+<div class="frame">
+<div class="Y"> <b>เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG105A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputM" type="number" id="EG105A">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG105BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputM" type="number" id="EG105BC">
+        </div>
+    
+	</div>
+</div><!-- frame -->
+  
+</div> <!-- EG105Div -->
+
+<!------------ EG106 ------------>
+
+<div id="EG106Div">
+    
+<div class="head3">
+	<b>EG106 : ค่าเรียนและเล่นกีฬา</b> (เช่น ว่ายน้ำ เทควันโด เทนนิส กอล์ฟ ฯลฯ)
+</div>
+
+<div class="frame">
+<div class="Y"> <b>เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG106A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputM" type="number" id="EG106A">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG106BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputM" type="number" id="EG106BC">
+        </div>
+    
+	</div>
+</div><!-- frame -->
+  
+</div> <!-- EG106Div -->
+
+<!------------ EG107 ------------>
+
+<div id="EG107Div">
+    
+<div class="head3">
+	<b>EG107 : อื่น ๆ</b> (เช่น ค่าสมาชิกสโมสร/สมาคมต่าง ๆ ฯลฯ)
+</div>
+
+<div class="frame">
+<div class="Y"> <b>เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG107A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputM" type="number" id="EG107A">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG107BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputM" type="number" id="EG107BC">
+        </div>
+    
+	</div>
+</div><!-- frame -->
+  
+</div> <!-- EG107Div -->
+
+</div><!-- EG104107Div -->
+
+</div><!-- 10.3Div -->
+
+<!-------------------------------------------------------------> <!--- 10.4 --->
+
+<div id="10.4Div"> 
+
+<div class="head1_">
+	<b>10.4 ค่าใช้จ่ายเกี่ยวกับการอ่าน และกิจกรรมทางศาสนา/ลัทธิความเชื่อ</b>
+</div>
+
+<div class="nn2">
+	<b>เช่น</b> ค่าหนังสือพิมพ์ นิตยสาร ค่าธรรมเนียมการใช้ห้องสมุด ค่าปรับหนังสือ ค่าอาหาร/ของถวายพระ/ไหว้เจ้า ค่าเช่าพระ ฯลฯ
+</div>
+
+<div class="select">
+	<select id="EG108110" onchange="toggleDiv('EG108110Div', 'EG108110');">
+		<option value="">-- กรุณาเลือก --</option>
+		<option value="0">ไม่มี</option>
+		<option value="1">มี</option>
+	</select>
+    		  <span class="remark">บันทึกเป็นตัวแปร EGCH24</span>
+</div>
+
+<!-------------------------- EG108 - EG110 -------------------------->
+
+<div id="EG108110Div">
+
+<!------------ EG108 ------------>
+
+<div id="EG108Div">
+    
+<div class="head3">
+	<b>EG108 : ค่าหนังสือพิมพ์ นิตยสาร และหนังสือประเภทอื่น ๆ</b> (ที่ไม่ใช่หนังสือเรียนทั้งรุปเล่ม/ e-book /Online)
+</div>
+
+<div class="frame">
+<div class="Y"> <b>เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG108A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputM" type="number" id="EG108A">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG108BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputM" type="number" id="EG108BC">
+        </div>
+    
+	</div>
+</div><!-- frame -->
+  
+</div> <!-- EG108Div -->
+
+<!------------ EG109 ------------>
+
+<div id="EG109Div">
+    
+<div class="head3">
+	<b>EG109 : ค่าธรรมเนียมการใช้ห้องสมุดและอื่น ๆ</b> (เช่น ค่าเช่าหนังสือ/ค่าปรับ ฯลฯ)
+</div>
+
+<div class="frame">
+<div class="Y"> <b>เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG109A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputM" type="number" id="EG109A">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG109BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputM" type="number" id="EG109BC">
+        </div>
+    
+	</div>
+</div><!-- frame -->
+  
+</div> <!-- EG109Div -->
+
+<!------------ EG110 ------------>
+
+<div id="EG110Div">
+    
+<div class="head3">
+	<b>EG110 : ค่าอาหาร/ของถวายพระ/ไหว้เจ้า</b> (<b>รวม</b> ดอกไม้/ธูปเทียน) <b>ค่าเช่าพระและอื่น ๆ</b>
+</div>
+
+<div class="frame">
+<div class="Y"> <b>เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG110A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputM" type="number" id="EG110A">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG110BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputM" type="number" id="EG110BC">
+        </div>
+    
+	</div>
+</div><!-- frame -->
+  
+</div> <!-- EG110Div -->
+
+</div><!-- EG108110Div -->
+
+</div><!-- 10.4Div -->
+
+</div><!-- 10Div -->
+
+<!----------------------------------------------------------------------------> <!--- 11 --->
+
+<div id="11Div"> 
+
+<div class="head1">
+	<b>11. ค่าใช้จ่ายเกี่ยวกับการจัดงานพิธีในโอกาสพิเศษ</b>
+</div>
+
+<!-------------------------- EG111 -------------------------->
+
+<div id="EG111Div">
+    
+<div class="head3">
+	<b>EG111 : ค่าจัดงานแต่งงาน งานวันเกิด งานบวช งานศพและอื่น ๆ</b>
+</div>
+
+<div class="frame">
+<div class="Y"> <b>12 เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG111AY</b> : ซื้อ/จ่าย<br>
+            </div>
+            <input class="inputY" type="number" id="EG111AY" oninput="CalMonthly('EG111AY', 'EG111A');">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG111BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputY" type="number" id="EG111BCY" oninput="CalMonthly('EG111BCY', 'EG111BC');">
+        </div>
+    
+	</div>
+    
+<div class="Y"> <b>เฉลี่ยต่อเดือน :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EG111A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputM2" id="EG111A" type="number" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EG111BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputM2" id="EG111BC" type="number" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- EG111Div -->
+
+</div><!-- 11Div -->
+
+<!------------ TOTAL_EG ------------>
+
+<div id="TOTAL_EGDiv">
+    
+<div class="headT">
+	<b>สรุปค่าใช้จ่ายอุปโภคบริโภคต่อเดือนของครัวเรือน</b>
+</div>
+
+<div class="frame">
+<div class="Y"> <b>เฉลี่ยต่อเดือน :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>CON</b> : รวมทั้งสิ้น
+            </div>
+            <input class="inputT" type="number" id="CON" readonly placeholder="CON_A + CON_BC">
+        </div>
+        
+	</div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>CON_A</b> : รวมจำนวนเงิน (ซื้อ/จ่าย)
+            </div>
+            <input class="inputT" type="number" id="CON_A" readonly placeholder="∑(EG01A → EG111A)">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>CON_BC</b> : รวมมูลค่าที่ได้รับ (ไม่ได้ซื้อ/จ่าย เบิกได้)
+            </div>
+            <input class="inputT" type="number" id="CON_BC" readonly placeholder="∑(EG01BC → EG111BC)">
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- TOTAL_EGDiv -->
+
+
+<!-------------------------------------------- NOTE -------------------------------------------->
+
+<div class="note">
+  <b>NOTE :</b>
+  <span class="remark">C3.4_NOTE</span>
+  <div id="rec01_note" class="notebox" contenteditable="true">*** เพิ่มฟังก์ชันพิมพ์ด้วยเสียง ***</div>
+</div>
+
+<button onclick="saveToLocalStorage()">บันทึก</button>
+
+<!----------------------------------------------------------------------------------------------------------->
+
+<!-------------------------------------------------------------------------->
+<script>
+
+function toggleDiv(divId, selectId) {
+    var div = document.getElementById(divId);
+    var select = document.getElementById(selectId);
+    if (select.value === "1") {
+        div.style.display = "block";
+    } else {
+        div.style.display = "none";
+    }
+}
+
+<!-------------------------------------------------------------------------->
+
+function CalMonthly(inputId, outputId) {
+    var inputValue = parseFloat(document.getElementById(inputId).value);
+    if (!isNaN(inputValue)) {
+        document.getElementById(outputId).value = (inputValue / 12).toFixed(0);
+    } else {
+        document.getElementById(outputId).value = "";
+    }
+}
+
+<!-------------------------------------------------------------------------->
+
+var numbers = [88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 111];
+for (var i = 0; i < numbers.length; i++) { 
+    var idA = "EG" + numbers[i] + "A";
+    var idBC = "EG" + numbers[i] + "BC";
+        
+    document.getElementById(idA).placeholder = "(auto) = (รายปี / 12)";
+    document.getElementById(idBC).placeholder = "(auto) = (รายปี / 12)";
+}
+
+</script>
+</body>
+</html>

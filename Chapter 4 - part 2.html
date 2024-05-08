@@ -1,0 +1,3790 @@
+<SES pre Tablet>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SES Chapter 3 - part 2</title>
+
+<style>
+    /* CSS */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+        font-size: 16px;
+    }
+    .ses {
+        background-color: #b786db;
+        padding: 25px;
+        text-align:center;
+        font-size: 24px;
+    }
+    .chapter {
+        background-color: #edecf3;
+        padding: 20px;
+        font-size: 20px;
+        text-align:center;
+    }
+    .headABC {
+        background-color: #d2b3e8;
+        padding: 15px;
+        font-size: 18px;
+    }
+    .head1 {
+        background-color: #DEC8EE;
+        padding: 15px;
+        padding-left: 40px;
+        font-size: 16px;
+    }
+    .head1_ {
+        background-color: #E9DAF4;
+        padding: 15px;
+        padding-left: 60px;
+        font-size: 16px;
+    }
+    .head2 {
+        background-color: #f1e5f1;
+        padding: 15px;
+        padding-left: 60px;
+        margin-bottom: 50px;
+        font-size: 16px;
+    }
+    .head3 {
+        background-color: #F7EEFC;
+        padding: 15px;
+        padding-left: 60px;
+        font-size: 16px;
+        margin-bottom: 1px;
+    }
+    .head4 {
+        background-color: #fff;
+        padding-top: 20px;
+        padding-left: 100px;
+        font-size: 16px;
+    }
+    .Y {
+        margin-top: 50px;
+        margin-bottom: 25px;
+        padding-left: 70px;
+        font-size: 16px;
+    }
+    .select {
+        background-color: #fff;
+        padding: 60px;
+        padding-left: 80px;
+        font-size: 16px;
+    }
+    .select select {
+        font-size: 16px;
+        height: 35px;
+        width: 250px;
+    }
+    .select2 {
+        background-color: #fff;
+        padding-top: 15px;
+        padding-left: 100px;
+        padding-bottom: 10px;
+        font-size: 16px;
+    }
+    .select2 select {
+        font-size: 16px;
+        height: 35px;
+        width: 250px;   
+    }
+    .input {
+        padding-top: 15px;
+        padding-left: 100px;
+        padding-bottom: 10px;
+        font-size: 16px;
+    }
+    .input input {
+        font-size: 16px;
+        height: 35px;
+        width: 250px;
+    }
+    .input2 {
+        padding-left: 100px;
+        padding-bottom: 10px;
+        font-size: 16px;
+        display: inline;
+    }
+    .input2 input {
+        font-size: 16px;
+        height: 35px;
+        width: 70px;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+    .etc input{
+        font-size: 16px;
+        height: 35px;
+        width: 250px;
+        margin-top: 15px;
+    }
+    .checkbox {
+        display: inline-block;
+        margin-right: 5px;
+        font-family: Arial, sans-serif;
+        color: #AEAAAA;
+        font-size: 12px;
+    }
+    .success-box {
+        color: #00B050 !important;
+    }
+    .Gray {
+    	background-color: #EEEEEE;
+    	color: #BFBFBF;
+        font-size: 16px;
+        margin-bottom: 50px;
+    }
+    .nn {
+        background-color: #FFF9E7;
+        font-size: 15px;
+        padding: 10px;
+        padding-left: 20px;
+    }  
+    .nn2 {
+        background-color: #FFF9E7;
+        font-size: 15px;
+        padding: 10px;
+        padding-left: 60px;
+    }
+    .remark {
+        color: #FF0000;
+        font-size: 15px;
+        padding-left: 5px;
+        margin-bottom: 50px;
+    }
+    .P {
+        padding-left: 7px;
+        padding-right: 15px;
+        font-size: 16px;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap; /* ให้เรียงคอลัมน์เวลาขนาดหน้าจอเล็กลง */
+    }
+    .column {
+        flex: 1;
+        padding-left: 100px;
+    }
+    input[type="text"] {
+        height: 35px;
+        width: 250px;
+        box-sizing: border-box; /* ให้ขนาดกล่องข้อความครอบเส้นขอบ */
+        padding: 8px;
+        margin-top: 5px;
+        height: 35px;
+    }
+    .note {    
+        font-size: 18px;
+        background-color: #E2EFDA;
+        padding: 20px;
+        padding-left: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .notebox {
+        height: 200px;    
+        font-size: 16px;
+        color: #FF0000;
+        background-color: #fff;
+        padding: 10px;
+        border: 1px solid #000;
+        margin-top: 10px;
+        white-space: pre-line; /* เพิ่ม white-space เพื่อให้เกิดการขึ้นบรรทัดใหม่เมื่อกด Enter */
+        overflow-y: auto; /* เพิ่ม scrollbar เมื่อข้อความยาวเกินขอบเขตของ notebox */
+    }
+</style>
+</head>
+<body>
+
+<!----------------------------------------------- HEADDING ----------------------------------------------->
+
+<div class="ses">
+	<b>การสำรวจภาวะเศรษฐกิจและสังคมของครัวเรือน</b>
+</div>
+
+<div class="chapter">
+    <b>ตอนที่ 4 ค่าใช้จ่ายอาหาร เครื่องดื่ม และยาสูบ</b>
+    <br><span class="remark">ข้อที่มี * หมายถึง ต้องมีการบันทึกข้อมูลช่อง A หรือ BC อย่างน้อย 1 ช่อง <u>ปล่อย blank ทั้ง 2 ช่องไม่ได้</u></span>
+    <br><span class="remark">ข้อไหนไม่มีค่าใช้จ่ายสามารถปล่อย blank ได้ <u>แต่หลังบ้านบันทึกค่าเป็น 0</u></span>
+</div>
+
+<div class="nn">
+    ให้บันทึก <b>รหัสแหล่งที่มา/การได้รับมา ปริมาณ/หน่วย จำนวนเงิน</b> (ถ้าซื้อ/จ่าย) หรือ <b>มูลค่าคิดเป็นเงิน</b> (ถ้าไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง) และ <b>ระยะเวลาที่ใช้บริโภค</b> ของอาหารแห้ง/สำเร็จรูปที่เก็บไว้บริโภคได้นาน (เกิน 1 สัปดาห์) <b><u>ที่ครัวเรือนได้รับมาครั้งสุดท้าย</u></b>
+</div>
+
+<div class="headABC">
+    <b>ก. อาหารแห้ง/สำเร็จรูป ที่เก็บไว้บริโภคได้นาน (เกิน 1 สัปดาห์)</b> (เฉพาะที่บริโภคเป็นประจำสม่ำเสมอ)
+</div>
+
+<!----------------------------------------------------------------------------> <!--- EDF07 --->
+
+<div class="head1">
+  	<span style="color: #ff0000;"><b>*</b></span>
+	<b>7. ผัก</b>
+</div>
+
+<div class="nn2">
+	<b>เช่น</b> หัวหอมแดง กระเทียมแห้ง พริกแห้ง หน่อไม้ต้ม ผักกาดดอง ผักตากแห้ง/ดอง/ทำเค็ม อื่น ๆ
+</div>
+
+<div class="select">
+	<select id="EDF07Ch" onchange="toggleDiv('EDF07Div', 'EDF07Ch');">
+		<option value="">-- กรุณาเลือก --</option>
+		<option value="0">ไม่มี</option>
+		<option value="1">มี</option>
+	</select>
+    <span class="remark">บันทึกเป็นตัวแปร EDFCH07</span>
+</div>
+
+<div id="EDF07Div" style="display: none;">
+
+<!-------------------------- EDF07_01 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF07_01Div');">
+      <div class="checkbox" id="EDF07_01Ch">
+      		<span id="EDF07_01icon"></span>
+      </div>
+      <b>หัวหอมแดง</b>
+  </div>
+  
+<!---------------->
+
+  <div id="EDF07_01Div" style="display: none;" oninput="checkData('EDF07_01')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF07_01S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF07_01Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF07_01C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF07_01PM">
+      <span class="P">เดือน</span>
+      <input id="EDF07_01PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF07_01PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF07_01" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF07_01Div -->
+
+<!-------------------------- EDF07_02 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF07_02Div');">
+      <div class="checkbox" id="EDF07_02Ch">
+      		<span id="EDF07_02icon"></span>
+      </div>
+      <b>กระเทียมแห้ง</b>
+  </div>
+  
+<!---------------->
+
+  <div id="EDF07_02Div" style="display: none;" oninput="checkData('EDF07_02')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF07_02S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF07_02Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF07_02C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF07_02PM">
+      <span class="P">เดือน</span>
+      <input id="EDF07_02PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF07_02PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF07_02" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF07_02Div -->
+
+<!-------------------------- EDF07_03 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF07_03Div');">
+      <div class="checkbox" id="EDF07_03Ch">
+      		<span id="EDF07_03icon"></span>
+      </div>
+      <b>พริกแห้ง</b>
+  </div>
+  
+<!---------------->
+
+  <div id="EDF07_03Div" style="display: none;" oninput="checkData('EDF07_03')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF07_03S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF07_03Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF07_03C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF07_03PM">
+      <span class="P">เดือน</span>
+      <input id="EDF07_03PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF07_03PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF07_03" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF07_03Div -->
+
+<!-------------------------- EDF07_04 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF07_04Div');">
+      <div class="checkbox" id="EDF07_04Ch">
+      		<span id="EDF07_04icon"></span>
+      </div>
+      <b>หน่อไม้ต้ม</b>
+  </div>
+  
+<!---------------->
+
+  <div id="EDF07_04Div" style="display: none;" oninput="checkData('EDF07_04')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF07_04S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF07_04Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF07_04C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF07_04PM">
+      <span class="P">เดือน</span>
+      <input id="EDF07_04PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF07_04PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF07_04" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF07_04Div -->
+
+<!-------------------------- EDF07_05 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF07_05Div');">
+      <div class="checkbox" id="EDF07_05Ch">
+      		<span id="EDF07_05icon"></span>
+      </div>
+      <b>ผักกาดดอง</b>
+  </div>
+  
+<!---------------->
+
+  <div id="EDF07_05Div" style="display: none;" oninput="checkData('EDF07_05')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF07_05S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF07_05Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF07_05C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF07_05PM">
+      <span class="P">เดือน</span>
+      <input id="EDF07_05PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF07_05PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF07_05" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF07_05Div -->
+
+<!-------------------------- EDF07_06 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF07_06Div');">
+      <div class="checkbox" id="EDF07_06Ch">
+      		<span id="EDF07_06icon"></span>
+      </div>
+      <b>ผัก (ตากแห้ง/ดอง/ทำเค็ม) อื่น ๆ</b> (ระบุ)
+  </div>
+  
+<!---------------->
+
+  <div id="EDF07_06Div" style="display: none;" oninput="checkData('EDF07_06')">
+  
+  <div class="input" style="margin-top: 20px;">
+      <input id="EDF07_06T" placeholder="ระบุ">
+    <span class="remark">บันทึกเป็นตัวแปร EDF07_06T</span>
+  </div>
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF07_06S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF07_06Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF07_06C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF07_06PM">
+      <span class="P">เดือน</span>
+      <input id="EDF07_06PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF07_06PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF07_06" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF07_06Div -->
+
+<div class="head2"> <b>รวม ผัก :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EDF07A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="Gray" type="text" placeholder="= ∑(EDF07_01A → EDF07_06A)" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EDF07BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="Gray" type="text" placeholder="= ∑(EDF07_01BC → EDF07_06BC)" readonly>
+        </div>
+    
+	</div>
+
+</div><!-- EDF07Div -->
+
+<!----------------------------------------------------------------------------> <!--- EDF08 --->
+
+<div class="head1">
+  	<span style="color: #ff0000;"><b>*</b></span>
+	<b>8. น้ำตาล และขนมหวาน</b>
+</div>
+
+<div class="nn2">
+	<b>เช่น</b> น้ำตาลทราย น้ำตาลทรายแดง น้ำตาลมะพร้าว (น้ำตาลปี๊บ/ปึก/แว่น) แยม น้ำผึ้ง และอื่น ๆ (ระบุ)
+</div>
+
+<div class="select">
+	<select id="EDF08Ch" onchange="toggleDiv('EDF08Div', 'EDF08Ch');">
+		<option value="">-- กรุณาเลือก --</option>
+		<option value="0">ไม่มี</option>
+		<option value="1">มี</option>
+	</select>
+    <span class="remark">บันทึกเป็นตัวแปร EDFCH08</span>
+</div>
+
+<div id="EDF08Div" style="display: none;">
+
+<!-------------------------- EDF08_01 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF08_01Div');">
+      <div class="checkbox" id="EDF08_01Ch">
+      		<span id="EDF08_01icon"></span>
+      </div>
+      <b>น้ำตาลทราย</b>
+  </div>
+  
+<!---------------->
+
+  <div id="EDF08_01Div" style="display: none;" oninput="checkData('EDF08_01')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF08_01S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF08_01Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF08_01C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF08_01PM">
+      <span class="P">เดือน</span>
+      <input id="EDF08_01PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF08_01PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF08_01" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF08_01Div -->
+
+<!-------------------------- EDF08_02 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF08_02Div');">
+      <div class="checkbox" id="EDF08_02Ch">
+      		<span id="EDF08_02icon"></span>
+      </div>
+      <b>น้ำตาลทรายแดง</b>
+  </div>
+  
+<!---------------->
+
+  <div id="EDF08_02Div" style="display: none;" oninput="checkData('EDF08_02')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF08_02S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF08_02Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF08_02C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF08_02PM">
+      <span class="P">เดือน</span>
+      <input id="EDF08_02PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF08_02PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF08_02" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF08_02Div -->
+
+<!-------------------------- EDF08_03 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF08_03Div');">
+      <div class="checkbox" id="EDF08_03Ch">
+      		<span id="EDF08_03icon"></span>
+      </div>
+      <b>น้ำตาลมะพร้าว (น้ำตาลปี๊บ/ปึก/แว่น)</b>
+  </div>
+  
+<!---------------->
+
+  <div id="EDF08_03Div" style="display: none;" oninput="checkData('EDF08_03')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF08_03S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF08_03Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF08_03C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF08_03PM">
+      <span class="P">เดือน</span>
+      <input id="EDF08_03PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF08_03PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF08_03" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF08_03Div -->
+
+<!-------------------------- EDF08_04 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF08_04Div');">
+      <div class="checkbox" id="EDF08_04Ch">
+      		<span id="EDF08_04icon"></span>
+      </div>
+      <b>แยม น้ำผึ้ง และอื่น ๆ</b> (ระบุ)
+  </div>
+  
+<!---------------->
+
+  <div id="EDF08_04Div" style="display: none;" oninput="checkData('EDF08_04')">
+  
+  <div class="input" style="margin-top: 20px;">
+      <input id="EDF08_04T" placeholder="ระบุ">
+    <span class="remark">บันทึกเป็นตัวแปร EDF08_04T</span>
+  </div>
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF08_04S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF08_04Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF08_04C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF08_04PM">
+      <span class="P">เดือน</span>
+      <input id="EDF08_04PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF08_04PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF08_04" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF08_04Div -->
+
+<div class="head2"> <b>รวม น้ำตาล และขนมหวาน :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EDF08A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="Gray" type="text" placeholder="= ∑(EDF08_01A → EDF08_04A)" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EDF08BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="Gray" type="text" placeholder="= ∑(EDF08_01BC → EDF08_04BC)" readonly>
+        </div>
+	</div>
+
+</div><!-- EDF08Div -->
+
+<!----------------------------------------------------------------------------> <!--- EDF09 --->
+
+<div class="head1">
+  	<span style="color: #ff0000;"><b>*</b></span>
+	<b>9. เครื่องปรุงรส และเครื่องเทศ </b>
+</div>
+
+<div class="nn2">
+	<b>เช่น</b> เกลือ น้ำปลา ซีอิ๊ว น้ำส้มสายชู กะปิ ซุปก้อน/ผงสำเร็จรูป ผงชูรส น้ำจิ้ม ซอส เครื่องปรุงรสและเครื่องเทศอื่น ๆ
+</div>
+
+<div class="select">
+	<select id="EDF09Ch" onchange="toggleDiv('EDF09Div', 'EDF09Ch');">
+		<option value="">-- กรุณาเลือก --</option>
+		<option value="0">ไม่มี</option>
+		<option value="1">มี</option>
+	</select>
+    <span class="remark">บันทึกเป็นตัวแปร EDFCH09</span>
+</div>
+
+<div id="EDF09Div" style="display: none;">
+
+<!-------------------------- EDF09_01 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF09_01Div');">
+      <div class="checkbox" id="EDF09_01Ch">
+      		<span id="EDF09_01icon"></span>
+      </div>
+      <b>เกลือ</b>
+  </div>
+  
+<!---------------->
+
+  <div id="EDF09_01Div" style="display: none;" oninput="checkData('EDF09_01')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF09_01S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF09_01Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF09_01C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF09_01PM">
+      <span class="P">เดือน</span>
+      <input id="EDF09_01PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF09_01PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF09_01" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF09_01Div -->
+
+<!-------------------------- EDF09_02 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF09_02Div');">
+      <div class="checkbox" id="EDF09_02Ch">
+      		<span id="EDF09_02icon"></span>
+      </div>
+      <b>น้ำปลา</b>
+  </div>
+  
+<!---------------->
+
+  <div id="EDF09_02Div" style="display: none;" oninput="checkData('EDF09_02')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF09_02S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF09_02Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF09_02C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF09_02PM">
+      <span class="P">เดือน</span>
+      <input id="EDF09_02PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF09_02PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF09_02" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF09_02Div -->
+
+<!-------------------------- EDF09_03 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF09_03Div');">
+      <div class="checkbox" id="EDF09_03Ch">
+      		<span id="EDF09_03icon"></span>
+      </div>
+      <b>ซีอิ๊วขาว</b>
+  </div>
+  
+<!---------------->
+
+  <div id="EDF09_03Div" style="display: none;" oninput="checkData('EDF09_03')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF09_03S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF09_03Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF09_03C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF09_03PM">
+      <span class="P">เดือน</span>
+      <input id="EDF09_03PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF09_03PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF09_03" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF09_03Div -->
+
+<!-------------------------- EDF09_04 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF09_04Div');">
+      <div class="checkbox" id="EDF09_04Ch">
+      		<span id="EDF09_04icon"></span>
+      </div>
+      <b>น้ำมันหอย/ซอสหอยนางรม</b>
+  </div>
+  
+<!---------------->
+
+  <div id="EDF09_04Div" style="display: none;" oninput="checkData('EDF09_04')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF09_04S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF09_04Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF09_04C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF09_04PM">
+      <span class="P">เดือน</span>
+      <input id="EDF09_04PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF09_04PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF09_04" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF09_04Div -->
+
+<!-------------------------- EDF09_05 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF09_05Div');">
+      <div class="checkbox" id="EDF09_05Ch">
+      		<span id="EDF09_05icon"></span>
+      </div>
+      <b>ซอสพริก</b>
+  </div>
+  
+<!---------------->
+
+  <div id="EDF09_05Div" style="display: none;" oninput="checkData('EDF09_05')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF09_05S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF09_05Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF09_05C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF09_05PM">
+      <span class="P">เดือน</span>
+      <input id="EDF09_05PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF09_05PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF09_05" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF09_05Div -->
+
+<!-------------------------- EDF09_06 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF09_06Div');">
+      <div class="checkbox" id="EDF09_06Ch">
+      		<span id="EDF09_06icon"></span>
+      </div>
+      <b>ซอสมะเขือเทศ</b>
+  </div>
+  
+<!---------------->
+
+  <div id="EDF09_06Div" style="display: none;" oninput="checkData('EDF09_06')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF09_06S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF09_06Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF09_06C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF09_06PM">
+      <span class="P">เดือน</span>
+      <input id="EDF09_06PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF09_06PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF09_06" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF09_06Div -->
+
+<!-------------------------- EDF09_07 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF09_07Div');">
+      <div class="checkbox" id="EDF09_07Ch">
+      		<span id="EDF09_07icon"></span>
+      </div>
+      <b>น้ำส้มสายชู</b>
+  </div>
+  
+<!---------------->
+
+  <div id="EDF09_07Div" style="display: none;" oninput="checkData('EDF09_07')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF09_07S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF09_07Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF09_07C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF09_07PM">
+      <span class="P">เดือน</span>
+      <input id="EDF09_07PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF09_07PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF09_07" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF09_07Div -->
+
+<!-------------------------- EDF09_08 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF09_08Div');">
+      <div class="checkbox" id="EDF09_08Ch">
+      		<span id="EDF09_08icon"></span>
+      </div>
+      <b>กะปิ</b>
+  </div>
+  
+<!---------------->
+
+  <div id="EDF09_08Div" style="display: none;" oninput="checkData('EDF09_08')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF09_08S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF09_08Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF09_08C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF09_08PM">
+      <span class="P">เดือน</span>
+      <input id="EDF09_08PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF09_08PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF09_08" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF09_08Div -->
+
+<!-------------------------- EDF09_09 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF09_09Div');">
+      <div class="checkbox" id="EDF09_09Ch">
+      		<span id="EDF09_09icon"></span>
+      </div>
+      <b>เครื่องปรุงรส (ซุปก้อน/ผงสำเร็จรูป)</b>
+  </div>
+  
+<!---------------->
+
+  <div id="EDF09_09Div" style="display: none;" oninput="checkData('EDF09_09')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF09_09S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF09_09Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF09_09C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF09_09PM">
+      <span class="P">เดือน</span>
+      <input id="EDF09_09PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF09_09PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF09_09" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF09_09Div -->
+
+<!-------------------------- EDF09_10 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF09_10Div');">
+      <div class="checkbox" id="EDF09_10Ch">
+      		<span id="EDF09_10icon"></span>
+      </div>
+      <b>ผงชูรส</b>
+  </div>
+  
+<!---------------->
+
+  <div id="EDF09_10Div" style="display: none;" oninput="checkData('EDF09_10')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF09_10S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF09_10Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF09_10C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF09_10PM">
+      <span class="P">เดือน</span>
+      <input id="EDF09_10PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF09_10PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF09_10" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF09_10Div -->
+
+<!-------------------------- EDF09_11 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF09_11Div');">
+      <div class="checkbox" id="EDF09_11Ch">
+      		<span id="EDF09_11icon"></span>
+      </div>
+      <b>น้ำจิ้ม ซอส เครื่องปรุงรสและเครื่องเทศอื่น ๆ</b> (ระบุ)
+  </div>
+  
+<!---------------->
+
+  <div id="EDF09_11Div" style="display: none;" oninput="checkData('EDF09_11')">
+  
+  <div class="input" style="margin-top: 20px;">
+      <input id="EDF09_11T" placeholder="ระบุ">
+    <span class="remark">บันทึกเป็นตัวแปร EDF09_11T</span>
+  </div>
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF09_11S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF09_11Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF09_11C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF09_11PM">
+      <span class="P">เดือน</span>
+      <input id="EDF09_11PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF09_11PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF09_11" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF09_11Div -->
+
+<div class="head2"> <b>รวม เครื่องปรุงรส และเครื่องเทศ :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EDF09A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="Gray" type="text" placeholder="= ∑(EDF09_01A → EDF09_11A)" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EDF09BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="Gray" type="text" placeholder="= ∑(EDF09_01BC → EDF09_11BC)" readonly>
+        </div>
+	</div>
+    
+</div><!-- EDF09Div -->
+
+<!----------------------------------------------------------------------------> <!--- EDF10 --->
+
+<div class="head1">
+  	<span style="color: #ff0000;"><b>*</b></span>
+	<b>10. เครื่องดื่มที่ไม่มีแอลกอฮอล์ (บริโภคที่บ้าน)</b>
+</div>
+
+<div class="nn2">
+	<b>เช่น</b> กาแฟ/โกโก้(เม็ด,ผง) ชาผงสำเร็จรูป/ใบชา โซดา น้ำอัดลม น้ำผัก/น้ำผลไม้ เครื่องดื่มชูกำลัง ซุปไก่สกัด รังนก และอื่น ๆ
+</div>
+
+<div class="select">
+	<select id="EDF10Ch" onchange="toggleDiv('EDF10Div', 'EDF10Ch');">
+		<option value="">-- กรุณาเลือก --</option>
+		<option value="0">ไม่มี</option>
+		<option value="1">มี</option>
+	</select>
+    <span class="remark">บันทึกเป็นตัวแปร EDFCH10</span>
+</div>
+
+<div id="EDF10Div" style="display: none;">
+
+<!-------------------------- EDF10_01 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF10_01Div');">
+      <div class="checkbox" id="EDF10_01Ch">
+      		<span id="EDF10_01icon"></span>
+      </div>
+      <b>กาแฟเม็ด กาแฟผง กาแฟแคปซูล</b>
+  </div>
+  
+<!---------------->
+
+  <div id="EDF10_01Div" style="display: none;" oninput="checkData('EDF10_01')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF10_01S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF10_01Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF10_01C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF10_01PM">
+      <span class="P">เดือน</span>
+      <input id="EDF10_01PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF10_01PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF10_01" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF10_01Div -->
+
+<!-------------------------- EDF10_02 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF10_02Div');">
+      <div class="checkbox" id="EDF10_02Ch">
+      		<span id="EDF10_02icon"></span>
+      </div>
+      <b>ชาผงสำเร็จรูป/ใบชา</b>
+  </div>
+  
+<!---------------->
+
+  <div id="EDF10_02Div" style="display: none;" oninput="checkData('EDF10_02')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF10_02S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF10_02Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF10_02C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF10_02PM">
+      <span class="P">เดือน</span>
+      <input id="EDF10_02PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF10_02PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF10_02" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF10_02Div -->
+
+<!-------------------------- EDF10_03 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF10_03Div');">
+      <div class="checkbox" id="EDF10_03Ch">
+      		<span id="EDF10_03icon"></span>
+      </div>
+      <b>ไมโล โอวัลติน โกโก้/ช็อกโกแลตผง</b>
+  </div>
+  
+<!---------------->
+
+  <div id="EDF10_03Div" style="display: none;" oninput="checkData('EDF10_03')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF10_03S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF10_03Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF10_03C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF10_03PM">
+      <span class="P">เดือน</span>
+      <input id="EDF10_03PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF10_03PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF10_03" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF10_03Div -->
+
+<div class="head2"> <b>รวม เครื่องดื่มที่ไม่มีแอลกอฮอล์ กึ่งสำเร็จรูป (บริโภคที่บ้าน) :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EDF10A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="Gray" type="text" placeholder="= ∑(EDF10_01A → EDF10_03A)" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EDF10BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="Gray" type="text" placeholder="= ∑(EDF10_01BC → EDF10_03BC)" readonly>
+        </div>
+	</div>
+
+<!-------------------------- EDF11_01 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF11_01Div');">
+      <div class="checkbox" id="EDF11_01Ch">
+      		<span id="EDF11_01icon"></span>
+      </div>
+      <b>โซดา</b>
+  </div>
+  
+<!---------------->
+
+  <div id="EDF11_01Div" style="display: none;" oninput="checkData('EDF11_01')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF11_01S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF11_01Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF11_01C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF11_01PM">
+      <span class="P">เดือน</span>
+      <input id="EDF11_01PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF11_01PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF11_01" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF11_01Div -->
+
+<!-------------------------- EDF11_02 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF11_02Div');">
+      <div class="checkbox" id="EDF11_02Ch">
+      		<span id="EDF11_02icon"></span>
+      </div>
+      <b>น้ำอัดลม</b>
+  </div>
+  
+<!---------------->
+
+  <div id="EDF11_02Div" style="display: none;" oninput="checkData('EDF11_02')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF11_02S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF11_02Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF11_02C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF11_02PM">
+      <span class="P">เดือน</span>
+      <input id="EDF11_02PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF11_02PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF11_02" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF11_02Div -->
+
+<!-------------------------- EDF11_03 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF11_03Div');">
+      <div class="checkbox" id="EDF11_03Ch">
+      		<span id="EDF11_03icon"></span>
+      </div>
+      <b>น้ำผัก/น้ำผลไม้พร้อมดื่ม</b> (กล่อง/ขวด)
+  </div>
+  
+<!---------------->
+
+  <div id="EDF11_03Div" style="display: none;" oninput="checkData('EDF11_03')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF11_03S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF11_03Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF11_03C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF11_03PM">
+      <span class="P">เดือน</span>
+      <input id="EDF11_03PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF11_03PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF11_03" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF11_03Div -->
+
+<!-------------------------- EDF11_04 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF11_04Div');">
+      <div class="checkbox" id="EDF11_04Ch">
+      		<span id="EDF11_04icon"></span>
+      </div>
+      <b>น้ำผัก/น้ำผลไม้</b> (คั้น/ปั่นสด, ร้อน-เย็น)
+  </div>
+  
+<!---------------->
+
+  <div id="EDF11_04Div" style="display: none;" oninput="checkData('EDF11_04')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF11_04S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF11_04Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF11_04C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF11_04PM">
+      <span class="P">เดือน</span>
+      <input id="EDF11_04PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF11_04PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF11_04" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF11_04Div -->
+
+<!-------------------------- EDF11_05 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF11_05Div');">
+      <div class="checkbox" id="EDF11_05Ch">
+      		<span id="EDF11_05icon"></span>
+      </div>
+      <b>น้ำดื่มบริสุทธิ์</b> (บรรจุขวด)
+  </div>
+  
+<!---------------->
+
+  <div id="EDF11_05Div" style="display: none;" oninput="checkData('EDF11_05')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF11_05S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF11_05Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF11_05C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF11_05PM">
+      <span class="P">เดือน</span>
+      <input id="EDF11_05PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF11_05PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF11_05" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF11_05Div -->
+
+<!-------------------------- EDF11_06 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF11_06Div');">
+      <div class="checkbox" id="EDF11_06Ch">
+      		<span id="EDF11_06icon"></span>
+      </div>
+      <b>เครื่องดื่มชูกำลัง/บำรุงร่างกาย</b>
+  </div>
+  
+<!---------------->
+
+  <div id="EDF11_06Div" style="display: none;" oninput="checkData('EDF11_06')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF11_06S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF11_06Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF11_06C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF11_06PM">
+      <span class="P">เดือน</span>
+      <input id="EDF11_06PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF11_06PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF11_06" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF11_06Div -->
+
+<!-------------------------- EDF11_07 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF11_07Div');">
+      <div class="checkbox" id="EDF11_07Ch">
+      		<span id="EDF11_07icon"></span>
+      </div>
+      <b>กาแฟสำเร็จรูปพร้อมดื่ม</b> (กระป๋อง/ขวด)
+  </div>
+  
+<!---------------->
+
+  <div id="EDF11_07Div" style="display: none;" oninput="checkData('EDF11_07')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF11_07S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF11_07Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF11_07C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF11_07PM">
+      <span class="P">เดือน</span>
+      <input id="EDF11_07PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF11_07PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF11_07" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF11_07Div -->
+
+<!-------------------------- EDF11_08 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF11_08Div');">
+      <div class="checkbox" id="EDF11_08Ch">
+      		<span id="EDF11_08icon"></span>
+      </div>
+      <b>ชาสำเร็จรูปพร้อมดื่ม</b> (กระป๋อง/ขวด)
+  </div>
+  
+<!---------------->
+
+  <div id="EDF11_08Div" style="display: none;" oninput="checkData('EDF11_08')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF11_08S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF11_08Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF11_08C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF11_08PM">
+      <span class="P">เดือน</span>
+      <input id="EDF11_08PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF11_08PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF11_08" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF11_08Div -->
+
+<!-------------------------- EDF11_09 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF11_09Div');">
+      <div class="checkbox" id="EDF11_09Ch">
+      		<span id="EDF11_09icon"></span>
+      </div>
+      <b>อาหารเสริมบำรุงสุขภาพ</b> (เช่น ซุปไก่สกัด รังนก)
+  </div>
+  
+<!---------------->
+
+  <div id="EDF11_09Div" style="display: none;" oninput="checkData('EDF11_09')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF11_09S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF11_09Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF11_09C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF11_09PM">
+      <span class="P">เดือน</span>
+      <input id="EDF11_09PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF11_09PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF11_09" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF11_09Div -->
+
+<!-------------------------- EDF11_10 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF11_10Div');">
+      <div class="checkbox" id="EDF11_10Ch">
+      		<span id="EDF11_10icon"></span>
+      </div>
+      <b>ผลิตภัณฑ์เครื่องดื่มสำเร็จรูปอื่น ๆ</b> (ระบุ)
+  </div>
+  
+<!---------------->
+
+  <div id="EDF11_10Div" style="display: none;" oninput="checkData('EDF11_10')">
+  
+  <div class="input" style="margin-top: 20px;">
+      <input id="EDF11_10T" placeholder="ระบุ">
+    <span class="remark">บันทึกเป็นตัวแปร EDF11_10T</span>
+  </div>
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF11_10S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF11_10Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF11_10C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF11_10PM">
+      <span class="P">เดือน</span>
+      <input id="EDF11_10PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF11_10PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF11_10" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF11_10Div -->
+
+<div class="head2"> <b>รวม เครื่องดื่มที่ไม่มีแอลกอฮอล์ สำเร็จรูป (บริโภคที่บ้าน) :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EDF11A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="Gray" type="text" placeholder="= ∑(EDF11_01A → EDF11_10A)" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EDF11BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="Gray" type="text" placeholder="= ∑(EDF11_01BC → EDF11_10BC)" readonly>
+        </div>
+	</div>
+
+</div><!-- EDF10Div -->
+
+<!----------------------------------------------------------------------------> <!--- EDF12 --->
+
+<div class="head1">
+  	<span style="color: #ff0000;"><b>*</b></span>
+	<b>11. อาหารสำเร็จรูปที่ซื้อมา (บริโภคที่บ้าน)</b>
+</div>
+
+<div class="nn2">
+	<b>เช่น</b> บะหมี่กึ่งสำเร็จรูป อาหารกระป๋องสำเร็จรูป ผลิตภัณฑ์อาหารสำเร็จรูปอื่น ๆ
+</div>
+
+<div class="select">
+	<select id="EDF11Ch" onchange="toggleDiv('EDF12Div', 'EDF11Ch');">
+		<option value="">-- กรุณาเลือก --</option>
+		<option value="0">ไม่มี</option>
+		<option value="1">มี</option>
+	</select>
+    <span class="remark">บันทึกเป็นตัวแปร EDFCH11</span>
+</div>
+
+<div id="EDF12Div" style="display: none;">
+
+<!-------------------------- EDF12_01 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF12_01Div');">
+      <div class="checkbox" id="EDF12_01Ch">
+      		<span id="EDF12_01icon"></span>
+      </div>
+      <b>บะหมี่กึ่งสำเร็จรูป</b> (เช่น บะหมี่ มาม่า โจ๊กกึ่งสำเร็จรูป)
+  </div>
+  
+<!---------------->
+
+  <div id="EDF12_01Div" style="display: none;" oninput="checkData('EDF12_01')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF12_01S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF12_01Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF12_01C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF12_01PM">
+      <span class="P">เดือน</span>
+      <input id="EDF12_01PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF12_01PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF12_01" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF12_01Div -->
+
+<!-------------------------- EDF12_02 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF12_02Div');">
+      <div class="checkbox" id="EDF12_02Ch">
+      		<span id="EDF12_02icon"></span>
+      </div>
+      <b>อาหารกระป๋องสำเร็จรูป</b>
+  </div>
+  
+<!---------------->
+
+  <div id="EDF12_02Div" style="display: none;" oninput="checkData('EDF12_02')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF12_02S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF12_02Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF12_02C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF12_02PM">
+      <span class="P">เดือน</span>
+      <input id="EDF12_02PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF12_02PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF12_02" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF12_02Div -->
+
+<!-------------------------- EDF12_03 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF12_03Div');">
+      <div class="checkbox" id="EDF12_03Ch">
+      		<span id="EDF12_03icon"></span>
+      </div>
+      <b>อาหารสำเร็จรูปที่นำมาอบด้วยความร้อนและ พร้อมรับประทาน เช่น พรานทะเล, CP, S&P</b>
+  </div>
+  
+<!---------------->
+
+  <div id="EDF12_03Div" style="display: none;" oninput="checkData('EDF12_03')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF12_03S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF12_03Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF12_03C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF12_03PM">
+      <span class="P">เดือน</span>
+      <input id="EDF12_03PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF12_03PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF12_03" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF12_03Div -->
+
+<!-------------------------- EDF12_04 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF12_04Div');">
+      <div class="checkbox" id="EDF12_04Ch">
+      		<span id="EDF12_04icon"></span>
+      </div>
+      <b>ผลิตภัณฑ์อาหารสำเร็จรูปอื่น ๆ</b> (ระบุ)
+  </div>
+  
+<!---------------->
+
+  <div id="EDF12_04Div" style="display: none;" oninput="checkData('EDF12_04')">
+  
+  <div class="input" style="margin-top: 20px;">
+      <input id="EDF12_04T" placeholder="ระบุ">
+    <span class="remark">บันทึกเป็นตัวแปร EDF12_04T</span>
+  </div>
+
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF12_04S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF12_04Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF12_04C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF12_04PM">
+      <span class="P">เดือน</span>
+      <input id="EDF12_04PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF12_04PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF12_04" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF12_04Div -->
+
+<div class="head2"> <b>รวม อาหารสำเร็จรูปที่ซื้อมา (บริโภคที่บ้าน) :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EDF12A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="Gray" type="text" placeholder="= ∑(EDF12_01A → EDF12_04A)" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EDF12BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="Gray" type="text" placeholder="= ∑(EDF12_01BC → EDF12_04BC)" readonly>
+        </div>
+	</div>
+
+</div><!-- EDF12Div -->
+
+<!----------------------------------------------------------------------------> <!--- EDF14 --->
+
+<div class="head1">
+  	<span style="color: #ff0000;"><b>*</b></span>
+	<b>13. เครื่องดื่มที่มีแอลกอฮอล์ (บริโภคที่บ้าน)</b>
+</div>
+
+<div class="nn2">
+	<b>เช่น</b> เบียร์ ไวน์ สุรา และอื่น ๆ
+</div>
+
+<div class="select">
+	<select id="EDF12Ch" onchange="toggleDiv('EDF14Div', 'EDF12Ch');">
+		<option value="">-- กรุณาเลือก --</option>
+		<option value="0">ไม่มี</option>
+		<option value="1">มี</option>
+	</select>
+    <span class="remark">บันทึกเป็นตัวแปร EDFCH12</span>
+</div>
+
+<div id="EDF14Div" style="display: none;">
+
+<!-------------------------- EDF14_01 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF14_01Div');">
+      <div class="checkbox" id="EDF14_01Ch">
+      		<span id="EDF14_01icon"></span>
+      </div>
+      <b>เบียร์</b>
+  </div>
+  
+<!---------------->
+
+  <div id="EDF14_01Div" style="display: none;" oninput="checkData('EDF14_01')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF14_01S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF14_01Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF14_01C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF14_01PM">
+      <span class="P">เดือน</span>
+      <input id="EDF14_01PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF14_01PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF14_01" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF14_01Div -->
+
+<!-------------------------- EDF14_02 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF14_02Div');">
+      <div class="checkbox" id="EDF14_02Ch">
+      		<span id="EDF14_02icon"></span>
+      </div>
+      <b>ไวน์</b>
+  </div>
+  
+<!---------------->
+
+  <div id="EDF14_02Div" style="display: none;" oninput="checkData('EDF14_02')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF14_02S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF14_02Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF14_02C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF14_02PM">
+      <span class="P">เดือน</span>
+      <input id="EDF14_02PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF14_02PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF14_02" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF14_02Div -->
+
+<!-------------------------- EDF14_03 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF14_03Div');">
+      <div class="checkbox" id="EDF14_03Ch">
+      		<span id="EDF14_03icon"></span>
+      </div>
+      <b>สุรา</b>
+  </div>
+  
+<!---------------->
+
+  <div id="EDF14_03Div" style="display: none;" oninput="checkData('EDF14_03')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF14_03S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF14_03Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF14_03C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF14_03PM">
+      <span class="P">เดือน</span>
+      <input id="EDF14_03PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF14_03PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF14_03" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF14_03Div -->
+
+<!-------------------------- EDF14_04 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF14_04Div');">
+      <div class="checkbox" id="EDF14_04Ch">
+      		<span id="EDF14_04icon"></span>
+      </div>
+      <b>อื่น ๆ</b> (ระบุ)
+  </div>
+  
+<!---------------->
+
+  <div id="EDF14_04Div" style="display: none;" oninput="checkData('EDF14_04')">
+  
+  <div class="input" style="margin-top: 20px;">
+      <input id="EDF14_04T" placeholder="ระบุ">
+    <span class="remark">บันทึกเป็นตัวแปร EDF14_04T</span>
+  </div>
+
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF14_04S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF14_04Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF14_04C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF14_04PM">
+      <span class="P">เดือน</span>
+      <input id="EDF14_04PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF14_04PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF14_04" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF14_04Div -->
+
+<div class="head2"> <b>รวม เครื่องดื่มที่มีแอลกอฮอล์ (บริโภคที่บ้าน) :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EDF14A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="Gray" type="text" placeholder="= ∑(EDF14_01A → EDF14_04A)" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EDF14BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="Gray" type="text" placeholder="= ∑(EDF14_01BC → EDF14_04BC)" readonly>
+        </div>
+	</div>
+
+
+</div><!-- EDF14Div -->
+
+<!----------------------------------------------------------------------------> <!--- EDF16-17 --->
+
+<div class="head1">
+  	<span style="color: #ff0000;"><b>*</b></span>
+	<b>14. ยาสูบ หมาก ยานัตถุ์ และผลิตภัณฑ์ประเภทเดียวกัน</b>
+</div>
+
+<div class="nn2">
+	<b>เช่น</b> บุหรี่ บุหรี่ไฟฟ้า ซิการ์ ยาเส้น ยาตั้ง ยานัตถุ์ หมาก พลู ยาฉุน ยาจืด
+</div>
+
+<div class="select">
+	<select id="EDF13Ch" onchange="toggleDiv('EDF1617Div', 'EDF13Ch');">
+		<option value="">-- กรุณาเลือก --</option>
+		<option value="0">ไม่มี</option>
+		<option value="1">มี</option>
+	</select>
+    <span class="remark">บันทึกเป็นตัวแปร EDFCH13</span>
+</div>
+
+<div id="EDF1617Div" style="display: none;">
+
+<!-------------------------- EDF16 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF16Div');">
+      <div class="checkbox" id="EDF16Ch">
+      		<span id="EDF16icon"></span>
+      </div>
+      <b>บุหรี่ บุหรี่ไฟฟ้า ซิการ์ ยาเส้น ยาตั้ง ฯลฯ</b>
+  </div>
+  
+<!---------------->
+
+  <div id="EDF16Div" style="display: none;" oninput="checkData('EDF16')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF16S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF16Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF16C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF16PM">
+      <span class="P">เดือน</span>
+      <input id="EDF16PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF16PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF16" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF16Div -->
+
+<!-------------------------- EDF17 -------------------------->
+    
+  <div class="head3" onclick="toggleEGDiv('EDF17Div');">
+      <div class="checkbox" id="EDF17Ch">
+      		<span id="EDF17icon"></span>
+      </div>
+      <b>ยานัตถุ์ หมาก พลู ยาฉุน ยาจืด</b>
+  </div>
+  
+<!---------------->
+
+  <div id="EDF17Div" style="display: none;" oninput="checkData('EDF17')">
+
+  <div class="head4">
+      <b>แหล่งที่มา/การได้รับมา</b>
+  </div>
+
+  <div class="select2">
+      <select id="EDF17S">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">ซื้อ/จ่าย</option>
+          <option value="2">ไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง</option>
+      </select>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>ปริมาณ/หน่วย</b> (เช่น กก./ถุง/กล่อง/ขวด ฯลฯ)
+  </div>
+  
+  <div class="input">
+      <input id="EDF17Q">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าคิดเป็นเงิน</b>
+  </div>
+  
+  <div class="input">
+      <input id="EDF17C">
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>อาหารเหล่านี้ใช้บริโภคได้นานเท่าใด ?</b>
+  </div>
+  
+  <div class="input2">
+      <input id="EDF17PM">
+      <span class="P">เดือน</span>
+      <input id="EDF17PW">
+      <span class="P">สัปดาห์</span>
+      <input id="EDF17PD">
+      <span class="P">วัน</span>
+  </div>
+  
+<!---------------->
+
+  <div class="head4">
+      <b>จำนวนเงิน หรือมูลค่าที่บริโภค เฉลี่ยต่อสัปดาห์</b>
+  </div>
+  
+  <div class="input">
+      <input class="Gray" id="EDF17" readonly placeholder=" โปรแกรมคำนวณให้">
+  </div>
+
+</div><!-- EDF17Div -->
+
+</div><!-- EDF1617Div -->
+
+<!-------------------------------------------- NOTE -------------------------------------------->
+
+<div class="note">
+  <b>NOTE :</b>
+  <span class="remark">C4.2_NOTE</span>
+  <div id="rec01_note" class="notebox" contenteditable="true">*** เพิ่มฟังก์ชันพิมพ์ด้วยเสียง ***</div>
+</div>
+
+<button onclick="saveToLocalStorage()">บันทึก</button>
+
+<!----------------------------------------------------------------------------------------------------------->
+
+
+<!-------------------------------------------------------------------------->
+
+<script>
+
+<!-------------------------------------------------------------------------->
+
+function toggleDiv(divId, selectId) {
+    var div = document.getElementById(divId);
+    var select = document.getElementById(selectId);
+    if (select.value === "1") {
+        div.style.display = "block";
+    } else {
+        div.style.display = "none";
+    }
+}
+
+<!-------------------------------------------------------------------------->
+
+function toggleEGDiv(divId) {
+    var div = document.getElementById(divId);
+    if (div.style.display === "block") {
+        div.style.display = "none";
+    } else {
+        div.style.display = "block";
+    }
+}
+
+<!-------------------------------------------------------------------------->
+
+// ตรวจสอบค่าของ textboxB และ selectC เมื่อมีการเปลี่ยนแปลง
+  function checkData(EDF) {
+    var Value1 = document.getElementById(EDF+"S").value;
+    var Value2 = document.getElementById(EDF+"Q").value;
+    var Value3 = document.getElementById(EDF+"C").value;
+    var Value4 = document.getElementById(EDF+"PM").value;
+    var Value5 = document.getElementById(EDF+"PW").value;
+    var Value6 = document.getElementById(EDF+"PD").value;
+
+    // ตรวจสอบว่ามีข้อมูลหรือไม่และกำหนดสีของกล่องตามเงื่อนไข
+    if (Value1.trim() !== "" && Value2.trim() !== "" && Value3.trim() !== "" && (Value4.trim() !== "" || Value5.trim() !== "" || Value6.trim() !== "")) {
+      document.getElementById(EDF+"Ch").classList.add("success-box");
+      document.getElementById(EDF+"icon").textContent = "✔"; // เปลี่ยนเครื่องหมายเป็นเครื่องหมายถูก
+    } else {
+      document.getElementById(EDF+"Ch").classList.remove("success-box");
+      document.getElementById(EDF+"icon").textContent = ""; // เปลี่ยนเครื่องหมายเป็นเครื่องหมายกากบาท
+    }
+  }
+
+  checkData()
+
+
+</script>
+</body>
+</html>

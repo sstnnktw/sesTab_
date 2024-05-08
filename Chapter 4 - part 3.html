@@ -1,0 +1,1231 @@
+<SES pre Tablet>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SES Chapter 3 - part 3</title>
+
+<style>
+    /* CSS */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+        font-size: 16px;
+    }
+    .ses {
+        background-color: #b786db;
+        padding: 25px;
+        text-align:center;
+        font-size: 24px;
+    }
+    .frame {
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+    .chapter {
+        background-color: #edecf3;
+        padding: 20px;
+        font-size: 20px;
+        text-align:center;
+    }
+    .headABC {
+        background-color: #d2b3e8;
+        padding: 15px;
+        font-size: 18px;
+    }
+    .head1 {
+        background-color: #DEC8EE;
+        padding: 15px;
+        padding-left: 40px;
+        font-size: 16px;
+    }
+    .head1_ {
+        background-color: #E9DAF4;
+        padding: 15px;
+        padding-left: 60px;
+        font-size: 16px;
+    }
+    .head2 {
+        background-color: #f1e5f1;
+        padding: 15px;
+        padding-left: 60px;
+        font-size: 16px;
+    }
+    .head3 {
+        background-color: #F7EEFC;
+        padding: 15px;
+        padding-left: 60px;
+        font-size: 16px;
+        margin-bottom: 1px;
+    }
+    .head4 {
+        background-color: #f8f6fa;
+        padding: 15px;
+        padding-left: 60px;
+        font-size: 16px;
+    }
+    .headT {
+        background-color: #FED5AA;
+        padding: 15px;
+        padding-left: 60px;
+        font-size: 16px;
+    }
+    .Y {  /* เดือนที่แล้ว, 12 เดือนที่แล้ว, เฉลี่ยต่อเดือน */
+        margin-top: 30px;
+        padding-left: 70px;
+        font-size: 16px;
+    }
+    .id {  /* ซื้อ/จ่าย, ไม่ได้ซื้อ/จ่าย */
+        margin-top: 25px;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    .select {
+        background-color: #fff;
+        padding: 60px;
+        padding-left: 80px;
+        font-size: 16px;
+    }
+    .select select {
+        font-size: 16px;
+        height: 35px;
+        width: 250px;
+    }
+    .input {
+        padding-left: 80px;
+        font-size: 16px;
+    }
+    .input input {
+        font-size: 16px;
+        height: 35px;
+        width: 250px;
+    }
+    .etc input{
+        font-size: 16px;
+        height: 35px;
+        width: 250px;
+        margin-top: 15px;
+    }
+    .Gray {
+    	background-color: #EEEEEE;
+    	color: #BFBFBF;
+        font-size: 16px;
+    }
+    .inputT {
+    	background-color: #FEE4CD;
+        font-size: 16px;
+    }
+    .inputT input {
+        font-size: 16px;
+    }
+    .nn {
+        background-color: #FFF9E7;
+        font-size: 15px;
+        padding: 10px;
+        padding-left: 20px;
+    }  
+    .nn2 {
+        background-color: #FFF9E7;
+        font-size: 15px;
+        padding: 10px;
+        padding-left: 60px;
+    }
+    .remark {
+        color: #FF0000;
+        font-size: 15px;
+        padding-left: 5px;
+        margin-bottom: 50px;
+    }
+    .P {
+        padding-left: 7px;
+        padding-right: 15px;
+        font-size: 16px;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap; /* ให้เรียงคอลัมน์เวลาขนาดหน้าจอเล็กลง */
+    }
+    .column {
+        flex: 1;
+        padding-left: 100px;
+    }
+    input[type="number"] {
+        height: 35px;
+        width: 250px;
+        box-sizing: border-box; /* ให้ขนาดกล่องข้อความครอบเส้นขอบ */
+        padding: 8px;
+        margin-top: 5px;
+        height: 35px;
+    }
+    .note {    
+        font-size: 18px;
+        background-color: #E2EFDA;
+        padding: 20px;
+        padding-left: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .notebox {
+        height: 200px;    
+        font-size: 16px;
+        color: #FF0000;
+        background-color: #fff;
+        padding: 10px;
+        border: 1px solid #000;
+        margin-top: 10px;
+        white-space: pre-line; /* เพิ่ม white-space เพื่อให้เกิดการขึ้นบรรทัดใหม่เมื่อกด Enter */
+        overflow-y: auto; /* เพิ่ม scrollbar เมื่อข้อความยาวเกินขอบเขตของ notebox */
+    }
+</style>
+</head>
+<body>
+
+<!----------------------------------------------- HEADDING ----------------------------------------------->
+
+<div class="ses">
+	<b>การสำรวจภาวะเศรษฐกิจและสังคมของครัวเรือน</b>
+</div>
+
+<div class="chapter">
+    <b>ตอนที่ 4 ค่าใช้จ่ายอาหาร เครื่องดื่ม และยาสูบ</b>
+    <br><span class="remark">ข้อไหนไม่มีค่าใช้จ่ายสามารถปล่อย blank ได้ <u>แต่หลังบ้านบันทึกค่าเป็น 0</u></span>
+</div>
+
+<div class="nn">
+    ให้บันทึก <b>จำนวนเงิน</b> (ถ้าซื้อ/จ่าย) หรือ <b>มูลค่าคิดเป็นเงิน</b> (ถ้าไม่ได้ซื้อ/จ่าย เบิกได้ หรือผลิตเอง) ของค่าใช้จ่ายแต่ละรายการ <b>ในรอบสัปดาห์ที่แล้ว</b> จำแนกตาม <b><u>แหล่งที่มา/การได้รับมา</u></b><br><br>
+    *อาหารที่ซื้อหรือได้รับมา <b>เป็นจำนวนมาก</b> (ถ้าซื้อ/จ่าย) และใช้บริโภคเกิน 1 สัปดาห์ให้ประมาณ<b>และใช้บริโภคเกิน 1 สัปดาห์ให้ประมาณมูลค่าที่บริโภคจริงต่อสัปดาห์</b> เท่านั้น (<b>ไม่รวม</b> อาหารที่จัดเลี้ยงในโอกาสพิเศษ เช่น งานวันเกิด งานบวช ฯลฯ ซึ่งต้องบันทึกใน<u>ตอนที่ 3 ข้อ 11</u>)
+</div>
+
+<div class="headABC">
+    <b>ข. อาหารทุกชนิดที่ครัวเรือนบริโภคจริงในรอบสัปดาห์ที่แล้ว</b>
+</div>
+
+<!----------------------------------------------------------------------------> <!--- EFF01 --->
+<div id="EFF01Div">
+
+<div class="head1">
+	<b>1. ข้าว แป้ง และอาหารที่ทำจากแป้ง</b>
+</div>
+
+<div class="nn2">
+	<b>เช่น </b>เส้นก๋วยเตี๋ยว บะหมี่ ขนมจีน ขนมปัง/เค้ก ขนมที่ทำจากแป้ง
+</div>
+
+<div class="frame">
+<div class="Y"> <b>ที่บริโภคในรอบสัปดาห์ที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EFF01A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="input" type="number" id="EFF01A">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EFF01BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="input" type="number" id="EFF01BC">
+        </div>
+    
+	</div>
+
+<div class="Y"> <b>ที่เก็บไว้บริโภคได้นาน (เกิน 1 สัปดาห์) :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EDF01A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF01A (Chapter 4 Part 1)" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EDF01BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF01BC (Chapter 4 Part 1)" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- EFF01Div -->
+
+<!----------------------------------------------------------------------------> <!--- EFF02 --->
+<div id="EFF02Div">
+
+<div class="head1">
+	<b>2. เนื้อสัตว์ และสัตว์ปีกทุกชนิด</b>
+</div>
+
+<div class="nn2">
+	<b>เช่น </b>หมู ไก่ สัตว์ป่า ฯลฯ รวม อวัยวะทุกส่วน <b>รวม</b> เนื้อที่ปรุงสำเร็จ (เช่น หมูแดง ฯลฯ)
+</div>
+
+<div class="frame">
+<div class="Y"> <b>ที่บริโภคในรอบสัปดาห์ที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EFF02A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="input" type="number" id="EFF02A">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EFF02BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="input" type="number" id="EFF02BC">
+        </div>
+    
+	</div>
+
+<div class="Y"> <b>ที่เก็บไว้บริโภคได้นาน (เกิน 1 สัปดาห์) :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EDF02A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF02A (Chapter 4 Part 1)" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EDF02BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF02BC (Chapter 4 Part 1)" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- EFF02Div -->
+
+<!----------------------------------------------------------------------------> <!--- EFF03 --->
+<div id="EFF03Div">
+
+<div class="head1">
+	<b>3. ปลาและสัตว์น้ำอื่น ๆ</b>
+</div>
+
+<div class="nn2">
+	<b>เช่น </b>ปลา กุ้ง ปลาหมึก ฯลฯ <b>รวม</b> สัตว์น้ำปรุงสำเร็จ (เช่น ปลานึ่ง เกี๊ยวกุ้ง ฯลฯ)
+</div>
+
+<div class="frame">
+<div class="Y"> <b>ที่บริโภคในรอบสัปดาห์ที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EFF03A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="input" type="number" id="EFF03A">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EFF03BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="input" type="number" id="EFF03BC">
+        </div>
+    
+	</div>
+
+<div class="Y"> <b>ที่เก็บไว้บริโภคได้นาน (เกิน 1 สัปดาห์) :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EDF03A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF03A (Chapter 4 Part 1)" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EDF03BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF03BC (Chapter 4 Part 1)" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- EFF03Div -->
+
+<!----------------------------------------------------------------------------> <!--- EFF04 --->
+<div id="EFF04Div">
+
+<div class="head1">
+	<b>4. อาหารประเภทนม เนย เนยแข็งและไข่</b>
+</div>
+
+<div class="nn2">
+	<b>เช่น </b>นมสด นมถั่วเหลือง และเครื่องดื่มที่ทำจากนม (เช่น นมเปรี้ยว โยเกิร์ต ยาคูลท์ ฯลฯ) ไข่ (สด/แปรรูป)
+</div>
+
+<div class="frame">
+<div class="Y"> <b>ที่บริโภคในรอบสัปดาห์ที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EFF04A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="input" type="number" id="EFF04A">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EFF04BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="input" type="number" id="EFF04BC">
+        </div>
+    
+	</div>
+
+<div class="Y"> <b>ที่เก็บไว้บริโภคได้นาน (เกิน 1 สัปดาห์) :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EDF04A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF04A (Chapter 4 Part 1)" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EDF04BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF04BC (Chapter 4 Part 1)" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- EFF04Div -->
+
+<!----------------------------------------------------------------------------> <!--- EFF05 --->
+<div id="EFF05Div">
+
+<div class="head1">
+	<b>5. น้ำมัน และไขมัน</b>
+</div>
+
+<div class="frame">
+<div class="Y"> <b>ที่บริโภคในรอบสัปดาห์ที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EFF05A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="input" type="number" id="EFF05A">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EFF05BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="input" type="number" id="EFF05BC">
+        </div>
+    
+	</div>
+
+<div class="Y"> <b>ที่เก็บไว้บริโภคได้นาน (เกิน 1 สัปดาห์) :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EDF05A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF05A (Chapter 4 Part 1)" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EDF05BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF05BC (Chapter 4 Part 1)" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- EFF05Div -->
+
+<!----------------------------------------------------------------------------> <!--- EFF06 --->
+<div id="EFF06Div">
+
+<div class="head1">
+	<b>6. ผลไม้ และถั่วเปลือกแข็ง</b>
+</div>
+
+<div class="nn2">
+	<b>เช่น </b>ผลไม้สดทุกชนิด
+</div>
+
+<div class="frame">
+<div class="Y"> <b>ที่บริโภคในรอบสัปดาห์ที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EFF06A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="input" type="number" id="EFF06A">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EFF06BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="input" type="number" id="EFF06BC">
+        </div>
+    
+	</div>
+
+<div class="Y"> <b>ที่เก็บไว้บริโภคได้นาน (เกิน 1 สัปดาห์) :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EDF06A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF06A (Chapter 4 Part 1)" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EDF06BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF06BC (Chapter 4 Part 1)" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- EFF06Div -->
+
+<!----------------------------------------------------------------------------> <!--- EFF07 --->
+<div id="EFF07Div">
+
+<div class="head1">
+	<b>7. ผัก</b>
+</div>
+
+<div class="nn2">
+	<b>เช่น </b>ผักสดทุกชนิด
+</div>
+
+<div class="frame">
+<div class="Y"> <b>ที่บริโภคในรอบสัปดาห์ที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EFF07A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="input" type="number" id="EFF07A">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EFF07BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="input" type="number" id="EFF07BC">
+        </div>
+    
+	</div>
+
+<div class="Y"> <b>ที่เก็บไว้บริโภคได้นาน (เกิน 1 สัปดาห์) :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EDF07A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF07A (Chapter 4 Part 2)" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EDF07BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF07BC (Chapter 4 Part 2)" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- EFF07Div -->
+
+<!----------------------------------------------------------------------------> <!--- EFF08 --->
+<div id="EFF08Div">
+
+<div class="head1">
+	<b>8. น้ำตาล และขนมหวาน</b>
+</div>
+
+<div class="nn2">
+	<b>เช่น </b>ไอศกรีม เชอร์เบต เยลลี่ และขนมหวานประเภทต่าง ๆ ลูกกวาด/ลูกอม ช็อกโกแลตแท่ง
+</div>
+
+<div class="frame">
+<div class="Y"> <b>ที่บริโภคในรอบสัปดาห์ที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EFF08A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="input" type="number" id="EFF08A">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EFF08BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="input" type="number" id="EFF08BC">
+        </div>
+    
+	</div>
+
+<div class="Y"> <b>ที่เก็บไว้บริโภคได้นาน (เกิน 1 สัปดาห์) :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EDF08A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF08A (Chapter 4 Part 2)" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EDF08BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF08BC (Chapter 4 Part 2)" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- EFF08Div -->
+
+<!----------------------------------------------------------------------------> <!--- EFF09 --->
+<div id="EFF09Div">
+
+<div class="head1">
+	<b>9. เครื่องปรุงรส และเครื่องเทศ </b>
+</div>
+
+<div class="frame">
+<div class="Y"> <b>ที่บริโภคในรอบสัปดาห์ที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EFF09A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="input" type="number" id="EFF09A">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EFF09BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="input" type="number" id="EFF09BC">
+        </div>
+    
+	</div>
+
+<div class="Y"> <b>ที่เก็บไว้บริโภคได้นาน (เกิน 1 สัปดาห์) :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EDF09A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF09A (Chapter 4 Part 2)" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EDF09BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF09BC (Chapter 4 Part 2)" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- EFF09Div -->
+
+<!----------------------------------------------------------------------------> <!--- EFF10 --->
+<div id="EFF1011Div">
+
+<div class="head1">
+	<b>10. เครื่องดื่มที่ไม่มีแอลกอฮอล์ (บริโภคที่บ้าน)</b>
+</div>
+
+<div class="head4">
+	<b>ผลิตภัณฑ์กึ่งสำเร็จรูป</b>
+</div>
+
+<div class="nn2">
+	<b>เช่น </b>กาแฟเม็ด/ผง ใบชา ชาผง ไมโล โอวัลติน โกโก้/ช็อคโกแลตผง ฯลฯ
+</div>
+
+<div class="frame">
+<div class="Y"> <b>ที่บริโภคในรอบสัปดาห์ที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EFF10A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="input" type="number" id="EFF10A">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EFF10BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="input" type="number" id="EFF10BC">
+        </div>
+    
+	</div>
+
+<div class="Y"> <b>ที่เก็บไว้บริโภคได้นาน (เกิน 1 สัปดาห์) :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EDF10A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF10A (Chapter 4 Part 2)" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EDF10BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF10BC (Chapter 4 Part 2)" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+<div class="head4">
+	<b>ผลิตภัณฑ์สำเร็จรูป</b>
+</div>
+
+<div class="nn2">
+	<b>เช่น </b>น้ำอัดลมและน้ำหวานต่าง ๆ น้ำดื่ม น้ำแร่ น้ำผัก/ผลไม้ โซดา น้ำแข็ง กาแฟ/ชาบรรจุภาชนะพร้อมดื่ม เครื่องดื่มชูกำลัง/บำรุงร่างกาย ฯลฯ
+</div>
+
+<div class="frame">
+<div class="Y"> <b>ที่บริโภคในรอบสัปดาห์ที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EFF11A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="input" type="number" id="EFF11A">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EFF11BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="input" type="number" id="EFF11BC">
+        </div>
+    
+	</div>
+
+<div class="Y"> <b>ที่เก็บไว้บริโภคได้นาน (เกิน 1 สัปดาห์) :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EDF11A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF11A (Chapter 4 Part 2)" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EDF11BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF11BC (Chapter 4 Part 2)" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- EFF1011Div -->
+
+<!----------------------------------------------------------------------------> <!--- EFF12 --->
+<div id="EFF12Div">
+
+<div class="head1">
+	<b>11. อาหารสำเร็จรูปที่ซื้อมา (บริโภคที่บ้าน)</b>
+</div>
+
+<div class="nn2">
+	<b>เช่น </b>ข้าวแกง/กับข้าวสำเร็จรูป (เช่น ข้าวผัด ก๋วยเตี๋ยว ฯลฯ) อาหารปิ่นโต และอาหารว่างอื่น ๆ
+</div>
+
+<div class="frame">
+<div class="Y"> <b>ที่บริโภคในรอบสัปดาห์ที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EFF12A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="input" type="number" id="EFF12A">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EFF12BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="input" type="number" id="EFF12BC">
+        </div>
+    
+	</div>
+
+<div class="Y"> <b>ที่เก็บไว้บริโภคได้นาน (เกิน 1 สัปดาห์) :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EDF12A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF12A (Chapter 4 Part 2)" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EDF12BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF12BC (Chapter 4 Part 2)" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- EFF12Div -->
+
+<!----------------------------------------------------------------------------> <!--- EFF13 --->
+<div id="EFF13Div">
+
+<div class="head1">
+	<b>12. อาหารและเครื่องดื่มที่ไม่มีแอลกอฮอล์ (บริโภคนอกบ้าน)</b>
+</div>
+
+<div class="nn2">
+	(ค่าอาหารเช้า/กลางวัน/เย็น อาหารรับประทานที่ทำงาน อาหารว่างอื่น ๆ และค่าอาหารกลางวันสำหรับเด็กนักเรียน/นักศึกษาที่ไปเรียนหนังสือ) 
+</div>
+
+<div class="frame">
+<div class="Y"> <b>ที่บริโภคในรอบสัปดาห์ที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EFF13A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="input" type="number" id="EFF13A">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EFF13BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="input" type="number" id="EFF13BC">
+        </div>
+    
+	</div>
+
+<div class="Y"> <b>ที่เก็บไว้บริโภคได้นาน (เกิน 1 สัปดาห์) :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EDF13A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF13A (Chapter 4 Part 2)" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EDF13BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF13BC (Chapter 4 Part 2)" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- EFF13Div -->
+
+<!----------------------------------------------------------------------------> <!--- EFF14 --->
+<div id="EFF1415Div">
+
+<div class="head1">
+	<b>13. เครื่องดื่มที่มีแอลกอฮอล์ (เช่น เบียร์ ไวน์ สุรา ฯลฯ)</b>
+</div>
+
+<div class="head4">
+	<b>บริโภคที่บ้าน</b>
+</div>
+
+<div class="frame">
+<div class="Y"> <b>ที่บริโภคในรอบสัปดาห์ที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EFF14A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="input" type="number" id="EFF14A">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EFF14BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="input" type="number" id="EFF14BC">
+        </div>
+    
+	</div>
+
+<div class="Y"> <b>ที่เก็บไว้บริโภคได้นาน (เกิน 1 สัปดาห์) :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EDF14A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF14A (Chapter 4 Part 2)" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EDF14BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF14BC (Chapter 4 Part 2)" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+<div class="head4">
+	<b>บริโภคนอกบ้าน</b>
+</div>
+
+<div class="frame">
+<div class="Y"> <b>ที่บริโภคในรอบสัปดาห์ที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EFF15A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="input" type="number" id="EFF15A">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EFF15BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="input" type="number" id="EFF15BC">
+        </div>
+    
+	</div>
+
+<div class="Y"> <b>ที่เก็บไว้บริโภคได้นาน (เกิน 1 สัปดาห์) :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EDF15A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF15A (Chapter 4 Part 2)" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EDF15BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF15BC (Chapter 4 Part 2)" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- EFF1415Div -->
+
+<!----------------------------------------------------------------------------> <!--- EFF16 --->
+<div id="EFF16Div">
+
+<div class="head1">
+	<b>14. ยาสูบ  หมาก  ยานัตถุ์  และผลิตภัณฑ์ประเภทเดียวกัน</b>
+</div>
+
+<div class="head4">
+	<b>บุหรี่ บุหรี่ไฟฟ้า ซิการ์ ยาเส้น ยาตั้ง ฯลฯ</b>
+</div>
+
+<div class="frame">
+<div class="Y"> <b>ที่บริโภคในรอบสัปดาห์ที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EFF16A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="input" type="number" id="EFF16A">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EFF16BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="input" type="number" id="EFF16BC">
+        </div>
+    
+	</div>
+
+<div class="Y"> <b>ที่เก็บไว้บริโภคได้นาน (เกิน 1 สัปดาห์) :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EDF16A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF16A (Chapter 4 Part 2)" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EDF16BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF16BC (Chapter 4 Part 2)" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- EFF16Div -->
+
+<!----------------------------------------------------------------------------> <!--- EFF17 --->
+
+<div id="EFF17Div">
+
+<div class="head4">
+	<b>ยานัตถุ์ หมาก พลู ยาฉุน ยาจืด</b>
+</div>
+
+<div class="frame">
+<div class="Y"> <b>ที่บริโภคในรอบสัปดาห์ที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EFF17A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="input" type="number" id="EFF17A">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EFF17BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="input" type="number" id="EFF17BC">
+        </div>
+    
+	</div>
+
+<div class="Y"> <b>ที่เก็บไว้บริโภคได้นาน (เกิน 1 สัปดาห์) :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EDF17A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF17A (Chapter 4 Part 2)" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EDF17BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="Gray" type="number" placeholder="= EDF17BC (Chapter 4 Part 2)" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- EFF17Div -->
+
+<!-------------------------- TOTAL -------------------------->
+
+<div id="TOTAL_EFDiv">
+    
+<div class="headT">
+	<b>รวมค่าใช้จ่ายอาหาร เครื่องดื่ม และยาสูบที่บริโภคในรอบสัปดาห์ที่แล้ว (EDF + EFF)</b>
+</div>
+
+<div class="frame">
+<div class="Y"> <b>บริโภคมากกว่า 1 สัปดาห์ (EDF) :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EDF_A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputT" type="number" id="EDF_A" readonly placeholder="∑(EDF01A → EDF17A)">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EDF_BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputT" type="number" id="EDF_BC" readonly placeholder="∑(EDF01BC → EDF7BC)">
+        </div>
+    
+	</div>
+
+<div class="Y"> <b>บริโภคในรอบสัปดาห์ (EFF) :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EFF_A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputT" type="number" id="EFF_A" readonly placeholder="∑(EFF01A → EFF17A)">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EFF_BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputT" type="number" id="EFF_BC" readonly placeholder="∑(EFF01BC → EFF7BC)">
+        </div>
+    
+	</div>
+
+<div class="Y"> <b>รวมทั้งสิ้น (EDF + DFF) :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>EF_A</b> : ซื้อ/จ่าย
+            </div>
+            <input class="inputT" type="number" id="EF_A" readonly placeholder="EDF_A + EFF_A">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>EF_BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+            </div>
+            <input class="inputT" type="number" id="EF_BC" readonly placeholder="EFF_BC + EFF_BC">
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- TOTAL_EGDiv -->
+
+<!-------------------------------------------- NOTE -------------------------------------------->
+
+<div class="note">
+  <b>NOTE :</b>
+  <span class="remark">C4.3_NOTE</span>
+  <div id="rec01_note" class="notebox" contenteditable="true">*** เพิ่มฟังก์ชันพิมพ์ด้วยเสียง ***</div>
+</div>
+
+<button onclick="saveToLocalStorage()">บันทึก</button>
+
+<!----------------------------------------------------------------------------------------------------------->
+
+
+<!-------------------------------------------------------------------------->
+
+<script>
+
+<!-------------------------------------------------------------------------->
+
+function toggleDiv(divId, selectId) {
+    var div = document.getElementById(divId);
+    var select = document.getElementById(selectId);
+    if (select.value === "1") {
+        div.style.display = "block";
+    } else {
+        div.style.display = "none";
+    }
+}
+
+<!-------------------------------------------------------------------------->
+
+function toggleEGDiv(divId) {
+    var div = document.getElementById(divId);
+    if (div.style.display === "block") {
+        div.style.display = "none";
+    } else {
+        div.style.display = "block";
+    }
+}
+
+</script>
+</body>
+</html>

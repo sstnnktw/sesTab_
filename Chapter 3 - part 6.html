@@ -1,0 +1,821 @@
+<SES pre Tablet>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SES Chapter 3 - part 6</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+        font-size: 16px;
+    }
+    .frame {
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+    .ses {
+        background-color: #b786db;
+        padding: 25px;
+        text-align:center;
+        font-size: 24px;
+    }
+    .chapter {
+        background-color: #edecf3;
+        padding: 20px;
+        font-size: 20px;
+        text-align:center;
+    }
+    .headABC {
+        background-color: #d2b3e8;
+        padding: 15px;
+        font-size: 18px;
+    }
+    .head1 {
+        background-color: #DEC8EE;
+        padding: 15px;
+        padding-left: 40px;
+        font-size: 16px;
+    }
+    .head1_ {
+        background-color: #E9DAF4;
+        padding: 15px;
+        padding-left: 60px;
+        font-size: 16px;
+    }
+    .head2 {
+        background-color: #f1e5f1;
+        padding: 15px;
+        padding-left: 60px;
+        font-size: 16px;
+    }
+    .head3 {
+        background-color: #F7EEFC;
+        padding: 15px;
+        padding-left: 60px;
+        font-size: 16px;
+    }
+    .head4 {
+        background-color: #f8f6fa;
+        padding: 15px;
+        padding-left: 60px;
+        font-size: 16px;
+    }
+    .Y {  /* เดือนที่แล้ว, 12 เดือนที่แล้ว, เฉลี่ยต่อเดือน */
+        margin-top: 30px;
+        padding-left: 70px;
+        font-size: 16px;
+    }
+    .id {  /* ซื้อ/จ่าย, ไม่ได้ซื้อ/จ่าย */
+        margin-top: 25px;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    .inputY {
+        background-color: #E9FCFF;
+        font-size: 16px;
+    }
+    .inputM {
+        font-size: 16px;
+    }
+    .inputM2 {
+    	background-color: #EEEEEE;
+    	color: #BFBFBF;
+        font-size: 16px;
+    }
+    .nn {
+        background-color: #FFF9E7;
+        font-size: 15px;
+        padding: 10px;
+        padding-left: 20px;
+    }  
+    .nn2 {
+        background-color: #FFF9E7;
+        font-size: 15px;
+        padding: 10px;
+        padding-left: 60px;
+    }
+    .remark {
+        color: #FF0000;
+        font-size: 15px;
+        padding-left: 5px;
+    }
+    .select {
+        background-color: #fff;
+        padding: 60px;
+        padding-left: 80px;
+        font-size: 16px;
+    }
+    .select select {
+        font-size: 16px;
+        height: 35px;
+        width: 250px;  
+    }
+    .etc {
+        margin-top: 30px;
+        padding-left: 100px;
+    }
+    .etc input{
+        font-size: 16px;
+        height: 35px;
+        width: 250px;
+        margin-top: 15px;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap; /* ให้เรียงคอลัมน์เวลาขนาดหน้าจอเล็กลง */
+    }
+    .column {
+        flex: 1;
+        padding-left: 100px;
+    }
+    input[type="text"] {
+        height: 35px;
+        width: 250px;
+        box-sizing: border-box; /* ให้ขนาดกล่องข้อความครอบเส้นขอบ */
+        padding: 8px;
+        margin-top: 5px;
+        height: 35px;
+    }
+    .note {    
+        font-size: 18px;
+        background-color: #E2EFDA;
+        padding: 20px;
+        padding-left: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .notebox {
+        height: 200px;    
+        font-size: 16px;
+        color: #FF0000;
+        background-color: #fff;
+        padding: 10px;
+        border: 1px solid #000;
+        margin-top: 10px;
+        white-space: pre-line; /* เพิ่ม white-space เพื่อให้เกิดการขึ้นบรรทัดใหม่เมื่อกด Enter */
+        overflow-y: auto; /* เพิ่ม scrollbar เมื่อข้อความยาวเกินขอบเขตของ notebox */
+    }
+</style>
+</head>
+<body>
+
+<!----------------------------------------------- HEADDING ----------------------------------------------->
+
+<div class="ses">
+	<b>การสำรวจภาวะเศรษฐกิจและสังคมของครัวเรือน</b>
+</div>
+
+<div class="chapter">
+    <b>ตอนที่ 3 ค่าใช้จ่ายสินค้าและบริการ</b>
+    <br><span class="remark">ข้อที่มี * หมายถึง ต้องมีการบันทึกข้อมูล <u>ปล่อย blank ไม่ได้</u></span>
+</div>
+
+<div class="headABC">
+    <b>ค. การชำระหนี้ของครัวเรือน (ทั้งที่เป็นตัวเงินและสิ่งของ)</b>
+</div>
+
+<div class="nn">
+    <b>ถามทุกครัวเรือน</b> (แม้ว่าในปัจจุบันไม่มีหนี้สินแล้ว)
+</div>
+
+<!------------ AE00 ------------>
+
+<div id="AE00Div">
+  <div class="head3">
+  	  <span style="color: #ff0000;"><b>*</b></span>
+      <b>AE00 :</b> (ปัจจุบัน) <b>ครัวเรือนของท่านมีหนี้สินหรือไม่</b>
+  </div>
+  
+  <div class="select">
+      <select id="AE00">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="0">0 - ไม่มี</option>
+          <option value="1">1 - มี</option>
+      </select>
+  </div>
+</div><!-- AE00Div -->
+
+<!------------ AE01 ------------>
+
+<div id="AE01Div">
+  <div class="head3">
+  	  <span style="color: #ff0000;"><b>*</b></span>
+      <b>AE01 :</b> (ในรอบ 12 เดือนที่แล้ว) <b>ครัวเรือนของท่านมีการชำระหนี้สินทุกประเภท</b> (<b>รวม ผ่อนบ้านและ/หรือที่ดิน) หรือไม่</b>
+  </div>
+  
+  <div class="select">
+      <select id="AE01" onchange="toggleDiv('AE0207Div', 'AE01');">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="0">0 - ไม่มี</option>
+          <option value="1">1 - มี</option>
+      </select>
+  </div>
+</div><!-- AE01Div -->
+
+<!------------------------------- AE02 - AE07 ------------------------------->
+
+<div id="AE0207Div" style="display: none;">
+
+  <div class="head1">
+      (ในรอบ 12 เดือนที่แล้ว) <b>จำนวนเงินที่ครัวเรือนชำระหนี้สิน</b><br><b>จำแนกตามวัตถุประสงค์ของการกู้ยืม</b> (<b>รวม</b> เงินต้นและดอกเบี้ย)
+    <br><span class="remark">ข้อไหนไม่มีการชำระสามารถปล่อย blank ได้ <u>แต่หลังบ้านบันทึกค่าเป็น 0</u></span>
+  </div>
+
+  <div class="nn2">
+      <b>(ถ้าชำระเป็นสิ่งของ <u>ให้ประเมินมูลค่า</u>)</b>
+  </div>
+  
+<!-------------------------- AE02 -------------------------->
+
+<div id="AE02Div">
+    
+<div class="head3">
+	<b>AE02 : ใช้ซื้อ/เช่าซื้อบ้าน และ/หรือที่ดิน</b>
+</div>
+
+<div class="frame">
+<div class="Y"> <b>12 เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>AE02AY</b> : ชำระเป็นตัวเงิน
+            </div>
+            <input class="inputY" type="text" id="AE02AY" oninput="CalMonthly('AE02AY', 'AE02A');">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>AE02BCY</b> : ชำระเป็นสิ่งของ
+            </div>
+            <input class="inputY" type="text" id="AE02BCY" oninput="CalMonthly('AE02BCY', 'AE02BC');">
+        </div>
+    
+	</div>
+    
+<div class="Y" style="padding-top: 0px;" > <b>เฉลี่ยต่อเดือน :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>AE02A</b> : ชำระเป็นตัวเงิน
+            </div>
+            <input class="inputM2" id="AE02A" type="text" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>AE02BC</b> : ชำระเป็นสิ่งของ
+            </div>
+            <input class="inputM2" id="AE02BC" type="text" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- AE02Div -->
+  
+<!-------------------------- AE03 -------------------------->
+
+<div id="AE03Div">
+    
+<div class="head3">
+	<b>AE03 : ใช้ในการศึกษา</b>
+</div>
+
+<div class="frame">
+<div class="Y"> <b>12 เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>AE03AY</b> : ชำระเป็นตัวเงิน
+            </div>
+            <input class="inputY" type="text" id="AE03AY" oninput="CalMonthly('AE03AY', 'AE03A');">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>AE03BCY</b> : ชำระเป็นสิ่งของ
+            </div>
+            <input class="inputY" type="text" id="AE03BCY" oninput="CalMonthly('AE03BCY', 'AE03BC');">
+        </div>
+    
+	</div>
+    
+<div class="Y" style="padding-top: 0px;" > <b>เฉลี่ยต่อเดือน :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>AE03A</b> : ชำระเป็นตัวเงิน
+            </div>
+            <input class="inputM2" id="AE03A" type="text" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>AE03BC</b> : ชำระเป็นสิ่งของ
+            </div>
+            <input class="inputM2" id="AE03BC" type="text" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- AE03Div -->
+
+<!------------ AE04 ------------>
+
+<div id="AE04Div">
+    
+<div class="head3">
+	<b>AE04 : ใช้จ่ายอุปโภคบริโภคอื่น ๆ ในครัวเรือน</b>
+</div>
+    
+<!------------ AE04_1 ------------>
+
+<div id="AE04_1Div">
+    
+<div class="head4">
+	<b>- AE04_1 : ใช้ซื้อยานพาหนะ</b>
+</div>
+
+<div class="frame">
+<div class="Y"> <b>12 เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>AE04_1AY</b> : ชำระเป็นตัวเงิน
+            </div>
+            <input class="inputY" type="text" id="AE04_1AY" oninput="CalMonthly('AE04_1AY', 'AE04_1A'); updateSum('AE04_1AY','AE04_2AY', 'AE04_3AY', 'AE04AY'); updateSum('AE04_1A','AE04_2A', 'AE04_3A', 'AE04A');">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>AE04_1BCY</b> : ชำระเป็นสิ่งของ
+            </div>
+            <input class="inputY" type="text" id="AE04_1BCY" oninput="CalMonthly('AE04_1BCY', 'AE04_1BC'); updateSum('AE04_1BCY','AE04_2BCY', 'AE04_3BCY', 'AE04BCY'); updateSum('AE04_1BC','AE04_2BC', 'AE04_3BC', 'AE04BC');">
+        </div>
+    
+	</div>
+
+<div class="Y"><b>เฉลี่ยต่อเดือน :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>AE04_1A</b> : ชำระเป็นตัวเงิน
+            </div>
+            <input class="inputM2" type="text" id="AE04_1A" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>AE04_1BC</b> : ชำระเป็นสิ่งของ
+            </div>
+            <input class="inputM2" type="text" id="AE04_1BC" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+  
+</div> <!-- AE04_1Div -->
+    
+<!------------ AE04_2 ------------>
+
+<div id="AE04_2Div">
+    
+<div class="head4">
+	<b>- AE04_2 : ใช้ซื้อสินค้าและบริการผ่านบัตรเครดิต</b> (Credit card)
+</div>
+
+<div class="frame">
+<div class="Y"> <b>12 เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>AE04_2AY</b> : ชำระเป็นตัวเงิน
+            </div>
+            <input class="inputY" type="text" id="AE04_2AY" oninput="CalMonthly('AE04_2AY', 'AE04_2A'); updateSum('AE04_1AY','AE04_2AY', 'AE04_3AY', 'AE04AY'); updateSum('AE04_1A','AE04_2A', 'AE04_3A', 'AE04A');">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>AE04_2BCY</b> : ชำระเป็นสิ่งของ
+            </div>
+            <input class="inputY" type="text" id="AE04_2BCY" oninput="CalMonthly('AE04_2BCY', 'AE04_2BC'); updateSum('AE04_1BCY','AE04_2BCY', 'AE04_3BCY', 'AE04BCY'); updateSum('AE04_1BC','AE04_2BC', 'AE04_3BC', 'AE04BC');">
+        </div>
+    
+	</div>
+
+<div class="Y"> <b>เฉลี่ยต่อเดือน :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>AE04_2A</b> : ชำระเป็นตัวเงิน
+            </div>
+            <input class="inputM2" type="text" id="AE04_2A" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>AE04_2BC</b> : ชำระเป็นสิ่งของ
+            </div>
+            <input class="inputM2" type="text" id="AE04_2BC" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+  
+</div> <!-- AE04_2Div -->
+    
+<!------------ AE04_3 ------------>
+
+<div id="AE04_3Div">
+    
+<div class="head4">
+	<b>- AE04_3 : ใช้จ่ายอื่น ๆ</b>
+</div>
+
+<div class="frame">
+<div class="Y"> <b>12 เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>AE04_3AY</b> : ชำระเป็นตัวเงิน
+            </div>
+            <input class="inputY" type="text" id="AE04_3AY" oninput="CalMonthly('AE04_3AY', 'AE04_3A'); updateSum('AE04_1AY','AE04_2AY', 'AE04_3AY', 'AE04AY'); updateSum('AE04_1A','AE04_2A', 'AE04_3A', 'AE04A');">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>AE04_3BCY</b> : ชำระเป็นสิ่งของ
+            </div>
+            <input class="inputY" type="text" id="AE04_3BCY" oninput="CalMonthly('AE04_3BCY', 'AE04_3BC'); updateSum('AE04_1BCY','AE04_2BCY', 'AE04_3BCY', 'AE04BCY'); updateSum('AE04_1BC','AE04_2BC', 'AE04_3BC', 'AE04BC');">
+        </div>
+    
+	</div>
+
+<div class="Y"> <b>เฉลี่ยต่อเดือน :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>AE04_3A</b> : ชำระเป็นตัวเงิน
+            </div>
+            <input class="inputM2" type="text" id="AE04_3A" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>AE04_3BC</b> : ชำระเป็นสิ่งของ
+            </div>
+            <input class="inputM2" type="text" id="AE04_3BC" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+  
+</div> <!-- AE04_3Div -->
+    
+<div class="head4">
+	<b>รวมทั้งสิ้น</b>
+</div>
+
+<div class="frame">
+<div class="Y"> <b>12 เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>AE04AY</b> : ชำระเป็นตัวเงิน
+            </div>
+            <input class="inputM2" type="text" id="AE04AY" readonly placeholder="∑(AE04_1AY → AE04_3AY)">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>AE04BCY</b> : ชำระเป็นสิ่งของ
+            </div>
+            <input class="inputM2" type="text" id="AE04BCY" readonly placeholder="∑(AE04_1BCY → AE04_3BCY)">
+        </div>
+    
+	</div>
+
+<div class="Y"> <b>เฉลี่ยต่อเดือน :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>AE04A</b> : ชำระเป็นตัวเงิน
+            </div>
+            <input class="inputM2" type="text" id="AE04A" readonly placeholder="∑(AE04_1A → AE04_3A)">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>AE04BC</b> : ชำระเป็นสิ่งของ
+            </div>
+            <input class="inputM2" type="text" id="AE04BC" readonly placeholder="∑(AE04_1BC → AE04_3BC)">
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div> <!-- AE04Div -->
+  
+<!-------------------------- AE05 -------------------------->
+
+<div id="AE05Div">
+    
+<div class="head3">
+	<b>AE05 : ใช้ในการทำธุรกิจ</b> (ที่ไม่ใช่การเกษตร)
+</div>
+
+<div class="frame">
+<div class="Y"> <b>12 เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>AE05AY</b> : ชำระเป็นตัวเงิน
+            </div>
+            <input class="inputY" type="text" id="AE05AY" oninput="CalMonthly('AE05AY', 'AE05A');">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>AE05BCY</b> : ชำระเป็นสิ่งของ
+            </div>
+            <input class="inputY" type="text" id="AE05BCY" oninput="CalMonthly('AE05BCY', 'AE05BC');">
+        </div>
+    
+	</div>
+    
+<div class="Y" style="padding-top: 0px;"> <b>เฉลี่ยต่อเดือน :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>AE05A</b> : ชำระเป็นตัวเงิน
+            </div>
+            <input class="inputM2" id="AE05A" type="text" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>AE05BC</b> : ชำระเป็นสิ่งของ
+            </div>
+            <input class="inputM2" id="AE05BC" type="text" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- AE05Div -->
+  
+<!-------------------------- AE06 -------------------------->
+
+<div id="AE06Div">
+    
+<div class="head3">
+	<b>AE06 : ใช้ในการทำการเกษตร</b> (ปลูกพืช/เลี้ยงสัตว์/เพาะเลี้ยง/ประมง ฯลฯ)
+</div>
+
+<div class="frame">
+<div class="Y"> <b>12 เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>AE06AY</b> : ชำระเป็นตัวเงิน
+            </div>
+            <input class="inputY" type="text" id="AE06AY" oninput="CalMonthly('AE06AY', 'AE06A');">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>AE06BCY</b> : ชำระเป็นสิ่งของ
+            </div>
+            <input class="inputY" type="text" id="AE06BCY" oninput="CalMonthly('AE06BCY', 'AE06BC');">
+        </div>
+    
+	</div>
+    
+<div class="Y" style="padding-top: 0px;"> <b>เฉลี่ยต่อเดือน :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>AE06A</b> : ชำระเป็นตัวเงิน
+            </div>
+            <input class="inputM2" id="AE06A" type="text" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>AE06BC</b> : ชำระเป็นสิ่งของ
+            </div>
+            <input class="inputM2" id="AE06BC" type="text" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- AE06Div -->
+  
+<!-------------------------- AE07 -------------------------->
+
+<div id="AE07Div">
+    
+<div class="head3">
+	<b>AE07 : อื่น ๆ เช่น หนี้จากการค้ำประกัน หนี้ค่าปรับ/จ่ายค่าเสียหาย ฯลฯ</b>
+</div>
+
+<div class="frame">
+<div class="Y"> <b>12 เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>AE07AY</b> : ชำระเป็นตัวเงิน
+            </div>
+            <input class="inputY" type="text" id="AE07AY" oninput="CalMonthly('AE07AY', 'AE07A');">
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>AE07BCY</b> : ชำระเป็นสิ่งของ
+            </div>
+            <input class="inputY" type="text" id="AE07BCY" oninput="CalMonthly('AE07BCY', 'AE07BC');">
+        </div>
+    
+	</div>
+    
+<div class="Y" style="padding-top: 0px;"> <b>เฉลี่ยต่อเดือน :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>AE07A</b> : ชำระเป็นตัวเงิน
+            </div>
+            <input class="inputM2" id="AE07A" type="text" readonly>
+        </div>
+
+        <div class="column">
+            <div class="id">
+                <b>AE07BC</b> : ชำระเป็นสิ่งของ
+            </div>
+            <input class="inputM2" id="AE07BC" type="text" readonly>
+        </div>
+    
+	</div>
+</div><!-- frame -->
+
+</div><!-- AE07Div -->
+
+ </div><!-- AE0207Div -->
+
+<!------------ AE08 ------------>
+
+<div id="AE08Div">
+  <div class="head3">
+  	  <span style="color: #ff0000;"><b>*</b></span>
+      <b>AE08 :</b> (ในรอบ 12 เดือนที่แล้ว) <b>ครัวเรือนนี้มีการซื้อที่อยู่อาศัย (ด้วยเงินออมของครัวเรือน) หรือไม่</b>
+  </div>
+  
+  <div class="select" style="padding-bottom: 30px;">
+      <select id="AE08" onchange="toggleDiv('AE09Div', 'AE08');">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="0">0 - ไม่มี</option>
+          <option value="1">1 - มี</option>
+      </select>
+  </div>
+
+  
+<!-------------------------- AE09 -------------------------->
+
+<div id="AE09Div" style="display: none;">
+
+<div class="Y" style="margin-top: 25px;"> <b>12 เดือนที่แล้ว :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>AE09Y</b> : ชำระด้วยเงินออม
+            </div>
+            <input class="inputY" type="text" id="AE09Y" oninput="CalMonthly('AE09Y', 'AE09');">
+        </div>    
+	</div>
+    
+<div class="Y" style="padding-top: 0px;"> <b>เฉลี่ยต่อเดือน :</b></div>
+
+	<div class="container">
+
+        <div class="column">
+            <div class="id">
+                <b>AE09</b> : ชำระด้วยเงินออม
+            </div>
+            <input class="inputM2" id="AE09" type="text" style="margin-bottom: 30px;" readonly>
+        </div>    
+	</div>
+
+</div><!-- AE09Div -->
+
+</div><!-- AE08Div -->
+
+<!-------------------------------------------- NOTE -------------------------------------------->
+
+<div class="note" style="margin-top: 50px;">
+  <b>NOTE :</b>
+  <span class="remark">C3.6_NOTE</span>
+  <div id="rec01_note" class="notebox" contenteditable="true">*** เพิ่มฟังก์ชันพิมพ์ด้วยเสียง ***</div>
+</div>
+
+<button onclick="saveToLocalStorage()">บันทึก</button>
+
+<!----------------------------------------------------------------------------------------------------------->
+
+<!-------------------------------------------------------------------------->
+
+<script>
+
+function toggleDiv(divId, selectId) {
+    var div = document.getElementById(divId);
+    var select = document.getElementById(selectId);
+    if (select.value === "1") {
+        div.style.display = "block";
+    } else {
+        div.style.display = "none";
+    }
+}
+
+<!-------------------------------------------------------------------------->
+
+function CalMonthly(inputId, outputId) {
+    var inputValue = parseFloat(document.getElementById(inputId).value);
+    if (!isNaN(inputValue)) {
+        document.getElementById(outputId).value = (inputValue / 12).toFixed(0);
+    } else {
+        document.getElementById(outputId).value = "";
+    }
+}
+
+<!-------------------------------------------------------------------------->
+
+function updateSum() {
+    var sum = 0;
+    for (var i = 0; i < arguments.length - 1; i++) {
+        var value = parseFloat(document.getElementById(arguments[i]).value) || 0;
+        sum += value;
+    }
+    var outputId = arguments[arguments.length - 1];
+    if (sum != 0) {
+        document.getElementById(outputId).value = sum;
+    } else {
+        document.getElementById(outputId).value = "";
+    }
+}
+
+<!-------------------------------------------------------------------------->
+
+var numbers = ['02', '03', '04_1', '04_2', '04_3', '05', '06', '07', '09'];
+for (var i = 0; i < numbers.length; i++) { 
+    var idA = "AE" + numbers[i] + "A";
+    var idBC = "AE" + numbers[i] + "BC";
+        
+    document.getElementById(idA).placeholder = "(auto) = (รายปี / 12)";
+    document.getElementById(idBC).placeholder = "(auto) = (รายปี / 12)";
+}
+
+
+</script>
+
+</body>
+</html>
