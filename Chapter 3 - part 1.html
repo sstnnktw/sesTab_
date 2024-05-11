@@ -95,6 +95,7 @@
     input.G {
     	background-color: #EEEEEE;
     	color: #BFBFBF;
+        pointer-events: none;
     }
     .select {
         background-color: #fff;
@@ -347,133 +348,53 @@
 
 <div id="EG0205Div">
 
-<!------------ EG02 ------------>
+<script>
+    var components = [
+        { label: '<b>ค่าซ่อมแซมบ้าน รวมค่าวัสดุก่อสร้างที่ใช้</b> (<b>รวม</b> ค่าแรงทาสี/ปูกระเบื้อง)', id: 'EG02' },
+        { label: '<b>ค่าติดตั้ง/ซ่อมแซมระบบประปา/ท่อประปา</b> (<b>รวม</b> ห้องน้ำ)', id: 'EG03' },
+        { label: '<b>ค่าติดตั้ง/ซ่อมแซมระบบไฟฟ้าในบ้าน</b>', id: 'EG04' },
+        { label: '<b>เครื่องมือ/อุปกรณ์สำหรับซ่อมแซมบ้าน</b> (เช่น ค้อน คีม ไขควง เลื่อย สว่าน ฯลฯ)', id: 'EG05' }
+    ];
 
-<div id="EG02Div">
-    
-<div class="head3">
-	<b>EG02 : ค่าซ่อมแซมบ้าน รวมค่าวัสดุก่อสร้างที่ใช้</b> (<b>รวม</b> ค่าแรงทาสี/ปูกระเบื้อง)
-</div>
-
-<div class="frame">
-<div class="Y"> <b>เดือนที่แล้ว :</b></div>
-
-	<div class="container">
-
-        <div class="column">
-            <div class="id">
-                <b>EG02A</b> : ซื้อ/จ่าย
+    function generateInputElements(components) {
+        var container = document.getElementById('EG0205Div');
+        var inputsHTML = '';
+        components.forEach(function(component) {
+            inputsHTML += `
+                
+            <div class="head3">
+                <b>${component.id} :</b> ${component.label}
             </div>
-            <input class="inputM" type="number" id="EG02A">
-        </div>
+            <div class="frame">
+                <div class="Y"> <b>เดือนที่แล้ว :</b></div>
 
-        <div class="column">
-            <div class="id">
-                <b>EG02BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
-            </div>
-            <input class="inputM" type="number" id="EG02BC">
-        </div>
+                <div class="container">
+
+                    <div class="column">
+                        <div class="id">
+                            <b>${component.id}A</b> : ซื้อ/จ่าย
+                        </div>
+                        <input class="inputM" type="number" id="${component.id}A">
+                    </div>
+
+                    <div class="column">
+                        <div class="id">
+                            <b>${component.id}BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+                            <div style="color: #fff;"> . </div>
+                        </div>
+                        <input class="inputM" type="number" id="${component.id}BC">
+                    </div>
+
+                </div>
+            </div><!-- frame -->
+            `;
+        });
+        container.innerHTML = inputsHTML;
+    }
+
+    generateInputElements(components);
     
-	</div>
-</div><!-- frame -->
-  
-</div> <!-- EG02Div -->
-
-<!------------ EG03 ------------>
-
-<div id="EG03Div">
-    
-<div class="head3">
-	<b>EG03 : ค่าติดตั้ง/ซ่อมแซมระบบประปา/ท่อประปา</b> (<b>รวม</b> ห้องน้ำ)
-</div>
-
-<div class="frame">
-<div class="Y"> <b>เดือนที่แล้ว :</b></div>
-
-	<div class="container">
-
-        <div class="column">
-            <div class="id">
-                <b>EG03A</b> : ซื้อ/จ่าย
-            </div>
-            <input class="inputM" type="number" id="EG03A">
-        </div>
-
-        <div class="column">
-            <div class="id">
-                <b>EG03BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
-            </div>
-            <input class="inputM" type="number" id="EG03BC">
-        </div>
-    
-	</div>
-</div><!-- frame -->
-  
-</div> <!-- EG03Div -->
-
-<!------------ EG04 ------------>
-
-<div id="EG04Div">
-    
-<div class="head3">
-	<b>EG04 : ค่าติดตั้ง/ซ่อมแซมระบบไฟฟ้าในบ้าน</b>
-</div>
-
-<div class="frame">
-<div class="Y"> <b>เดือนที่แล้ว :</b></div>
-
-	<div class="container">
-
-        <div class="column">
-            <div class="id">
-                <b>EG04A</b> : ซื้อ/จ่าย
-            </div>
-            <input class="inputM" type="number" id="EG04A">
-        </div>
-
-        <div class="column">
-            <div class="id">
-                <b>EG04BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
-            </div>
-            <input class="inputM" type="number" id="EG04BC">
-        </div>
-    
-	</div>
-</div><!-- frame -->
-  
-</div> <!-- EG04Div -->
-
-<!------------ EG05 ------------>
-
-<div id="EG05Div">
-    
-<div class="head3">
-	<b>EG05 : เครื่องมือ/อุปกรณ์สำหรับซ่อมแซมบ้าน</b> (เช่น ค้อน คีม ไขควง เลื่อย สว่าน ฯลฯ)
-</div>
-
-<div class="frame">
-<div class="Y"> <b>เดือนที่แล้ว :</b></div>
-
-	<div class="container">
-
-        <div class="column">
-            <div class="id">
-                <b>EG05A</b> : ซื้อ/จ่าย
-            </div>
-            <input class="inputM" type="number" id="EG05A">
-        </div>
-
-        <div class="column">
-            <div class="id">
-                <b>EG05BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
-            </div>
-            <input class="inputM" type="number" id="EG05BC">
-        </div>
-    
-	</div>
-</div><!-- frame -->
-  
-</div> <!-- EG05Div -->
+</script>
 
 </div> <!-- EG0205Div -->
 
@@ -513,379 +434,77 @@
 
 <div id="EG0612Div">
 
-<!------------ EG06 ------------>
+<script>
+    var components = [
+        { label: '<b>เครื่องเรือนและเฟอร์นิเจอร์ต่าง ๆ</b> (เช่น เตียง เก้าอี้ โต๊ะ ตู้ ฯลฯ)', id: 'EG06' },
+        { label: '<b>เตาแก๊ส/ไฟฟ้า เตาอบไมโครเวฟ หม้อหุงข้าว กระทะไฟฟ้า</b>', id: 'EG07' },
+        { label: '<b>เครื่องบด/เครื่องปั่น กระติกไฟฟ้า/กาต้มน้ำไฟฟ้า</b>', id: 'EG08' },
+        { label: '<b>เครื่องซักผ้า เครื่องทำน้ำอุ่น เครื่องกรอง/ปั๊มน้ำ</b>', id: 'EG09' },
+        { label: '<b>เครื่องปรับอากาศ ตู้เย็น พัดลม พัดลมดูดอากาศ เครื่องกรองอากาศ</b>', id: 'EG10' },
+        { label: '<b>เครื่องใช้อื่น ๆ (เช่น เครื่องดูดฝุ่น เตารีด ฯลฯ)</b>', id: 'EG11' },
+        { label: '<b>ค่าซ่อมแซม/บำรุงรักษาเครื่องใช้อื่น ๆ', id: 'EG12' }
+    ];
 
-<div id="EG06Div">
+    function generateInputElements(components) {
+        var container = document.getElementById('EG0612Div');
+        var inputsHTML = '';
+        components.forEach(function(component) {
+            inputsHTML += `
+                
+            <div class="head3">
+                <b>${component.id} :</b> ${component.label}
+            </div>
+            <div class="frame">
+                <div class="Y"> <b>12 เดือนที่แล้ว :</b></div>
+
+                <div class="container">
+
+                    <div class="column">
+                        <div class="id">
+                            <b>${component.id}AY</b> : เงินซื้อ/เงินดาวน์ และเงินผ่อนส่ง <br>(ไม่รวมดอกเบี้ย)
+                        </div>
+                        <input class="inputM" type="number" id="${component.id}AY">
+                    </div>
+
+                    <div class="column">
+                        <div class="id">
+                            <b>${component.id}BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้<br>
+                            <div style="color: #fff;"> . </div>
+                        </div>
+                        <input class="inputM" type="number" id="${component.id}BCY">
+                    </div>
+
+                </div>
     
-<div class="head3">
-	<b>EG06 : เครื่องเรือนและเฟอร์นิเจอร์ต่าง ๆ</b> (เช่น เตียง เก้าอี้ โต๊ะ ตู้ ฯลฯ)
-</div>
+                <div class="Y"> <b>เดือนที่แล้ว :</b></div>
 
-<div class="frame">
-    <div class="Y"> <b>12 เดือนที่แล้ว :</b></div>
+                <div class="container">
 
-    <div class="container">
+                    <div class="column">
+                        <div class="id">
+                            <b>${component.id}A</b> : ซื้อ/จ่าย
+                        </div>
+                        <input class="G" type="number" id="${component.id}A" placeholder="${component.id}AY/12">
+                    </div>
 
-        <div class="column">
-            <div class="id">
-                <b>EG06AY</b> : เงินซื้อ/เงินดาวน์ และเงินผ่อนส่ง <br>(ไม่รวมดอกเบี้ย)
-            </div>
-            <input class="inputY" type="number" id="EG06AY">
-        </div>
+                    <div class="column">
+                        <div class="id">
+                            <b>${component.id}BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+                            <div style="color: #fff;"> . </div>
+                        </div>
+                        <input class="G" type="number" id="${component.id}BC" placeholder="${component.id}BCY/12">
+                    </div>
 
-        <div class="column">
-            <div class="id">
-                <b>EG06BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้<br>
-                <div style="color: #fff;"> . </div>
-            </div>
-            <input class="inputY" type="number" id="EG06BCY">
-        </div>
+                </div>
+            </div><!-- frame -->
+            `;
+        });
+        container.innerHTML = inputsHTML;
+    }
 
-    </div>
-
-    <div class="Y"> <b>เฉลี่ยต่อเดือน :</b></div>
-
-    <div class="container">
-
-        <div class="column">
-            <div class="id">
-                <b>EG06A</b> : ซื้อ/จ่าย
-            </div>
-            <input class="G" id="EG06A" type="number" readonly>
-        </div>
-
-        <div class="column">
-            <div class="id">
-                <b>EG06BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
-            </div>
-            <input class="G" id="EG06BC" type="number" readonly>
-        </div>
-
-    </div>
-</div><!-- frame -->
-
-</div><!-- EG06Div -->
-
-<!------------ EG07 ------------>
-
-<div id="EG07Div">
+    generateInputElements(components);
     
-<div class="head3">
-	<b>EG07 : เตาแก๊ส/ไฟฟ้า เตาอบไมโครเวฟ หม้อหุงข้าว กระทะไฟฟ้า</b>
-</div>
-
-<div class="frame">
-<div class="Y"> <b>12 เดือนที่แล้ว :</b></div>
-
-	<div class="container">
-
-        <div class="column">
-            <div class="id">
-                <b>EG07AY</b> : เงินซื้อ/เงินดาวน์ และเงินผ่อนส่ง <br>(ไม่รวมดอกเบี้ย)
-            </div>
-            <input class="inputY" type="number" id="EG07AY">
-        </div>
-
-        <div class="column">
-            <div class="id">
-                <b>EG07BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้<br>
-                <div style="color: #fff;"> . </div>
-            </div>
-            <input class="inputY" type="number" id="EG07BCY">
-        </div>
-    
-	</div>
-    
-<div class="Y"> <b>เฉลี่ยต่อเดือน :</b></div>
-
-	<div class="container">
-
-        <div class="column">
-            <div class="id">
-                <b>EG07A</b> : ซื้อ/จ่าย
-            </div>
-            <input class="G" id="EG07A" type="number" readonly>
-        </div>
-
-        <div class="column">
-            <div class="id">
-                <b>EG07BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
-            </div>
-            <input class="G" id="EG07BC" type="number" readonly>
-        </div>
-    
-	</div>
-</div><!-- frame -->
-
-</div><!-- EG07Div -->
-
-<!------------ EG08 ------------>
-
-<div id="EG08Div">
-    
-<div class="head3">
-	<b>EG08 : เครื่องบด/เครื่องปั่น กระติกไฟฟ้า/กาต้มน้ำไฟฟ้า</b>
-</div>
-
-<div class="frame">
-<div class="Y"> <b>12 เดือนที่แล้ว :</b></div>
-
-	<div class="container">
-
-        <div class="column">
-            <div class="id">
-                <b>EG08AY</b> : เงินซื้อ/เงินดาวน์ และเงินผ่อนส่ง <br>(ไม่รวมดอกเบี้ย)
-            </div>
-            <input class="inputY" type="number" id="EG08AY">
-        </div>
-
-        <div class="column">
-            <div class="id">
-                <b>EG08BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้<br>
-                <div style="color: #fff;"> . </div>
-            </div>
-            <input class="inputY" type="number" id="EG08BCY">
-        </div>
-    
-	</div>
-    
-<div class="Y"> <b>เฉลี่ยต่อเดือน :</b></div>
-
-	<div class="container">
-
-        <div class="column">
-            <div class="id">
-                <b>EG08A</b> : ซื้อ/จ่าย
-            </div>
-            <input class="G" id="EG08A" type="number" readonly>
-        </div>
-
-        <div class="column">
-            <div class="id">
-                <b>EG08BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
-            </div>
-            <input class="G" id="EG08BC" type="number" readonly>
-        </div>
-    
-	</div>
-</div><!-- frame -->
-
-</div><!-- EG08Div -->
-
-<!------------ EG09 ------------>
-
-<div id="EG09Div">
-    
-<div class="head3">
-	<b>EG09 : เครื่องซักผ้า เครื่องทำน้ำอุ่น เครื่องกรอง/ปั๊มน้ำ</b>
-</div>
-
-<div class="frame">
-<div class="Y"> <b>12 เดือนที่แล้ว :</b></div>
-
-	<div class="container">
-
-        <div class="column">
-            <div class="id">
-                <b>EG09AY</b> : เงินซื้อ/เงินดาวน์ และเงินผ่อนส่ง <br>(ไม่รวมดอกเบี้ย)
-            </div>
-            <input class="inputY" type="number" id="EG09AY">
-        </div>
-
-        <div class="column">
-            <div class="id">
-                <b>EG09BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้<br>
-                <div style="color: #fff;"> . </div>
-            </div>
-            <input class="inputY" type="number" id="EG09BCY">
-        </div>
-    
-	</div>
-    
-<div class="Y"> <b>เฉลี่ยต่อเดือน :</b></div>
-
-	<div class="container">
-
-        <div class="column">
-            <div class="id">
-                <b>EG09A</b> : ซื้อ/จ่าย
-            </div>
-            <input class="G" id="EG09A" type="number" readonly>
-        </div>
-
-        <div class="column">
-            <div class="id">
-                <b>EG09BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
-            </div>
-            <input class="G" id="EG09BC" type="number" readonly>
-        </div>
-    
-	</div>
-</div><!-- frame -->
-
-</div><!-- EG09Div -->
-
-
-<!------------ EG10 ------------>
-
-<div id="EG10Div">
-    
-<div class="head3">
-	<b>EG10 : เครื่องปรับอากาศ  ตู้เย็น พัดลม พัดลมดูดอากาศ เครื่องกรองอากาศ</b>
-</div>
-
-<div class="frame">
-<div class="Y"> <b>12 เดือนที่แล้ว :</b></div>
-
-	<div class="container">
-
-        <div class="column">
-            <div class="id">
-                <b>EG10AY</b> : เงินซื้อ/เงินดาวน์ และเงินผ่อนส่ง <br>(ไม่รวมดอกเบี้ย)
-            </div>
-            <input class="inputY" type="number" id="EG10AY">
-        </div>
-
-        <div class="column">
-            <div class="id">
-                <b>EG10BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้<br>
-                <div style="color: #fff;"> . </div>
-            </div>
-            <input class="inputY" type="number" id="EG10BCY">
-        </div>
-    
-	</div>
-    
-<div class="Y"> <b>เฉลี่ยต่อเดือน :</b></div>
-
-	<div class="container">
-
-        <div class="column">
-            <div class="id">
-                <b>EG10A</b> : ซื้อ/จ่าย
-            </div>
-            <input class="G" id="EG10A" type="number" readonly>
-        </div>
-
-        <div class="column">
-            <div class="id">
-                <b>EG10BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
-            </div>
-            <input class="G" id="EG10BC" type="number" readonly>
-        </div>
-    
-	</div>
-</div><!-- frame -->
-
-</div><!-- EG10Div -->
-
-
-<!------------ EG11 ------------>
-
-<div id="EG11Div">
-    
-<div class="head3">
-	<b>EG11 : เครื่องใช้อื่น ๆ</b> (เช่น เครื่องดูดฝุ่น เตารีด ฯลฯ)
-</div>
-
-<div class="frame">
-<div class="Y"> <b>12 เดือนที่แล้ว :</b></div>
-
-	<div class="container">
-
-        <div class="column">
-            <div class="id">
-                <b>EG11AY</b> : เงินซื้อ/เงินดาวน์ และเงินผ่อนส่ง <br>(ไม่รวมดอกเบี้ย)
-            </div>
-            <input class="inputY" type="number" id="EG11AY">
-        </div>
-
-        <div class="column">
-            <div class="id">
-                <b>EG11BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้<br>
-                <div style="color: #fff;"> . </div>
-            </div>
-            <input class="inputY" type="number" id="EG11BCY">
-        </div>
-    
-	</div>
-    
-<div class="Y"> <b>เฉลี่ยต่อเดือน :</b></div>
-
-	<div class="container">
-
-        <div class="column">
-            <div class="id">
-                <b>EG11A</b> : ซื้อ/จ่าย
-            </div>
-            <input class="G" id="EG11A" type="number" readonly>
-        </div>
-
-        <div class="column">
-            <div class="id">
-                <b>EG11BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
-            </div>
-            <input class="G" id="EG11BC" type="number" readonly>
-        </div>
-    
-	</div>
-</div><!-- frame -->
-
-</div><!-- EG11Div -->
-
-
-<!------------ EG12 ------------>
-
-<div id="EG12Div">
-    
-<div class="head3">
-	<b>EG12 : ค่าซ่อมแซม/บำรุงรักษาเครื่องใช้อื่น ๆ</b>
-</div>
-
-<div class="frame">
-<div class="Y"> <b>12 เดือนที่แล้ว :</b></div>
-
-	<div class="container">
-
-        <div class="column">
-            <div class="id">
-                <b>EG12AY</b> : เงินซื้อ/เงินดาวน์ และเงินผ่อนส่ง <br>(ไม่รวมดอกเบี้ย)
-            </div>
-            <input class="inputY" type="number" id="EG12AY">
-        </div>
-
-        <div class="column">
-            <div class="id">
-                <b>EG12BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้<br>
-                <div style="color: #fff;"> . </div>
-            </div>
-            <input class="inputY" type="number" id="EG12BCY">
-        </div>
-    
-	</div>
-    
-<div class="Y"> <b>เฉลี่ยต่อเดือน :</b></div>
-
-	<div class="container">
-
-        <div class="column">
-            <div class="id">
-                <b>EG12A</b> : ซื้อ/จ่าย
-            </div>
-            <input class="G" id="EG12A" type="number" readonly>
-        </div>
-
-        <div class="column">
-            <div class="id">
-                <b>EG12BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
-            </div>
-            <input class="G" id="EG12BC" type="number" readonly>
-        </div>
-    
-	</div>
-</div><!-- frame -->
-
-</div><!-- EG12Div -->
+</script>
 
 </div><!-- EG0612Div -->
 
@@ -916,103 +535,52 @@
 
 <div id="EG1315Div">
 
-<!------------ EG13 ------------>
+<script>
+    var components = [
+        { label: '<b>เครื่องนอนและผ้าที่ใช้ตกแต่ง</b> (มุ้ง ผ้าม่าน มูลี่ผ้า ผ้าปูที่นอน หมอน ผ้าห่ม ฯลฯ)', id: 'EG13' },
+        { label: '<b>ผ้าสำหรับใช้ในครัว/โต๊ะอาหาร</b> (ผ้าปูโต๊ะ ผ้าเช็ดมือ ฯลฯ)', id: 'EG14' },
+        { label: '<b>ผ้าอื่น ๆ ที่ใช้ในครัวเรือน</b> (ผ้าเช็ดตัว ผ้ารองรีด พรมเช็ดเท้า เสื่อกก เสื่อพลาสติก ผ้ากันแดด ฯลฯ)', id: 'EG15' }
+    ];
 
-<div id="EG13Div">
-    
-<div class="head3">
-	<b>EG13 : เครื่องนอนและผ้าที่ใช้ตกแต่ง</b> (มุ้ง ผ้าม่าน มูลี่ผ้า ผ้าปูที่นอน หมอน ผ้าห่ม ฯลฯ)
-</div>
-
-<div class="frame">
-<div class="Y"> <b>เดือนที่แล้ว :</b></div>
-
-	<div class="container">
-
-        <div class="column">
-            <div class="id">
-                <b>EG13A</b> : ซื้อ/จ่าย
+    function generateInputElements(components) {
+        var container = document.getElementById('EG1315Div');
+        var inputsHTML = '';
+        components.forEach(function(component) {
+            inputsHTML += `
+                
+            <div class="head3">
+                <b>${component.id} :</b> ${component.label}
             </div>
-            <input class="inputM" type="number" id="EG13A">
-        </div>
+            <div class="frame">
+                <div class="Y"> <b>เดือนที่แล้ว :</b></div>
 
-        <div class="column">
-            <div class="id">
-                <b>EG13BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
-            </div>
-            <input class="inputM" type="number" id="EG13BC">
-        </div>
+                <div class="container">
+
+                    <div class="column">
+                        <div class="id">
+                            <b>${component.id}A</b> : ซื้อ/จ่าย
+                        </div>
+                        <input class="inputM" type="number" id="${component.id}A">
+                    </div>
+
+                    <div class="column">
+                        <div class="id">
+                            <b>${component.id}BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+                            <div style="color: #fff;"> . </div>
+                        </div>
+                        <input class="inputM" type="number" id="${component.id}BC">
+                    </div>
+
+                </div>
+            </div><!-- frame -->
+            `;
+        });
+        container.innerHTML = inputsHTML;
+    }
+
+    generateInputElements(components);
     
-	</div>
-</div><!-- frame -->
-  
-</div> <!-- EG13Div -->
-
-
-<!------------ EG14 ------------>
-
-<div id="EG14Div">
-    
-<div class="head3">
-	<b>EG14 : ผ้าสำหรับใช้ในครัว/โต๊ะอาหาร</b> (ผ้าปูโต๊ะ ผ้าเช็ดมือ ฯลฯ)
-</div>
-
-<div class="frame">
-<div class="Y"> <b>เดือนที่แล้ว :</b></div>
-
-	<div class="container">
-
-        <div class="column">
-            <div class="id">
-                <b>EG14A</b> : ซื้อ/จ่าย
-            </div>
-            <input class="inputM" type="number" id="EG14A">
-        </div>
-
-        <div class="column">
-            <div class="id">
-                <b>EG14BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
-            </div>
-            <input class="inputM" type="number" id="EG14BC">
-        </div>
-    
-	</div>
-</div><!-- frame -->
-  
-</div> <!-- EG14Div -->
-
-
-<!------------ EG15 ------------>
-
-<div id="EG15Div">
-    
-<div class="head3">
-	<b>EG15 : ผ้าอื่น ๆ ที่ใช้ในครัวเรือน</b> (ผ้าเช็ดตัว  ผ้ารองรีด พรมเช็ดเท้า เสื่อกก เสื่อพลาสติก ผ้ากันแดด ฯลฯ)
-</div>
-
-<div class="frame">
-<div class="Y"> <b>เดือนที่แล้ว :</b></div>
-
-	<div class="container">
-
-        <div class="column">
-            <div class="id">
-                <b>EG15A</b> : ซื้อ/จ่าย
-            </div>
-            <input class="inputM" type="number" id="EG15A">
-        </div>
-
-        <div class="column">
-            <div class="id">
-                <b>EG15BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
-            </div>
-            <input class="inputM" type="number" id="EG15BC">
-        </div>
-    
-	</div>
-</div><!-- frame -->
-  
-</div> <!-- EG15Div -->
+</script>
 
 </div><!-- EG1315Div -->
 
@@ -1043,70 +611,51 @@
 
 <div id="EG1617Div">
 
-<!------------ EG16 ------------>
+<script>
+    var components = [
+        { label: '<b>เครื่องใช้ในครัว</b> (กระทะ หม้อ ถ้วยชาม มีด ช้อน ส้อม ฯลฯ)', id: 'EG16' },
+        { label: '<b>กระติกน้ำร้อน/น้ำเย็น ถังและอ่าง เครื่องแก้ว ขันน้ำ และอื่น ๆ</b>', id: 'EG17' }
+    ];
 
-<div id="EG16Div">
-    
-<div class="head3">
-	<b>EG16 : เครื่องใช้ในครัว</b> (กระทะ หม้อ ถ้วยชาม มีด ช้อน ส้อม ฯลฯ)
-</div>
-
-<div class="frame">
-<div class="Y"> <b>เดือนที่แล้ว :</b></div>
-
-	<div class="container">
-
-        <div class="column">
-            <div class="id">
-                <b>EG16A</b> : ซื้อ/จ่าย
+    function generateInputElements(components) {
+        var container = document.getElementById('EG1617Div');
+        var inputsHTML = '';
+        components.forEach(function(component) {
+            inputsHTML += `
+                
+            <div class="head3">
+                <b>${component.id} :</b> ${component.label}
             </div>
-            <input class="inputM" type="number" id="EG16A">
-        </div>
+            <div class="frame">
+                <div class="Y"> <b>เดือนที่แล้ว :</b></div>
 
-        <div class="column">
-            <div class="id">
-                <b>EG16BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
-            </div>
-            <input class="inputM" type="number" id="EG16BC">
-        </div>
+                <div class="container">
+
+                    <div class="column">
+                        <div class="id">
+                            <b>${component.id}A</b> : ซื้อ/จ่าย
+                        </div>
+                        <input class="inputM" type="number" id="${component.id}A">
+                    </div>
+
+                    <div class="column">
+                        <div class="id">
+                            <b>${component.id}BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+                            <div style="color: #fff;"> . </div>
+                        </div>
+                        <input class="inputM" type="number" id="${component.id}BC">
+                    </div>
+
+                </div>
+            </div><!-- frame -->
+            `;
+        });
+        container.innerHTML = inputsHTML;
+    }
+
+    generateInputElements(components);
     
-	</div>
-</div><!-- frame -->
-  
-</div> <!-- EG16Div -->
-
-
-<!------------ EG17 ------------>
-
-<div id="EG17Div">
-    
-<div class="head3">
-	<b>EG17 : กระติกน้ำร้อน/น้ำเย็น ถังและอ่าง เครื่องแก้ว ขันน้ำ และอื่น ๆ</b>
-</div>
-
-<div class="frame">
-<div class="Y"> <b>เดือนที่แล้ว :</b></div>
-
-	<div class="container">
-
-        <div class="column">
-            <div class="id">
-                <b>EG17A</b> : ซื้อ/จ่าย
-            </div>
-            <input class="inputM" type="number" id="EG17A">
-        </div>
-
-        <div class="column">
-            <div class="id">
-                <b>EG17BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
-            </div>
-            <input class="inputM" type="number" id="EG17BC">
-        </div>
-    
-	</div>
-</div><!-- frame -->
-  
-</div> <!-- EG17Div -->
+</script>
 
 </div><!-- EG1617Div -->
 
@@ -1137,234 +686,56 @@
 
 <div id="EG1824Div">
 
-<!------------ EG18 ------------>
+<script>
+    var components = [
+        { label: '<b>ไฟฟ้า</b>', id: 'EG18' },
+        { label: '<b>แก๊สหุงต้ม</b>', id: 'EG19' },
+        { label: '<b>แก๊สใช้อย่างอื่น (<b>ไม่รวม</b> ที่ใช้กับรถยนต์ส่วนบุคคล)', id: 'EG20' },
+        { label: '<b>ถ่านไม้และฟืน</b>', id: 'EG21' },
+        { label: '<b>น้ำมันก๊าด</b>', id: 'EG22' },
+        { label: '<b>วัสดุ/อุปกรณ์เกี่ยวกับแสงสว่าง</b> (หลอดไฟ ตะเกียง ไฟฉาย เทียนไข ไม้ขีดไฟ ฯลฯ)', id: 'EG23' },
+        { label: '<b>น้ำประปา น้ำบ่อ/น้ำบาดาล</b>', id: 'EG24' }
+    ];
 
-<div id="EG18Div">
-    
-<div class="head3">
-	<b>EG18 : ไฟฟ้า</b>
-</div>
-
-<div class="frame">
-<div class="Y"> <b>เดือนที่แล้ว :</b></div>
-
-	<div class="container">
-
-        <div class="column">
-            <div class="id">
-                <b>EG18A</b> : ซื้อ/จ่าย
+    function generateInputElements(components) {
+        var container = document.getElementById('EG1824Div');
+        var inputsHTML = '';
+        components.forEach(function(component) {
+            inputsHTML += `
+                
+            <div class="head3">
+                <b>${component.id} :</b> ${component.label}
             </div>
-            <input class="inputM" type="number" id="EG18A">
-        </div>
+            <div class="frame">
+                <div class="Y"> <b>เดือนที่แล้ว :</b></div>
 
-        <div class="column">
-            <div class="id">
-                <b>EG18BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
-            </div>
-            <input class="inputM" type="number" id="EG18BC">
-        </div>
+                <div class="container">
+
+                    <div class="column">
+                        <div class="id">
+                            <b>${component.id}A</b> : ซื้อ/จ่าย
+                        </div>
+                        <input class="inputM" type="number" id="${component.id}A">
+                    </div>
+
+                    <div class="column">
+                        <div class="id">
+                            <b>${component.id}BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+                            <div style="color: #fff;"> . </div>
+                        </div>
+                        <input class="inputM" type="number" id="${component.id}BC">
+                    </div>
+
+                </div>
+            </div><!-- frame -->
+            `;
+        });
+        container.innerHTML = inputsHTML;
+    }
+
+    generateInputElements(components);
     
-	</div>
-</div><!-- frame -->
-  
-</div> <!-- EG18Div -->
-
-
-<!------------ EG19 ------------>
-
-<div id="EG19Div">
-    
-<div class="head3">
-	<b>EG19 : แก๊สหุงต้ม</b>
-</div>
-
-<div class="frame">
-<div class="Y"> <b>เดือนที่แล้ว :</b></div>
-
-	<div class="container">
-
-        <div class="column">
-            <div class="id">
-                <b>EG19A</b> : ซื้อ/จ่าย
-            </div>
-            <input class="inputM" type="number" id="EG19A">
-        </div>
-
-        <div class="column">
-            <div class="id">
-                <b>EG19BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
-            </div>
-            <input class="inputM" type="number" id="EG19BC">
-        </div>
-    
-	</div>
-</div><!-- frame -->
-  
-</div> <!-- EG19Div -->
-
-
-<!------------ EG20 ------------>
-
-<div id="EG20Div">
-    
-<div class="head3">
-	<b>EG20 : แก๊สใช้อย่างอื่น</b> (<b>ไม่รวม</b> ที่ใช้กับรถยนต์ส่วนบุคคล)
-</div>
-
-<div class="frame">
-<div class="Y"> <b>เดือนที่แล้ว :</b></div>
-
-	<div class="container">
-
-        <div class="column">
-            <div class="id">
-                <b>EG20A</b> : ซื้อ/จ่าย
-            </div>
-            <input class="inputM" type="number" id="EG20A">
-        </div>
-
-        <div class="column">
-            <div class="id">
-                <b>EG20BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
-            </div>
-            <input class="inputM" type="number" id="EG20BC">
-        </div>
-    
-	</div>
-</div><!-- frame -->
-  
-</div> <!-- EG20Div -->
-
-
-<!------------ EG21 ------------>
-
-<div id="EG21Div">
-    
-<div class="head3">
-	<b>EG21 : ถ่านไม้และฟืน</b>
-</div>
-
-<div class="frame">
-<div class="Y"> <b>เดือนที่แล้ว :</b></div>
-
-	<div class="container">
-
-        <div class="column">
-            <div class="id">
-                <b>EG21A</b> : ซื้อ/จ่าย
-            </div>
-            <input class="inputM" type="number" id="EG21A">
-        </div>
-
-        <div class="column">
-            <div class="id">
-                <b>EG21BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
-            </div>
-            <input class="inputM" type="number" id="EG21BC">
-        </div>
-    
-	</div>
-</div><!-- frame -->
-  
-</div> <!-- EG21Div -->
-
-<!------------ EG22 ------------>
-
-<div id="EG22Div">
-    
-<div class="head3">
-	<b>EG22 :  น้ำมันก๊าด</b>
-</div>
-
-<div class="frame">
-<div class="Y"> <b>เดือนที่แล้ว :</b></div>
-
-	<div class="container">
-
-        <div class="column">
-            <div class="id">
-                <b>EG22A</b> : ซื้อ/จ่าย
-            </div>
-            <input class="inputM" type="number" id="EG22A">
-        </div>
-
-        <div class="column">
-            <div class="id">
-                <b>EG22BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
-            </div>
-            <input class="inputM" type="number" id="EG22BC">
-        </div>
-    
-	</div>
-</div><!-- frame -->
-  
-</div> <!-- EG22Div -->
-
-
-<!------------ EG23 ------------>
-
-<div id="EG23Div">
-    
-<div class="head3">
-	<b>EG23 : วัสดุ/อุปกรณ์เกี่ยวกับแสงสว่าง</b> (หลอดไฟ  ตะเกียง  ไฟฉาย  เทียนไข  ไม้ขีดไฟ ฯลฯ)
-</div>
-
-<div class="frame">
-<div class="Y"> <b>เดือนที่แล้ว :</b></div>
-
-	<div class="container">
-
-        <div class="column">
-            <div class="id">
-                <b>EG23A</b> : ซื้อ/จ่าย
-            </div>
-            <input class="inputM" type="number" id="EG23A">
-        </div>
-
-        <div class="column">
-            <div class="id">
-                <b>EG23BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
-            </div>
-            <input class="inputM" type="number" id="EG23BC">
-        </div>
-    
-	</div>
-</div><!-- frame -->
-  
-</div> <!-- EG23Div -->
-
-
-<!------------ EG24 ------------>
-
-<div id="EG24Div">
-    
-<div class="head3">
-	<b>EG24 : น้ำประปา น้ำบ่อ/น้ำบาดาล</b>
-</div>
-
-<div class="frame">
-<div class="Y"> <b>เดือนที่แล้ว :</b></div>
-
-	<div class="container">
-
-        <div class="column">
-            <div class="id">
-                <b>EG24A</b> : ซื้อ/จ่าย
-            </div>
-            <input class="inputM" type="number" id="EG24A">
-        </div>
-
-        <div class="column">
-            <div class="id">
-                <b>EG24BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
-            </div>
-            <input class="inputM" type="number" id="EG24BC">
-        </div>
-    
-	</div>
-</div><!-- frame -->
-  
-</div> <!-- EG24Div -->
+</script>
 
 </div><!-- EG1824Div -->
 
@@ -1395,102 +766,52 @@
 
 <div id="EG2527Div">
 
-<!------------ EG25 ------------>
+<script>
+    var components = [
+        { label: '<b>ไม้ถูพื้น ไม้กวาด แปรง ฯลฯ</b>', id: 'EG25' },
+        { label: '<b>ผงซักฟอก สบู่ซักผ้า น้ำยาปรับผ้านุ่มและอัดจีบผ้า น้ำยาขจัดคราบสกปรกของเสื้อผ้า</b>', id: 'EG26' },
+        { label: '<b>น้ำยาทำความสะอาด/ขัดเงา ยาดับกลิ่น ยาฆ่าเชื้อโรค/แมลง/วัชพืช ค่าขนขยะ ค่าส่วนกลางและอื่น ๆ</b>', id: 'EG27' }
+    ];
 
-<div id="EG25Div">
-    
-<div class="head3">
-	<b>EG25 : ไม้ถูพื้น ไม้กวาด แปรง ฯลฯ</b>
-</div>
-
-<div class="frame">
-<div class="Y"> <b>เดือนที่แล้ว :</b></div>
-
-	<div class="container">
-
-        <div class="column">
-            <div class="id">
-                <b>EG25A</b> : ซื้อ/จ่าย
+    function generateInputElements(components) {
+        var container = document.getElementById('EG2527Div');
+        var inputsHTML = '';
+        components.forEach(function(component) {
+            inputsHTML += `
+                
+            <div class="head3">
+                <b>${component.id} :</b> ${component.label}
             </div>
-            <input class="inputM" type="number" id="EG25A">
-        </div>
+            <div class="frame">
+                <div class="Y"> <b>เดือนที่แล้ว :</b></div>
 
-        <div class="column">
-            <div class="id">
-                <b>EG25BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
-            </div>
-            <input class="inputM" type="number" id="EG25BC">
-        </div>
+                <div class="container">
+
+                    <div class="column">
+                        <div class="id">
+                            <b>${component.id}A</b> : ซื้อ/จ่าย
+                        </div>
+                        <input class="inputM" type="number" id="${component.id}A">
+                    </div>
+
+                    <div class="column">
+                        <div class="id">
+                            <b>${component.id}BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
+                            <div style="color: #fff;"> . </div>
+                        </div>
+                        <input class="inputM" type="number" id="${component.id}BC">
+                    </div>
+
+                </div>
+            </div><!-- frame -->
+            `;
+        });
+        container.innerHTML = inputsHTML;
+    }
+
+    generateInputElements(components);
     
-	</div>
-</div><!-- frame -->
-  
-</div> <!-- EG25Div -->
-
-<!------------ EG26 ------------>
-
-<div id="EG26Div">
-    
-<div class="head3">
-	<b>EG26 : ผงซักฟอก สบู่ซักผ้า น้ำยาปรับผ้านุ่มและอัดจีบผ้า น้ำยาขจัดคราบสกปรกของเสื้อผ้า</b>
-</div>
-
-<div class="frame">
-<div class="Y"> <b>เดือนที่แล้ว :</b></div>
-
-	<div class="container">
-
-        <div class="column">
-            <div class="id">
-                <b>EG26A</b> : ซื้อ/จ่าย
-            </div>
-            <input class="inputM" type="number" id="EG26A">
-        </div>
-
-        <div class="column">
-            <div class="id">
-                <b>EG26BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
-            </div>
-            <input class="inputM" type="number" id="EG26BC">
-        </div>
-    
-	</div>
-</div><!-- frame -->
-  
-</div> <!-- EG26Div -->
-
-
-<!------------ EG27 ------------>
-
-<div id="EG27Div">
-    
-<div class="head3">
-	<b>EG27 : น้ำยาทำความสะอาด/ขัดเงา ยาดับกลิ่น ยาฆ่าเชื้อโรค/แมลง/วัชพืช ค่าขนขยะ ค่าส่วนกลางและอื่น ๆ</b>
-</div>
-
-<div class="frame">
-<div class="Y"> <b>เดือนที่แล้ว :</b></div>
-
-	<div class="container">
-
-        <div class="column">
-            <div class="id">
-                <b>EG27A</b> : ซื้อ/จ่าย
-            </div>
-            <input class="inputM" type="number" id="EG27A">
-        </div>
-
-        <div class="column">
-            <div class="id">
-                <b>EG27BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
-            </div>
-            <input class="inputM" type="number" id="EG27BC">
-        </div>
-    
-	</div>
-</div><!-- frame -->
-  
-</div> <!-- EG27Div -->
+</script>
 
 </div><!-- EG2527Div -->
 
