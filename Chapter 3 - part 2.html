@@ -62,6 +62,9 @@
         padding-left: 60px;
         font-size: 16px;
     }
+    
+    /*--------------------------------*/
+    
     .Y {  /* เดือนที่แล้ว, 12 เดือนที่แล้ว, เฉลี่ยต่อเดือน */
         margin-top: 30px;
         padding-left: 70px;
@@ -72,18 +75,33 @@
         margin-bottom: 10px;
         font-size: 16px;
     }
-    .inputY {
+    
+    /*--------------------------------*/
+    
+    input {
+        font-size: 16px;
+    }
+    input.Y {
         background-color: #E9FCFF;
-        font-size: 16px;
     }
-    .inputM {
-        font-size: 16px;
-    }
-    .inputM2 {
+    input.G {
     	background-color: #EEEEEE;
     	color: #BFBFBF;
+    }
+    .select {
+        background-color: #fff;
+        padding: 60px;
+        padding-left: 80px;
         font-size: 16px;
     }
+    .select select {
+        font-size: 16px;
+        height: 35px;
+        width: 250px;    
+    }
+    
+    /*--------------------------------*/
+    
     .nn {
         background-color: #FFF9E7;
         font-size: 15px;
@@ -97,20 +115,9 @@
         padding-left: 60px;
     }
     .remark {
+        text-align:left;
         color: #FF0000;
         font-size: 15px;
-        padding-left: 5px;
-    }  
-    .select {
-        background-color: #fff;
-        padding: 60px;
-        padding-left: 80px;
-        font-size: 16px;
-    }
-    .select select {
-        font-size: 16px;
-        height: 35px;
-        width: 250px;   
     }
     .container {
         display: flex;
@@ -146,6 +153,24 @@
         margin-top: 10px;
         white-space: pre-line; /* เพิ่ม white-space เพื่อให้เกิดการขึ้นบรรทัดใหม่เมื่อกด Enter */
         overflow-y: auto; /* เพิ่ม scrollbar เมื่อข้อความยาวเกินขอบเขตของ notebox */
+    }
+    #outer{
+        width:100%;
+        text-align: center;
+    }
+    .inner{
+        display: inline-block;
+    }
+    
+    /*--------------------------------*/
+    
+    input[type="number"]::-webkit-outer-spin-button, 
+    input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+    input[type="number"] {
+    -moz-appearance: textfield;
     }
   
   #EG2829Div,
@@ -192,7 +217,7 @@
 </div>
 
 <div class="select">
-	<select id="EG2829" onchange="toggleDiv('EG2829Div', 'EG2829');">
+	<select id="EGCH07">
 		<option value="">-- กรุณาเลือก --</option>
 		<option value="0">ไม่มี</option>
 		<option value="1">มี</option>
@@ -285,7 +310,7 @@
 </div>
 
 <div class="select">
-	<select id="EG3035" onchange="toggleDiv('EG3035Div', 'EG3035');">
+	<select id="EGCH08">
 		<option value="">-- กรุณาเลือก --</option>
 		<option value="0">ไม่มี</option>
 		<option value="1">มี</option>
@@ -514,7 +539,7 @@
 </div>
 
 <div class="select">
-	<select id="EG3638" onchange="toggleDiv('EG3638Div', 'EG3638');">
+	<select id="EGCH09">
 		<option value="">-- กรุณาเลือก --</option>
 		<option value="0">ไม่มี</option>
 		<option value="1">มี</option>
@@ -649,7 +674,7 @@
 </div>
 
 <div class="select">
-	<select id="EG3944" onchange="toggleDiv('EG3944Div', 'EG3944');">
+	<select id="EGCH10">
 		<option value="">-- กรุณาเลือก --</option>
 		<option value="0">ไม่มี</option>
 		<option value="1">มี</option>
@@ -875,7 +900,7 @@
 </div>
 
 <div class="select">
-	<select id="EG4546" onchange="toggleDiv('EG4546Div', 'EG4546');">
+	<select id="EGCH11">
 		<option value="">-- กรุณาเลือก --</option>
 		<option value="0">ไม่มี</option>
 		<option value="1">มี</option>
@@ -979,7 +1004,7 @@
 </div>
 
 <div class="select">
-	<select id="EG4751" onchange="toggleDiv('EG4751Div', 'EG4751');">
+	<select id="EGCH12">
 		<option value="">-- กรุณาเลือก --</option>
 		<option value="0">ไม่มี</option>
 		<option value="1">มี</option>
@@ -1173,7 +1198,7 @@
 </div>
 
 <div class="select">
-	<select id="EG5257" onchange="toggleDiv('EG5257Div', 'EG5257');">
+	<select id="EGCH13">
 		<option value="">-- กรุณาเลือก --</option>
 		<option value="0">ไม่มี</option>
 		<option value="1">มี</option>
@@ -1210,14 +1235,14 @@
             <div class="id">
                 <b>EG52_1A</b> : ซื้อ/จ่าย
             </div>
-            <input class="inputM" type="number" id="EG52_1A" oninput="updateSum('EG52_1A','EG52_2A', 'EG52A');">
+            <input class="inputM" type="number" id="EG52_1A">
         </div>
 
         <div class="column">
             <div class="id">
                 <b>EG52_1BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
             </div>
-            <input class="inputM" type="number" id="EG52_1BC" oninput="updateSum('EG52_1BC','EG52_2BC', 'EG52BC');">
+            <input class="inputM" type="number" id="EG52_1BC">
         </div>
     
 	</div>
@@ -1242,14 +1267,14 @@
             <div class="id">
                 <b>EG52_2A</b> : ซื้อ/จ่าย
             </div>
-            <input class="inputM" type="number" id="EG52_2A" oninput="updateSum('EG52_1A','EG52_2A', 'EG52A');">
+            <input class="inputM" type="number" id="EG52_2A">
         </div>
 
         <div class="column">
             <div class="id">
                 <b>EG52_2BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
             </div>
-            <input class="inputM" type="number" id="EG52_2BC" oninput="updateSum('EG52_1BC','EG52_2BC', 'EG52BC');">
+            <input class="inputM" type="number" id="EG52_2BC">
         </div>
     
 	</div>
@@ -1270,14 +1295,14 @@
             <div class="id">
                 <b>EG52A</b> : ซื้อ/จ่าย
             </div>
-            <input class="inputM2" type="number" id="EG52A" readonly>
+            <input class="G" type="number" id="EG52A" readonly>
         </div>
 
         <div class="column">
             <div class="id">
                 <b>EG52BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
             </div>
-            <input class="inputM2" type="number" id="EG52BC" readonly>
+            <input class="G" type="number" id="EG52BC" readonly>
         </div>
     
 	</div>
@@ -1310,14 +1335,14 @@
             <div class="id">
                 <b>EG53_1A</b> : ซื้อ/จ่าย
             </div>
-            <input class="inputM" type="number" id="EG53_1A" oninput="updateSum('EG53_1A','EG53_2A', 'EG53A');">
+            <input class="inputM" type="number" id="EG53_1A">
         </div>
 
         <div class="column">
             <div class="id">
                 <b>EG53_1BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
             </div>
-            <input class="inputM" type="number" id="EG53_1BC" oninput="updateSum('EG53_1BC','EG53_2BC', 'EG53BC');">
+            <input class="inputM" type="number" id="EG53_1BC">
         </div>
     
 	</div>
@@ -1342,14 +1367,14 @@
             <div class="id">
                 <b>EG53_2A</b> : ซื้อ/จ่าย
             </div>
-            <input class="inputM" type="number" id="EG53_2A" oninput="updateSum('EG53_1A','EG53_2A', 'EG53A');">
+            <input class="inputM" type="number" id="EG53_2A">
         </div>
 
         <div class="column">
             <div class="id">
                 <b>EG53_2BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
             </div>
-            <input class="inputM" type="number" id="EG53_2BC" oninput="updateSum('EG53_1BC','EG53_2BC', 'EG53BC');">
+            <input class="inputM" type="number" id="EG53_2BC">
         </div>
     
 	</div>
@@ -1370,14 +1395,14 @@
             <div class="id">
                 <b>EG53A</b> : ซื้อ/จ่าย
             </div>
-            <input class="inputM2" type="number" id="EG53A" readonly>
+            <input class="G" type="number" id="EG53A" readonly>
         </div>
 
         <div class="column">
             <div class="id">
                 <b>EG53BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
             </div>
-            <input class="inputM2" type="number" id="EG53BC" readonly>
+            <input class="G" type="number" id="EG53BC" readonly>
         </div>
     
 	</div>
@@ -1534,7 +1559,7 @@
 </div>
 
 <div class="select">
-	<select id="EG5860" onchange="toggleDiv('EG5860Div', 'EG5860');">
+	<select id="EGCH14">
 		<option value="">-- กรุณาเลือก --</option>
 		<option value="0">ไม่มี</option>
 		<option value="1">มี</option>
@@ -1571,14 +1596,14 @@
             <div class="id">
                 <b>EG58_1AY</b> : ซื้อ/จ่าย
             </div>
-            <input class="inputY" type="number" id="EG58_1AY" oninput="CalMonthly('EG58_1AY', 'EG58_1A'); updateSum('EG58_1AY','EG58_2AY', 'EG58AY'); updateSum('EG58_1A','EG58_2A', 'EG58A');">
+            <input class="inputY" type="number" id="EG58_1AY">
         </div>
 
         <div class="column">
             <div class="id">
                 <b>EG58_1BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
             </div>
-            <input class="inputY" type="number" id="EG58_1BCY" oninput="CalMonthly('EG58_1BCY', 'EG58_1BC'); updateSum('EG58_1BCY','EG58_2BCY', 'EG58BCY'); updateSum('EG58_1BC','EG58_2BC', 'EG58BC');">
+            <input class="inputY" type="number" id="EG58_1BCY">
         </div>
     
 	</div>
@@ -1591,14 +1616,14 @@
             <div class="id">
                 <b>EG58_1A</b> : ซื้อ/จ่าย
             </div>
-            <input class="inputM2" id="EG58_1A" type="number" readonly>
+            <input class="G" id="EG58_1A" type="number" readonly>
         </div>
 
         <div class="column">
             <div class="id">
                 <b>EG58_1BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
             </div>
-            <input class="inputM2" id="EG58_1BC" type="number" readonly>
+            <input class="G" id="EG58_1BC" type="number" readonly>
         </div>
     
 	</div>
@@ -1623,14 +1648,14 @@
             <div class="id">
                 <b>EG58_2AY</b> : ซื้อ/จ่าย
             </div>
-            <input class="inputY" type="number" id="EG58_2AY" oninput="CalMonthly('EG58_2AY', 'EG58_2A'); updateSum('EG58_1AY','EG58_2AY', 'EG58AY'); updateSum('EG58_1A','EG58_2A', 'EG58A');">
+            <input class="inputY" type="number" id="EG58_2AY">
         </div>
 
         <div class="column">
             <div class="id">
                 <b>EG58_2BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
             </div>
-            <input class="inputY" type="number" id="EG58_2BCY" oninput="CalMonthly('EG58_2BCY', 'EG58_2BC'); updateSum('EG58_1BCY','EG58_2BCY', 'EG58BCY'); updateSum('EG58_1BC','EG58_2BC', 'EG58BC');">
+            <input class="inputY" type="number" id="EG58_2BCY">
         </div>
     
 	</div>
@@ -1643,14 +1668,14 @@
             <div class="id">
                 <b>EG58_2A</b> : ซื้อ/จ่าย
             </div>
-            <input class="inputM2" id="EG58_2A" type="number" readonly>
+            <input class="G" id="EG58_2A" type="number" readonly>
         </div>
 
         <div class="column">
             <div class="id">
                 <b>EG58_2BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
             </div>
-            <input class="inputM2" id="EG58_2BC" type="number" readonly>
+            <input class="G" id="EG58_2BC" type="number" readonly>
         </div>
     
 	</div>
@@ -1671,14 +1696,14 @@
             <div class="id">
                 <b>EG58AY</b> : ซื้อ/จ่าย
             </div>
-            <input class="inputM2" type="number" id="EG58AY" readonly>
+            <input class="G" type="number" id="EG58AY" readonly>
         </div>
 
         <div class="column">
             <div class="id">
                 <b>EG58BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
             </div>
-            <input class="inputM2" type="number" id="EG58BCY" readonly>
+            <input class="G" type="number" id="EG58BCY" readonly>
         </div>
     
 	</div>
@@ -1691,14 +1716,14 @@
             <div class="id">
                 <b>EG58A</b> : ซื้อ/จ่าย
             </div>
-            <input class="inputM2" type="number" id="EG58A" readonly>
+            <input class="G" type="number" id="EG58A" readonly>
         </div>
 
         <div class="column">
             <div class="id">
                 <b>EG58BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
             </div>
-            <input class="inputM2" type="number" id="EG58BC" readonly>
+            <input class="G" type="number" id="EG58BC" readonly>
         </div>
     
 	</div>
@@ -1731,14 +1756,14 @@
             <div class="id">
                 <b>EG59_1AY</b> : ซื้อ/จ่าย
             </div>
-            <input class="inputY" type="number" id="EG59_1AY" oninput="CalMonthly('EG59_1AY', 'EG59_1A'); updateSum('EG59_1AY','EG59_2AY', 'EG59AY'); updateSum('EG59_1A','EG59_2A', 'EG59A');">
+            <input class="inputY" type="number" id="EG59_1AY">
         </div>
 
         <div class="column">
             <div class="id">
                 <b>EG59_1BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
             </div>
-            <input class="inputY" type="number" id="EG59_1BCY" oninput="CalMonthly('EG59_1BCY', 'EG59_1BC'); updateSum('EG59_1BCY','EG59_2BCY', 'EG59BCY'); updateSum('EG59_1BC','EG59_2BC', 'EG59BC');">
+            <input class="inputY" type="number" id="EG59_1BCY">
         </div>
     
 	</div>
@@ -1751,14 +1776,14 @@
             <div class="id">
                 <b>EG59_1A</b> : ซื้อ/จ่าย
             </div>
-            <input class="inputM2" id="EG59_1A" type="number" readonly>
+            <input class="G" id="EG59_1A" type="number" readonly>
         </div>
 
         <div class="column">
             <div class="id">
                 <b>EG59_1BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
             </div>
-            <input class="inputM2" id="EG59_1BC" type="number" readonly>
+            <input class="G" id="EG59_1BC" type="number" readonly>
         </div>
     
 	</div>
@@ -1783,14 +1808,14 @@
             <div class="id">
                 <b>EG59_2AY</b> : ซื้อ/จ่าย
             </div>
-            <input class="inputY" type="number" id="EG59_2AY" oninput="CalMonthly('EG59_2AY', 'EG59_2A'); updateSum('EG59_1AY','EG59_2AY', 'EG59AY'); updateSum('EG59_1A','EG59_2A', 'EG59A');">
+            <input class="inputY" type="number" id="EG59_2AY">
         </div>
 
         <div class="column">
             <div class="id">
                 <b>EG59_2BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
             </div>
-            <input class="inputY" type="number" id="EG59_2BCY" oninput="CalMonthly('EG59_2BCY', 'EG59_2BC'); updateSum('EG59_1BCY','EG59_2BCY', 'EG59BCY'); updateSum('EG59_1BC','EG59_2BC', 'EG59BC');">
+            <input class="inputY" type="number" id="EG59_2BCY">
         </div>
     
 	</div>
@@ -1803,14 +1828,14 @@
             <div class="id">
                 <b>EG59_2A</b> : ซื้อ/จ่าย
             </div>
-            <input class="inputM2" id="EG59_2A" type="number" readonly>
+            <input class="G" id="EG59_2A" type="number" readonly>
         </div>
 
         <div class="column">
             <div class="id">
                 <b>EG59_2BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
             </div>
-            <input class="inputM2" id="EG59_2BC" type="number" readonly>
+            <input class="G" id="EG59_2BC" type="number" readonly>
         </div>
     
 	</div>
@@ -1831,14 +1856,14 @@
             <div class="id">
                 <b>EG59AY</b> : ซื้อ/จ่าย
             </div>
-            <input class="inputM2" type="number" id="EG59AY" readonly>
+            <input class="G" type="number" id="EG59AY" readonly>
         </div>
 
         <div class="column">
             <div class="id">
                 <b>EG59BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
             </div>
-            <input class="inputM2" type="number" id="EG59BCY" readonly>
+            <input class="G" type="number" id="EG59BCY" readonly>
         </div>
     
 	</div>
@@ -1851,14 +1876,14 @@
             <div class="id">
                 <b>EG59A</b> : ซื้อ/จ่าย
             </div>
-            <input class="inputM2" type="number" id="EG59A" readonly>
+            <input class="G" type="number" id="EG59A" readonly>
         </div>
 
         <div class="column">
             <div class="id">
                 <b>EG59BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
             </div>
-            <input class="inputM2" type="number" id="EG59BC" readonly>
+            <input class="G" type="number" id="EG59BC" readonly>
         </div>
     
 	</div>
@@ -1884,14 +1909,14 @@
             <div class="id">
                 <b>EG60AY</b> : ซื้อ/จ่าย
             </div>
-            <input class="inputY" type="number" id="EG60AY" oninput="CalMonthly('EG60AY', 'EG60A');">
+            <input class="inputY" type="number" id="EG60AY">
         </div>
 
         <div class="column">
             <div class="id">
                 <b>EG60BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
             </div>
-            <input class="inputY" type="number" id="EG60BCY" oninput="CalMonthly('EG60BCY', 'EG60BC');">
+            <input class="inputY" type="number" id="EG60BCY">
         </div>
     
 	</div>
@@ -1904,14 +1929,14 @@
             <div class="id">
                 <b>EG60A</b> : ซื้อ/จ่าย
             </div>
-            <input class="inputM2" id="EG60A" type="number" readonly>
+            <input class="G" id="EG60A" type="number" readonly>
         </div>
 
         <div class="column">
             <div class="id">
                 <b>EG60BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
             </div>
-            <input class="inputM2" id="EG60BC" type="number" readonly>
+            <input class="G" id="EG60BC" type="number" readonly>
         </div>
     
 	</div>
@@ -1934,11 +1959,16 @@
   <div id="rec01_note" class="notebox" contenteditable="true">*** เพิ่มฟังก์ชันพิมพ์ด้วยเสียง ***</div>
 </div>
 
-<button onclick="saveToLocalStorage()">บันทึก</button>
+<div id="outer">
+  <div class="inner"><button onclick="back()">Back</button></div>
+  <div class="inner"><button onclick="index()">Index</button></div>
+  <div class="inner"><button onclick="next()">Next</button></div>
+</div>
+
+<button onclick="resetLocalStorage()">Reset localStorage</button>
 
 <!----------------------------------------------------------------------------------------------------------->
 
-<!-------------------------------------------------------------------------->
 <script>
 
 function toggleDiv(divId, selectId) {
@@ -1953,13 +1983,10 @@ function toggleDiv(divId, selectId) {
 
 <!-------------------------------------------------------------------------->
 
-function CalMonthly(inputId, outputId) {
-    var inputValue = parseFloat(document.getElementById(inputId).value);
-    if (!isNaN(inputValue)) {
-        document.getElementById(outputId).value = (inputValue / 12).toFixed(0);
-    } else {
-        document.getElementById(outputId).value = "";
-    }
+function CalMonthly(yearlyId, monthlyId) {
+    var yearlyValue = parseInt(document.getElementById(yearlyId).value);
+    var monthlyAverage = Math.round(yearlyValue / 12);
+    document.getElementById(monthlyId).value = monthlyAverage;
 }
 
 <!-------------------------------------------------------------------------->
@@ -1967,7 +1994,7 @@ function CalMonthly(inputId, outputId) {
 function updateSum() {
     var sum = 0;
     for (var i = 0; i < arguments.length - 1; i++) {
-        var value = parseFloat(document.getElementById(arguments[i]).value) || 0;
+        var value = parseInt(document.getElementById(arguments[i]).value) || 0;
         sum += value;
     }
     var outputId = arguments[arguments.length - 1];
@@ -1980,43 +2007,108 @@ function updateSum() {
 
 <!-------------------------------------------------------------------------->
 
-var numbers = ['58', '58_1', '58_2', '59', '59_1', '59_2', '60'];
-for (var i = 0; i < numbers.length; i++) { 
-    var idA = "EG" + numbers[i] + "A";
-    var idBC = "EG" + numbers[i] + "BC";
-        
-    document.getElementById(idA).placeholder = "(auto) = (รายปี / 12)";
-    document.getElementById(idBC).placeholder = "(auto) = (รายปี / 12)";
-}
+function allF() {
 
-  var numbers = [52, 53, 58, 59];
-  for (var i = 0; i < numbers.length; i++) {   
-      var idA = "EG" + numbers[i] + "A";
-      var idBC = "EG" + numbers[i] + "BC";
-
-      var idA1 = "EG" + numbers[i] + "_1" + "A";
-      var idBC1 = "EG" + numbers[i] + "_1" + "BC";
-      var idA2 = "EG" + numbers[i] + "_2" + "A";
-      var idBC2 = "EG" + numbers[i] + "_2" + "BC";
-
-      document.getElementById(idA).placeholder = "∑(" + idA1 + " → " + idA2 + ")";
-      document.getElementById(idBC).placeholder = "∑(" + idBC1 + " → " + idBC2 + ")";
-  }
-
-var numbers = [58, 59];
-for (var i = 0; i < numbers.length; i++) {   
-    var idA = "EG" + numbers[i] + "AY";
-    var idBC = "EG" + numbers[i] + "BCY";
+	CalMonthly('EG58_1AY', 'EG58_1A');
+	CalMonthly('EG58_2AY', 'EG58_2A');
+	CalMonthly('EG59_1AY', 'EG59_1A');
+	CalMonthly('EG59_2AY', 'EG59_2A');
+	CalMonthly('EG60AY', 'EG60A');
     
-    var idA1 = "EG" + numbers[i] + "_1" + "AY";
-    var idBC1 = "EG" + numbers[i] + "_1" + "BCY";
-    var idA2 = "EG" + numbers[i] + "_2" + "AY";
-    var idBC2 = "EG" + numbers[i] + "_2" + "BCY";
-        
-    document.getElementById(idA).placeholder = "∑(" + idA1 + " → " + idA2 + ")";
-    document.getElementById(idBC).placeholder = "∑(" + idBC1 + " → " + idBC2 + ")";
+    CalMonthly('EG58_1BCY', 'EG58_1BC');
+	CalMonthly('EG58_2BCY', 'EG58_2BC');
+	CalMonthly('EG59_1BCY', 'EG59_1BC');
+	CalMonthly('EG59_2BCY', 'EG59_2BC');
+	CalMonthly('EG60BCY', 'EG60BC');
+    
+	updateSum('EG52_1A','EG52_2A', 'EG52A');
+    updateSum('EG53_1A','EG53_2A', 'EG53A');
+    updateSum('EG58_1AY','EG58_2AY', 'EG58AY');
+    updateSum('EG58_1A','EG58_2A', 'EG58A');
+    updateSum('EG59_1AY','EG59_2AY', 'EG59AY');
+    updateSum('EG59_1A','EG59_2A', 'EG59A');
+    
+    updateSum('EG52_1BC','EG52_2BC', 'EG52BC');
+    updateSum('EG53_1BC','EG53_2BC', 'EG53BC');
+    updateSum('EG58_1BCY','EG58_2BCY', 'EG58BCY');
+    updateSum('EG58_1BC','EG58_2BC', 'EG58BC');
+    updateSum('EG59_1BCY','EG59_2BCY', 'EG59BCY');
+    updateSum('EG59_1BC','EG59_2BC', 'EG59BC');
+    
+    toggleDiv('EG2829Div', 'EGCH07');
+    toggleDiv('EG3035Div', 'EGCH08');
+    toggleDiv('EG3638Div', 'EGCH09');
+    toggleDiv('EG3944Div', 'EGCH10');
+    toggleDiv('EG4546Div', 'EGCH11');
+    toggleDiv('EG4751Div', 'EGCH12');
+    toggleDiv('EG5257Div', 'EGCH13');
+    toggleDiv('EG5860Div', 'EGCH14');
+    
+    
 }
 
+<!--------------------------------------------------------------------->
+
+function back() {
+    saveToLocalStorage();
+    window.location.href = 'Chapter 3 - part 1.html';}
+
+<!--------------------------------------------------------------------->
+
+function index() {
+    saveToLocalStorage();
+    window.location.href = 'index.html';}
+
+<!--------------------------------------------------------------------->
+
+function next() {
+    saveToLocalStorage();
+    window.location.href = 'Chapter 3 - part 3.html';}
+    
+<!--------------------------------------------------------------------->
+
+    var elements = document.querySelectorAll("[id]");
+    var inputIds = Array.from(elements).map(function(element) {
+        return element.id;
+    });
+    
+<!--------------------------------------------------------------------->
+
+function saveToLocalStorage() {
+    inputIds.forEach(function(id) {
+        localStorage.setItem(id, document.getElementById(id).value);
+    }); 
+}
+
+<!--------------------------------------------------------------------->
+
+function resetLocalStorage() {
+    localStorage.clear();
+    alert("localStorage has been reset.");
+
+    window.onload();
+}
+
+<!--------------------------------------------------------------------->
+
+window.onload = function() {
+    inputIds.forEach(function(id) {
+        var inputField = document.getElementById(id);
+        inputField.addEventListener('input', function() {
+        	saveToLocalStorage();
+            allF();
+        });
+
+        var value = localStorage.getItem(id);
+        if (value !== null) {
+            inputField.value = value;
+        } else {
+            inputField.value = "";
+        }
+    });
+    saveToLocalStorage();
+    allF();
+};
 
 </script>
 </body>
