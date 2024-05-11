@@ -62,6 +62,9 @@
         padding-left: 60px;
         font-size: 16px;
     }
+    
+    /*--------------------------------*/
+    
     .YorM{  /* เลือก เดือน/ปี EG01 */
         padding-top: 30px;
         padding-left: 70px;
@@ -80,35 +83,19 @@
         margin-bottom: 10px;
         font-size: 16px;
     }
-    .inputY {
+    
+    /*--------------------------------*/
+    
+    input {
+        font-size: 16px;
+    }
+    input.Y {
         background-color: #E9FCFF;
-        font-size: 16px;
     }
-    .inputM {
-        font-size: 16px;
-    }
-    .inputM2 {
+    input.G {
     	background-color: #EEEEEE;
     	color: #BFBFBF;
-        font-size: 16px;
     }
-    .nn {
-        background-color: #FFF9E7;
-        font-size: 15px;
-        padding: 10px;
-        padding-left: 20px;
-    }  
-    .nn2 {
-        background-color: #FFF9E7;
-        font-size: 15px;
-        padding: 10px;
-        padding-left: 60px;
-    }
-    .remark {
-        color: #FF0000;
-        font-size: 15px;
-        padding-left: 5px;
-    }  
     .select {
         background-color: #fff;
         padding: 60px;
@@ -136,6 +123,26 @@
         margin-top: 5px;
         height: 35px;
     }
+    
+    /*--------------------------------*/
+    
+    .nn {
+        background-color: #FFF9E7;
+        font-size: 15px;
+        padding: 10px;
+        padding-left: 20px;
+    }  
+    .nn2 {
+        background-color: #FFF9E7;
+        font-size: 15px;
+        padding: 10px;
+        padding-left: 60px;
+    }
+    .remark {
+        text-align:left;
+        color: #FF0000;
+        font-size: 15px;
+    }
     .note {    
         font-size: 18px;
         background-color: #E2EFDA;
@@ -154,6 +161,24 @@
         margin-top: 10px;
         white-space: pre-line; /* เพิ่ม white-space เพื่อให้เกิดการขึ้นบรรทัดใหม่เมื่อกด Enter */
         overflow-y: auto; /* เพิ่ม scrollbar เมื่อข้อความยาวเกินขอบเขตของ notebox */
+    }
+    #outer{
+        width:100%;
+        text-align: center;
+    }
+    .inner{
+        display: inline-block;
+    }
+    
+    /*--------------------------------*/
+    
+    input[type="number"]::-webkit-outer-spin-button, 
+    input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+    input[type="number"] {
+    -moz-appearance: textfield;
     }
   #EG01YDiv,
   #EG0205Div,
@@ -177,8 +202,12 @@
 
 <div class="chapter">
     <b>ตอนที่ 3 ค่าใช้จ่ายสินค้าและบริการ</b>
-    <br><span class="remark">ข้อที่มี * หมายถึง ต้องมีการบันทึกข้อมูลช่อง A หรือ BC อย่างน้อย 1 ช่อง <u>ปล่อย blank ทั้ง 2 ช่องไม่ได้</u></span>
-    <br><span class="remark">ข้อไหนไม่มีค่าใช้จ่ายสามารถปล่อย blank ได้ <u>แต่หลังบ้านบันทึกค่าเป็น 0</u></span>
+    <div class="remark">
+    	<u>remark</u>
+        <br><b>** ถามเฉพาะหัวหน้าครัวเรือน **</b>
+        <br>- ข้อไหนไม่มีค่าใช้จ่ายสามารถปล่อย blank ได้ <u>แต่หลังบ้านบันทึกค่าเป็น 0</u>
+        <br>- กำหนดค่า default ใน box ให้เป็นชื่อตัวแปรเพื่อความเข้าใจเท่านั้น หน้าโปรแกรมจริงให้เอาออก
+    </div>
 </div>
 
 <div class="nn">
@@ -204,13 +233,41 @@
   
 <div class="YorM">
 	<label for="checkboxA" style="padding-right: 20px;">
-		<input type="checkbox" id="EG01Y" onclick="uncheckCheckbox('EG01Y', 'EG01M', 'EG01YDiv', 'EG01MDiv');"> รายปี
+		<input type="radio" id="EG01C1" name="EG01C" value="1"> รายปี
 	</label>
-    
 	<label for="checkboxB">
-		<input type="checkbox" id="EG01M" onclick="uncheckCheckbox('EG01M', 'EG01Y', 'EG01MDiv', 'EG01YDiv');" checked> รายเดือน
+		<input type="radio" id="EG01C2" name="EG01C" value="2" checked> รายเดือน
 	</label>
 </div>
+
+<script>
+    var radioButtons = document.querySelectorAll('.YorM input[type="radio"]');
+
+    radioButtons.forEach(function(radioButton) {
+        radioButton.addEventListener('change', function() {
+            var EG01AY = document.getElementById('EG01AY');
+            var EG01BCY = document.getElementById('EG01BCY');
+            var EG01A = document.getElementById('EG01A');
+            var EG01BC = document.getElementById('EG01BC');
+            var EG01C1 = document.getElementById('EG01C1');
+            var EG01C2 = document.getElementById('EG01C2');
+
+            if (EG01C1.checked) {
+                EG01C2.checked = false;
+                EG01YDiv.style.display = "block";
+                EG01A.classList.add('G');
+                EG01BC.classList.add('G');
+            } else {
+                EG01C1.checked = false;
+                EG01YDiv.style.display = "none";
+                EG01A.classList.remove('G');
+                EG01BC.classList.remove('G');
+                EG01AY.value = '';
+                EG01BCY.value = '';
+            }
+        });
+    });
+</script>
 
 <div class="frame">
 
@@ -225,34 +282,14 @@
             <div class="id">
             	<b>EG01AY</b> : ซื้อ/จ่าย
             </div>
-            <input class="inputY" type="number" id="EG01AY" placeholder="ใส่ค่าเช่าบ้านรายปี" oninput="CalMonthly('EG01AY', 'EG01A');">
+            <input class="Y" type="number" id="EG01AY" placeholder="ใส่ค่าเช่าบ้านรายปี">
         </div>
 
         <div class="column">
             <div class="id">
             	<b>EG01BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
             </div>
-            <input class="inputY" type="number" id="EG01BCY" placeholder="ใส่ค่าเช่าบ้านรายปี" oninput="CalMonthly('EG01BCY', 'EG01BC');">
-        </div>
-    
-	</div>
-    
-<div class="Y"> <b>เดือนที่แล้ว :</b></div>
-
-	<div class="container">
-
-        <div class="column">
-            <div class="id">
-            	<b>EG01A</b> : ซื้อ/จ่าย
-            </div>
-            <input class="inputM2" id="EG01A" type="number" readonly>
-        </div>
-
-        <div class="column">
-            <div class="id">
-            	<b>EG01BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
-            </div>
-            <input class="inputM2" id="EG01BC" type="number" readonly>
+            <input class="Y" type="number" id="EG01BCY" placeholder="ใส่ค่าเช่าบ้านรายปี">
         </div>
     
 	</div>
@@ -270,14 +307,14 @@
             <div class="id">
             	<b>EG01A</b> : ซื้อ/จ่าย
             </div>
-            <input class="inputM" type="number" id="EG01A" placeholder="ใส่ค่าเช่าบ้านรายเดือน">
+            <input type="number" id="EG01A" placeholder="ใส่ค่าเช่าบ้านรายเดือน">
         </div>
 
         <div class="column">
             <div class="id">
             	<b>EG01BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
             </div>
-            <input class="inputM" type="number" id="EG01BC" placeholder="ใส่ค่าเช่าบ้านรายเดือน">
+            <input type="number" id="EG01BC" placeholder="ใส่ค่าเช่าบ้านรายเดือน">
         </div>
     
 	</div>
@@ -298,7 +335,7 @@
 </div>
 
 <div class="select">
-	<select id="EG0205" onchange="toggleDiv('EG0205Div', 'EG0205');">
+	<select id="EGCH01">
 		<option value="">-- กรุณาเลือก --</option>
 		<option value="0">ไม่มี</option>
 		<option value="1">มี</option>
@@ -464,7 +501,7 @@
 </div>
 
 <div class="select">
-	<select id="EG0612" onchange="toggleDiv('EG0612Div', 'EG0612');">
+	<select id="EGCH02">
 		<option value="">-- กรุณาเลือก --</option>
 		<option value="0">ไม่มี</option>
 		<option value="1">มี</option>
@@ -493,7 +530,7 @@
             <div class="id">
                 <b>EG06AY</b> : เงินซื้อ/เงินดาวน์ และเงินผ่อนส่ง <br>(ไม่รวมดอกเบี้ย)
             </div>
-            <input class="inputY" type="number" id="EG06AY" oninput="CalMonthly('EG06AY', 'EG06A');">
+            <input class="inputY" type="number" id="EG06AY">
         </div>
 
         <div class="column">
@@ -501,7 +538,7 @@
                 <b>EG06BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้<br>
                 <div style="color: #fff;"> . </div>
             </div>
-            <input class="inputY" type="number" id="EG06BCY" oninput="CalMonthly('EG06BCY', 'EG06BC');">
+            <input class="inputY" type="number" id="EG06BCY">
         </div>
 
     </div>
@@ -514,14 +551,14 @@
             <div class="id">
                 <b>EG06A</b> : ซื้อ/จ่าย
             </div>
-            <input class="inputM2" id="EG06A" type="number" readonly>
+            <input class="G" id="EG06A" type="number" readonly>
         </div>
 
         <div class="column">
             <div class="id">
                 <b>EG06BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
             </div>
-            <input class="inputM2" id="EG06BC" type="number" readonly>
+            <input class="G" id="EG06BC" type="number" readonly>
         </div>
 
     </div>
@@ -546,7 +583,7 @@
             <div class="id">
                 <b>EG07AY</b> : เงินซื้อ/เงินดาวน์ และเงินผ่อนส่ง <br>(ไม่รวมดอกเบี้ย)
             </div>
-            <input class="inputY" type="number" id="EG07AY" oninput="CalMonthly('EG07AY', 'EG07A');">
+            <input class="inputY" type="number" id="EG07AY">
         </div>
 
         <div class="column">
@@ -554,7 +591,7 @@
                 <b>EG07BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้<br>
                 <div style="color: #fff;"> . </div>
             </div>
-            <input class="inputY" type="number" id="EG07BCY" oninput="CalMonthly('EG07BCY', 'EG07BC');">
+            <input class="inputY" type="number" id="EG07BCY">
         </div>
     
 	</div>
@@ -567,14 +604,14 @@
             <div class="id">
                 <b>EG07A</b> : ซื้อ/จ่าย
             </div>
-            <input class="inputM2" id="EG07A" type="number" readonly>
+            <input class="G" id="EG07A" type="number" readonly>
         </div>
 
         <div class="column">
             <div class="id">
                 <b>EG07BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
             </div>
-            <input class="inputM2" id="EG07BC" type="number" readonly>
+            <input class="G" id="EG07BC" type="number" readonly>
         </div>
     
 	</div>
@@ -599,7 +636,7 @@
             <div class="id">
                 <b>EG08AY</b> : เงินซื้อ/เงินดาวน์ และเงินผ่อนส่ง <br>(ไม่รวมดอกเบี้ย)
             </div>
-            <input class="inputY" type="number" id="EG08AY" oninput="CalMonthly('EG08AY', 'EG08A');">
+            <input class="inputY" type="number" id="EG08AY">
         </div>
 
         <div class="column">
@@ -607,7 +644,7 @@
                 <b>EG08BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้<br>
                 <div style="color: #fff;"> . </div>
             </div>
-            <input class="inputY" type="number" id="EG08BCY" oninput="CalMonthly('EG08BCY', 'EG08BC');">
+            <input class="inputY" type="number" id="EG08BCY">
         </div>
     
 	</div>
@@ -620,14 +657,14 @@
             <div class="id">
                 <b>EG08A</b> : ซื้อ/จ่าย
             </div>
-            <input class="inputM2" id="EG08A" type="number" readonly>
+            <input class="G" id="EG08A" type="number" readonly>
         </div>
 
         <div class="column">
             <div class="id">
                 <b>EG08BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
             </div>
-            <input class="inputM2" id="EG08BC" type="number" readonly>
+            <input class="G" id="EG08BC" type="number" readonly>
         </div>
     
 	</div>
@@ -652,7 +689,7 @@
             <div class="id">
                 <b>EG09AY</b> : เงินซื้อ/เงินดาวน์ และเงินผ่อนส่ง <br>(ไม่รวมดอกเบี้ย)
             </div>
-            <input class="inputY" type="number" id="EG09AY" oninput="CalMonthly('EG09AY', 'EG09A');">
+            <input class="inputY" type="number" id="EG09AY">
         </div>
 
         <div class="column">
@@ -660,7 +697,7 @@
                 <b>EG09BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้<br>
                 <div style="color: #fff;"> . </div>
             </div>
-            <input class="inputY" type="number" id="EG09BCY" oninput="CalMonthly('EG09BCY', 'EG09BC');">
+            <input class="inputY" type="number" id="EG09BCY">
         </div>
     
 	</div>
@@ -673,14 +710,14 @@
             <div class="id">
                 <b>EG09A</b> : ซื้อ/จ่าย
             </div>
-            <input class="inputM2" id="EG09A" type="number" readonly>
+            <input class="G" id="EG09A" type="number" readonly>
         </div>
 
         <div class="column">
             <div class="id">
                 <b>EG09BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
             </div>
-            <input class="inputM2" id="EG09BC" type="number" readonly>
+            <input class="G" id="EG09BC" type="number" readonly>
         </div>
     
 	</div>
@@ -706,7 +743,7 @@
             <div class="id">
                 <b>EG10AY</b> : เงินซื้อ/เงินดาวน์ และเงินผ่อนส่ง <br>(ไม่รวมดอกเบี้ย)
             </div>
-            <input class="inputY" type="number" id="EG10AY" oninput="CalMonthly('EG10AY', 'EG10A');">
+            <input class="inputY" type="number" id="EG10AY">
         </div>
 
         <div class="column">
@@ -714,7 +751,7 @@
                 <b>EG10BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้<br>
                 <div style="color: #fff;"> . </div>
             </div>
-            <input class="inputY" type="number" id="EG10BCY" oninput="CalMonthly('EG10BCY', 'EG10BC');">
+            <input class="inputY" type="number" id="EG10BCY">
         </div>
     
 	</div>
@@ -727,14 +764,14 @@
             <div class="id">
                 <b>EG10A</b> : ซื้อ/จ่าย
             </div>
-            <input class="inputM2" id="EG10A" type="number" readonly>
+            <input class="G" id="EG10A" type="number" readonly>
         </div>
 
         <div class="column">
             <div class="id">
                 <b>EG10BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
             </div>
-            <input class="inputM2" id="EG10BC" type="number" readonly>
+            <input class="G" id="EG10BC" type="number" readonly>
         </div>
     
 	</div>
@@ -760,7 +797,7 @@
             <div class="id">
                 <b>EG11AY</b> : เงินซื้อ/เงินดาวน์ และเงินผ่อนส่ง <br>(ไม่รวมดอกเบี้ย)
             </div>
-            <input class="inputY" type="number" id="EG11AY" oninput="CalMonthly('EG11AY', 'EG11A');">
+            <input class="inputY" type="number" id="EG11AY">
         </div>
 
         <div class="column">
@@ -768,7 +805,7 @@
                 <b>EG11BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้<br>
                 <div style="color: #fff;"> . </div>
             </div>
-            <input class="inputY" type="number" id="EG11BCY" oninput="CalMonthly('EG11BCY', 'EG11BC');">
+            <input class="inputY" type="number" id="EG11BCY">
         </div>
     
 	</div>
@@ -781,14 +818,14 @@
             <div class="id">
                 <b>EG11A</b> : ซื้อ/จ่าย
             </div>
-            <input class="inputM2" id="EG11A" type="number" readonly>
+            <input class="G" id="EG11A" type="number" readonly>
         </div>
 
         <div class="column">
             <div class="id">
                 <b>EG11BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
             </div>
-            <input class="inputM2" id="EG11BC" type="number" readonly>
+            <input class="G" id="EG11BC" type="number" readonly>
         </div>
     
 	</div>
@@ -814,7 +851,7 @@
             <div class="id">
                 <b>EG12AY</b> : เงินซื้อ/เงินดาวน์ และเงินผ่อนส่ง <br>(ไม่รวมดอกเบี้ย)
             </div>
-            <input class="inputY" type="number" id="EG12AY" oninput="CalMonthly('EG12AY', 'EG12A');">
+            <input class="inputY" type="number" id="EG12AY">
         </div>
 
         <div class="column">
@@ -822,7 +859,7 @@
                 <b>EG12BCY</b> : ไม่ได้ซื้อ/จ่าย เบิกได้<br>
                 <div style="color: #fff;"> . </div>
             </div>
-            <input class="inputY" type="number" id="EG12BCY" oninput="CalMonthly('EG12BCY', 'EG12BC');">
+            <input class="inputY" type="number" id="EG12BCY">
         </div>
     
 	</div>
@@ -835,14 +872,14 @@
             <div class="id">
                 <b>EG12A</b> : ซื้อ/จ่าย
             </div>
-            <input class="inputM2" id="EG12A" type="number" readonly>
+            <input class="G" id="EG12A" type="number" readonly>
         </div>
 
         <div class="column">
             <div class="id">
                 <b>EG12BC</b> : ไม่ได้ซื้อ/จ่าย เบิกได้
             </div>
-            <input class="inputM2" id="EG12BC" type="number" readonly>
+            <input class="G" id="EG12BC" type="number" readonly>
         </div>
     
 	</div>
@@ -867,7 +904,7 @@
 </div>
 
 <div class="select">
-	<select id="EG1315" onchange="toggleDiv('EG1315Div', 'EG1315');">
+	<select id="EGCH03">
 		<option value="">-- กรุณาเลือก --</option>
 		<option value="0">ไม่มี</option>
 		<option value="1">มี</option>
@@ -994,7 +1031,7 @@
 </div>
 
 <div class="select">
-	<select id="EG1617" onchange="toggleDiv('EG1617Div', 'EG1617');">
+	<select id="EGCH04">
 		<option value="">-- กรุณาเลือก --</option>
 		<option value="0">ไม่มี</option>
 		<option value="1">มี</option>
@@ -1088,7 +1125,7 @@
 </div>
 
 <div class="select">
-	<select id="EG1824" onchange="toggleDiv('EG1824Div', 'EG1824');">
+	<select id="EGCH05">
 		<option value="">-- กรุณาเลือก --</option>
 		<option value="0">ไม่มี</option>
 		<option value="1">มี</option>
@@ -1346,7 +1383,7 @@
 </div>
 
 <div class="select">
-	<select id="EG2527" onchange="toggleDiv('EG2527Div', 'EG2527');">
+	<select id="EGCH06">
 		<option value="">-- กรุณาเลือก --</option>
 		<option value="0">ไม่มี</option>
 		<option value="1">มี</option>
@@ -1465,12 +1502,18 @@
 <!-------------------------------------------- NOTE -------------------------------------------->
 
 <div class="note">
-  <b>NOTE :</b> 
-   <span class="remark">(C3.1_NOTE)</span>
+  <b>NOTE :</b>
+  <span class="remark">(C3.1_NOTE)</span>
   <div id="rec01_note" class="notebox" contenteditable="true">*** เพิ่มฟังก์ชันพิมพ์ด้วยเสียง ***</div>
 </div>
 
-<button onclick="saveToLocalStorage()">บันทึก</button>
+<div id="outer">
+  <div class="inner"><button onclick="back()">Back</button></div>
+  <div class="inner"><button onclick="index()">Index</button></div>
+  <div class="inner"><button onclick="next()">Next</button></div>
+</div>
+
+<button onclick="resetLocalStorage()">Reset localStorage</button>
 
 <!----------------------------------------------------------------------------------------------------------->
 
@@ -1478,12 +1521,10 @@
 
 <!-------------------------------------------------------------------------->
 
-function uncheckCheckbox(checkboxId, relatedCheckboxId, divToShow, divToHide) {
-  if (document.getElementById(checkboxId).checked) {
-    document.getElementById(relatedCheckboxId).checked = false;
-    document.getElementById(divToShow).style.display = "block";
-    document.getElementById(divToHide).style.display = "none";
-  }
+function CalMonthly(yearlyId, monthlyId) {
+    var yearlyValue = parseInt(document.getElementById(yearlyId).value);
+    var monthlyAverage = Math.round(yearlyValue / 12);
+    document.getElementById(monthlyId).value = monthlyAverage;
 }
 
 <!-------------------------------------------------------------------------->
@@ -1500,24 +1541,98 @@ function toggleDiv(divId, selectId) {
 
 <!-------------------------------------------------------------------------->
 
-function CalMonthly(inputId, outputId) {
-    var inputValue = parseFloat(document.getElementById(inputId).value);
-    if (!isNaN(inputValue)) {
-        document.getElementById(outputId).value = (inputValue / 12).toFixed(0);
-    } else {
-        document.getElementById(outputId).value = "";
-    }
-}
+function allF() {
 
-var numbers = ['01', '06', '07', '08', '09', '10', '11', '12'];
-for (var i = 0; i < numbers.length; i++) { 
-    var idA = "EG" + numbers[i] + "A";
-    var idBC = "EG" + numbers[i] + "BC";
+	if (EG01C1.checked) {
+    	CalMonthly('EG01AY', 'EG01A');
+    	CalMonthly('EG01BCY', 'EG01BC');
+	}
+
+	CalMonthly('EG06AY', 'EG06A');
+	CalMonthly('EG07AY', 'EG07A');
+	CalMonthly('EG08AY', 'EG08A');
+	CalMonthly('EG09AY', 'EG09A');
+	CalMonthly('EG10AY', 'EG10A');
+	CalMonthly('EG11AY', 'EG11A');
+	CalMonthly('EG12AY', 'EG12A');
         
-    document.getElementById(idA).placeholder = "(auto) = (รายปี / 12)";
-    document.getElementById(idBC).placeholder = "(auto) = (รายปี / 12)";
+	CalMonthly('EG06BCY', 'EG06BC');
+	CalMonthly('EG07BCY', 'EG07BC');
+	CalMonthly('EG08BCY', 'EG08BC');
+	CalMonthly('EG09BCY', 'EG09BC');
+	CalMonthly('EG10BCY', 'EG10BC');
+	CalMonthly('EG11BCY', 'EG11BC');
+	CalMonthly('EG12BCY', 'EG12BC');
+    
+    toggleDiv('EG0205Div', 'EGCH01');
+    toggleDiv('EG0612Div', 'EGCH02');
+    toggleDiv('EG1315Div', 'EGCH03');
+    toggleDiv('EG1617Div', 'EGCH04');
+    toggleDiv('EG1824Div', 'EGCH05');
+    toggleDiv('EG2527Div', 'EGCH06');    
 }
 
+<!--------------------------------------------------------------------->
+
+function back() {
+    saveToLocalStorage();
+    window.location.href = 'Chapter 2.html';}
+
+<!--------------------------------------------------------------------->
+
+function index() {
+    saveToLocalStorage();
+    window.location.href = 'index.html';}
+
+<!--------------------------------------------------------------------->
+
+function next() {
+    saveToLocalStorage();
+    window.location.href = 'Chapter 3 - part 2.html';}
+  
+<!--------------------------------------------------------------------->
+
+    var elements = document.querySelectorAll("[id]");
+    var inputIds = Array.from(elements).map(function(element) {
+        return element.id;
+    });
+<!--------------------------------------------------------------------->
+
+function saveToLocalStorage() {
+    inputIds.forEach(function(id) {
+        localStorage.setItem(id, document.getElementById(id).value);
+    });
+}
+
+<!--------------------------------------------------------------------->
+
+function resetLocalStorage() {
+    localStorage.clear();
+    alert("localStorage has been reset.");
+
+    window.onload();
+}
+
+<!--------------------------------------------------------------------->
+
+window.onload = function() {
+    inputIds.forEach(function(id) {
+        var inputField = document.getElementById(id);
+        inputField.addEventListener('input', function() {
+        	saveToLocalStorage();
+            allF();
+        });
+
+        var value = localStorage.getItem(id);
+        if (value !== null) {
+            inputField.value = value;
+        } else {
+            inputField.value = "";
+        }
+    });
+    saveToLocalStorage();
+    allF();
+};
 
 </script>
 </body>
