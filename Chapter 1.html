@@ -120,7 +120,8 @@
 <div class="chapter">
     <b>ตอนที่ 1 สมาชิกของครัวเรือน</b>
     <div class="remark">
-    	** remark **
+    	<u>remark</u>
+        <br><b>** ถามสมาชิกทุกคน **</b>
     	<br>- ข้อที่มี * หมายถึง ต้องมีการบันทึกข้อมูล <u>ปล่อย blank ไม่ได้</u>
     </div>
 </div>
@@ -489,6 +490,7 @@
           <option value="5">5 - อยู่กับคนอื่น (ระบุ)</option>
       </select>
       <br><br><span class="remark">- ถามเฉพาะสมาชิกที่มีอายุต่ำกว่า 15 ปี</span>
+      <br><span class="remark">- ถ้า HM11 = 1 ข้ามไปถาม HM14</span>
       <br><span class="remark">- ถ้าเลือกอื่น ๆ ให้ระบุเพิ่ม</span>
       
       <div id="HM11T" style="display: none;">
@@ -545,7 +547,7 @@
           <option value="5">5 - เพื่อการศึกษา</option>
           <option value="6">6 - อื่น ๆ (ระบุ)</option>
       </select>
-      <br><span class="remark">- ถามเฉพาะสมาชิกที่มีอายุต่ำกว่า 15 ปี</span>
+      <br><br><span class="remark">- ถามเฉพาะสมาชิกที่มีอายุต่ำกว่า 15 ปี</span>
       <br><span class="remark">- ถ้าเลือกอื่น ๆ ให้ระบุเพิ่ม</span>
       
       <div id="HM13T" style="display: none;">
@@ -615,7 +617,6 @@
 <div id="HM15Div">
 
   <div class="head">
-  	  <span style="color: #ff0000;"><b>*</b></span>
       <b>HM15 : ชั้นสูงสุดที่เรียนจบ</b>
   </div>
   
@@ -631,7 +632,6 @@
 <div id="HM16Div">
 
   <div class="head">
-  	  <span style="color: #ff0000;"><b>*</b></span>
       <b>HM16 : สาขาของ HM15 (ถ้ามี)</b>
   </div>
   
@@ -652,14 +652,13 @@
 <div id="HM17Div">
 
   <div class="head">
-  	  <span style="color: #ff0000;"><b>*</b></span>
       <b>HM17 : ชั้นที่กำลังเรียน</b>
   </div>
   
   <div class="frame">
       <input id="HM17" type="text" style="color: #BFBFBF;" placeholder=" Search คำหรือรหัสได้">
       <img src="https://icon-library.com/images/search-flat-icon/search-flat-icon-9.jpg" width="25" height="25" style="position: relative; left: 10px; top: 8px;">
-      <br><span class="remark">ถามเฉพาะสมาชิกที่ HM14 = 1 หรือ 2</span>
+      <br><br><span class="remark">ถามเฉพาะสมาชิกที่ HM14 = 1 หรือ 2</span>
   </div>
   
 </div> <!-- HM17Div -->
@@ -694,7 +693,6 @@
             components.forEach(function(component) {
                 inputsHTML += `
                     <div class="head">
-                        <span style="color: #ff0000;"><b>*</b></span>
                         <b>${component.id} :</b> ${component.item}
                     </div>
                     <div class="frame">
@@ -931,7 +929,6 @@
 
 <!-- HM43 : สถานภาพการทำงาน -->
   <div class="head">
-      <span style="color: #ff0000;"><b>*</b></span>
       <b>HM43 : สถานภาพการทำงาน</b>
   </div>
   
@@ -954,7 +951,6 @@
 
 <!-- HM44 : ประเภทอุตสาหกรรม -->
   <div class="head">
-      <span style="color: #ff0000;"><b>*</b></span>
       <b>HM44 : ประเภทอุตสาหกรรม</b>
   </div>
   
@@ -988,12 +984,10 @@
 
 <!-- HM45 : อาชีพรองที่ท่านทำ -->
   <div class="head">
-      <span style="color: #ff0000;"><b>*</b></span>
       <b>HM45 : อาชีพรองที่ท่านทำ</b>
   </div>
   
   <div class="nn">
-      บันทึกอาชีพรองสูงสุดไม่เกิน 5 อาชีพ โดยเรียงลำดับตามความสำคัญ<br>
       ผู้ที่ไม่มีอาชีพรองให้ "ปล่อยว่าง"<br>
       <b>ไม่รวม</b>รหัส 9991-9996, 9999
   </div>
@@ -1006,7 +1000,6 @@
 
 <!-- HM46 : สถานภาพการทำงาน -->
   <div class="head">
-      <span style="color: #ff0000;"><b>*</b></span>
       <b>HM46 : สถานภาพการทำงาน</b>
   </div>
   
@@ -1025,7 +1018,6 @@
 
 <!-- HM47 : ประเภทอุตสาหกรรม -->
   <div class="head">
-      <span style="color: #ff0000;"><b>*</b></span>
       <b>HM47 : ประเภทอุตสาหกรรม</b>
   </div>
   
@@ -1143,7 +1135,7 @@ function Others(fieldId) {
     if (fieldId === "HM11") {
         var HM12Div = document.getElementById('HM12Div');
         var HM13Div = document.getElementById('HM13Div');
-        if (field.value === "1") {
+        if (field.value === "1"|| field.value === "") {
             HM12Div.style.display = "none";
             HM13Div.style.display = "none";
         } else {
